@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+	<meta charset = "utf-8">
+	<title>Vendor</title>
+	<link rel="icon" type = "image/png" href = "res/favicon.png">
+	<meta name="viewport" content ="initial-scale=1,width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="cee/bootstrap-theme.min.css">
+	<script type="text/javascript" src = "js/jquery.js"></script>
+	<script type="text/javascript" src = "js/bootstrap.min.js"></script>
+	<style type = "text/css">
+
+#bottom-footer {
+  height: 60px;
+  background-color: #000000;
+  padding-bottom:20px;
+  padding-top: 20px;
+}
+
+td{
+
+  color: #4C4C4C;
+  font-weight: bold;
+  font-size: 120%;
+
+}
+#footer> .table{
+    background-color: #0B0B0B;
+    margin-bottom: 0px;
+  }
+
+
+.starRating:not(old){
+  display        : inline-block;
+  width          : 7.5em;
+  height         : 1.5em;
+  overflow       : hidden;
+  vertical-align : bottom;
+}
+
+.starRating:not(old) > input{
+  margin-right : -100%;
+  opacity      : 0;
+}
+
+.starRating:not(old) > label{
+  display         : block;
+  float           : right;
+  position        : relative;
+  background      : url('star-off.svg');
+  background-size : contain;
+}
+
+.starRating:not(old) > label:before{
+  content         : '';
+  display         : block;
+  width           : 1.5em;
+  height          : 1.5em;
+  background      : url('star-on.svg');
+  background-size : contain;
+  opacity         : 0;
+  transition      : opacity 0.2s linear;
+}
+
+.starRating:not(old) > label:hover:before,
+.starRating:not(old) > label:hover ~ label:before,
+
+.starRating:not(:hover) > :checked ~ label:before{
+  opacity : 1;
+}
+#title{
+background-image: url(res/bg.jpg);
+margin-top: 50px;
+}
+
+.jumbotron{
+  background-color: #ffffff;
+}
+
+#bg{
+  background-color: #f0f0e8;
+
+.row-no-padding   >[class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+  margin-left: 0;
+  margin-right: 0;
+
+}
+
+}
+
+       
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top	">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    	
+    	<form class="navbar-form navbar-left" role="search">
+        	<div class="form-group">
+        		<div class="input-group">
+	          		<input type="text" class="form-control" placeholder="Search">
+	         		<span class="input-group-btn">
+	        		<button class="btn btn-default" type="button"><span class = "glyphicon glyphicon-search"></span></button>
+	      			</span>
+      			</div>
+        	</div>
+        </form>
+        <ul class = "nav navbar-nav navbar-right">
+        	<li style = "padding-top:15px; color:#9d9d9d; ">Call us: 123456789</li>    
+        	<li ><a href = "http://www.google.com">Live Chat</a></li>    
+        	<li><a href="http://www.facebook.com">Login/Register</a></li>
+        </ul>
+
+
+
+    	
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class = "jumbotron text-center" id="title">
+	<div class = "container">
+		<img src="res/logo.png">
+		<h1>VENDOR</h1>
+		<p>Address<br>Email | Contact</p>
+    <p>
+      <span class="starRating">
+        <input id="rating5" type="radio" name="rating" value="5">
+        <label for="rating5">5</label>
+        <input id="rating4" type="radio" name="rating" value="4">
+        <label for="rating4">4</label>
+        <input id="rating3" type="radio" name="rating" value="3" checked>
+        <label for="rating3">3</label>
+        <input id="rating2" type="radio" name="rating" value="2">
+        <label for="rating2">2</label>
+        <input id="rating1" type="radio" name="rating" value="1">
+        <label for="rating1">1</label>
+      </span>
+    </p>
+  </div>
+</div>
+
+
+<div class = "container text-center">
+  
+  <div class = "col-xs-12">
+    <h1>ABOUT VENDOR</h1>
+  </div>
+  <div class = "col-xs-12">
+    <img src = "res/separator.png">
+  </div>
+  <div class = "col-xs-12">
+   <h3> Lorem Ipsum</h3>
+  </div>
+  <div class = "col-xs-12 col-sm-4" style="border-right: 1px solid gray">
+    <img class = "img-circle" src = "res/i1.png">
+    <p>
+      <h2>Something</h2>
+    </p>
+    <p>
+      Text goes here
+    </p>
+  </div>
+
+  <div class = "col-xs-12 col-sm-4" style="border-right: 1px solid gray">
+    <img class = "img-circle" src = "res/i1.png">
+    <p>
+      <h2>Something</h2>
+    </p>
+    <p>
+      Text goes here
+    </p>
+  </div>
+
+  <div class = "col-xs-12 col-sm-4" >
+    <img class = "img-circle" src = "res/i1.png">
+    <p>
+      <h2>Something</h2>
+    </p>
+    <p>
+      Text goes here
+    </p>
+  </div>
+  
+</div>
+<br>
+<br><br>
+<div class = "container">
+  <div class = "col-xs-6" id = "bg">
+    <div class = "container">
+      <div class = "row">
+        <div class = "col-xs-6 text-center">
+          <h2>STATUTORY DETAILS</h2>
+        </div>
+      </div>
+      <div class = "row">
+      </div>
+      <div class = "row">
+        <div class = "col-xs-3 text-left">
+          <p><h4>Pan details:</h4></p>
+          <p>one sector</p>
+          
+        </div>
+        <div class = "col-xs-3 text-left">
+          <p><h4>Pan details:</h4></p>
+          <p>one sector</p>
+          
+        </div>
+
+      </div> 
+      <div class = "row">
+        <div class = "col-xs-3 text-left">
+          <p><h4>Pan details:</h4></p>
+          <p>one sector</p>
+          
+        </div>
+        <div class = "col-xs-3 text-left">
+          <p><h4>Pan details:</h4></p>
+          <p>one sector</p>
+          
+        </div>
+      </div>      
+      <div class = "row">
+        <div class = "col-xs-3 text-left">
+          <p><h4>Pan details:</h4></p>
+          <p>one sector</p>
+          
+        </div>
+        <div class = "col-xs-3 text-left">
+          <p><h4>Pan details:</h4></p>
+          <p>one sector</p>
+          
+        </div>
+      </div> 
+      <div class = "row">
+        <div class = "col-xs-3 text-left">
+          <p><h4>Pan details:</h4></p>
+          <p>one sector</p>
+          
+        </div>
+        <div class = "col-xs-3 text-left">
+          <p><h4>Pan details:</h4></p>
+          <p>one sector</p>
+          
+        </div>
+      </div> 
+      <div class = "row">
+        <div class = "col-xs-3 text-left">
+          <p><h4>Pan details:</h4></p>
+          <p>one sector</p>
+          
+        </div>
+        <div class = "col-xs-3 text-left">
+          <p><h4>Pan details:</h4></p>
+          <p>one sector</p>
+          
+        </div>
+      </div>              
+    </div>
+  </div>
+
+
+  <div class ="col-xs-6 hidden-xs">
+    <img src="res/image1.png">
+  </div>
+
+</div>
+
+
+<div class = "jumbotron text-center">
+  <div class = "container">
+    <img src="res/logo.png">
+    <h1>INDUSTRY</h1>
+      <div class = "col-xs-12">
+    <img src = "res/separator.png">
+  </div>
+    <p>
+      LoremIpsum
+    </p>
+  </div>
+
+  <div class = "container">
+    <div class = "row">
+      <div class = "col-xs-12">
+        <img src="res/logo.png">
+        <img src="res/logo.png">
+        <img src="res/logo.png">
+        <img src="res/logo.png">
+      </div>
+
+      <div class = "col-xs-12">
+        <img src="res/logo.png">
+        <img src="res/logo.png">
+        <img src="res/logo.png">
+        <img src="res/logo.png">
+      </div>
+
+    </div>
+  
+    </div>
+
+  </div>
+
+<div class = "jumbotron text-center">
+  <div class = "container">
+    <img src="res/logo.png">
+    <h1>SERVICE AREAS</h1>
+      <div class = "col-xs-12">
+    <img src = "res/separator.png">
+  </div>
+    <p>
+      LoremIpsum
+    </p>
+  </div>
+</div>
+
+
+<div id = "footer">
+  <table class = "table text-center">
+    <tr>
+      <td><br><br><br>Bandra<br><br><br></td>
+      <td><br><br><br>Andheri<br><br><br></td>
+      <td><br><br><br>Goregaon<br><br><br></td>
+      <td><br><br><br>Ville Parle<br><br><br></td>
+      <td><br><br><br>East<br><br><br></td>
+      <td><br><br><br>West<br><br><br></td>
+      <td><br><br><br>Central<br><br><br></td>
+    </tr>
+
+  </table>
+
+
+
+</div>
+  <div id="bottom-footer">
+
+    <p class="text-muted text-center bottom"><span class = "glyphicon glyphicon-copyright-mark"></span> Bye</p>
+
+</div>
+
+
+</body>
+</html>

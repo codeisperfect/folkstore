@@ -1,0 +1,1087 @@
+ body {
+	margin: 0;
+	padding: 0;
+ }
+ 
+ #background 
+{ 
+	 left: 0px; 
+	 top: 0px; 
+	 position: relative; 
+	 margin-left: auto; 
+	 margin-right: auto; 
+	 width: 1280px;
+	 height: 3500px; 
+	 overflow: hidden;
+	 z-index:0;
+	} 
+
+ #PageBg 
+{ 
+	 left: 0px; 
+	 top: 50px; 
+	 position: absolute; 
+	 width: 1280px;
+	 height: 4050px;
+	 z-index:1;
+} 
+
+ #BgCopyright 
+{ 
+	 left: 0px; 
+	 top: 3461px; 
+	 position: absolute; 
+	 width: 1280px;
+	 height: 79px;
+	 z-index:2;
+} 
+
+ #FOLKSTORE 
+{ 
+	 left: 601px; 
+	 top: 3476px; 
+	 position: absolute; 
+	 width: 79px;
+	 height: 9px;
+	 z-index:3;
+} 
+
+ #Bg 
+{ 
+	 left: 0px; 
+	 top: 3316px; 
+	 position: absolute; 
+	 width: 1280px;
+	 height: 147px;
+	 z-index:4;
+} 
+
+ #Andheri 
+{ 
+	 left: 50px; 
+	 top: 3382px; 
+	 position: absolute; 
+	 width: 59px;
+	 height: 13px;
+	 z-index:5;
+} 
+
+ #Bandra 
+{ 
+	 left: 239px; 
+	 top: 3382px; 
+	 position: absolute; 
+	 width: 53px;
+	 height: 13px;
+	 z-index:6;
+} 
+
+ #Dadar 
+{ 
+	 left: 429px; 
+	 top: 3382px; 
+	 position: absolute; 
+	 width: 46px;
+	 height: 13px;
+	 z-index:7;
+} 
+
+ #Goregaon 
+{ 
+	 left: 607px; 
+	 top: 3383px; 
+	 position: absolute; 
+	 width: 73px;
+	 height: 16px;
+	 z-index:8;
+} 
+
+ #Juhu 
+{ 
+	 left: 808px; 
+	 top: 3382px; 
+	 position: absolute; 
+	 width: 35px;
+	 height: 16px;
+	 z-index:9;
+} 
+
+ #SantaCruz 
+{ 
+	 left: 973px; 
+	 top: 3383px; 
+	 position: absolute; 
+	 width: 80px;
+	 height: 12px;
+	 z-index:10;
+} 
+
+ #VileParle 
+{ 
+	 left: 1164px; 
+	 top: 3382px; 
+	 position: absolute; 
+	 width: 69px;
+	 height: 13px;
+	 z-index:11;
+} 
+
+ #Shape2 
+{ 
+	 left: 320px; 
+	 top: 3412px; 
+	 position: absolute; 
+	 width: 640px;
+	 height: 3px;
+	 z-index:12;
+} 
+
+ #layer_13 
+{ 
+	 left: 586px; 
+	 top: 3147px; 
+	 position: absolute; 
+	 width: 108px;
+	 height: 9px;
+	 z-index:13;
+} 
+
+ #serviceAreas 
+{ 
+	 left: 461px; 
+	 top: 3081px; 
+	 position: absolute; 
+	 width: 361px;
+	 height: 34px;
+	 z-index:14;
+} 
+
+ #VectorSmartObject 
+{ 
+	 left: 603px; 
+	 top: 2977px; 
+	 position: absolute; 
+	 width: 76px;
+	 height: 76px;
+	 z-index:15;
+} 
+
+ #Loremipsumdolorsitam 
+{ 
+	 left: 303px; 
+	 top: 3186px; 
+	 position: absolute; 
+	 width: 677px;
+	 height: 58px;
+	 z-index:16;
+} 
+
+ #Rectangle2 
+{ 
+	 left: -1px; 
+	 top: 2681px; 
+	 position: absolute; 
+	 width: 323px;
+	 height: 241px;
+	 z-index:17;
+} 
+
+ #Layer9 
+{ 
+	 left: 0px; 
+	 top: 2331px; 
+	 position: absolute; 
+	 width: 1001px;
+	 height: 866px;
+	 z-index:18;
+} 
+
+ #Rectangle2copy4 
+{ 
+	 left: 319px; 
+	 top: 2681px; 
+	 position: absolute; 
+	 width: 324px;
+	 height: 241px;
+	 z-index:19;
+} 
+
+ #Image 
+{ 
+	 left: 0px; 
+	 top: 2514px; 
+	 position: absolute; 
+	 width: 803px;
+	 height: 538px;
+	 z-index:20;
+} 
+
+ #Rectangle3 
+{ 
+	 left: 347px; 
+	 top: 2702px; 
+	 position: absolute; 
+	 width: 269px;
+	 height: 199px;
+	 z-index:21;
+} 
+
+ #onsecteturadipisicin 
+{ 
+	 left: 387px; 
+	 top: 2794px; 
+	 position: absolute; 
+	 width: 190px;
+	 height: 55px;
+	 z-index:22;
+} 
+
+ #Titlegoeshere 
+{ 
+	 left: 421px; 
+	 top: 2762px; 
+	 position: absolute; 
+	 width: 122px;
+	 height: 17px;
+	 z-index:23;
+} 
+
+ #Rectangle2copy5 
+{ 
+	 left: 640px; 
+	 top: 2681px; 
+	 position: absolute; 
+	 width: 324px;
+	 height: 241px;
+	 z-index:24;
+} 
+
+ #Image_0 
+{ 
+	 left: 642px; 
+	 top: 2683px; 
+	 position: absolute; 
+	 width: 321px;
+	 height: 238px;
+	 z-index:25;
+} 
+
+ #Rectangle2copy6 
+{ 
+	 left: 961px; 
+	 top: 2681px; 
+	 position: absolute; 
+	 width: 324px;
+	 height: 241px;
+	 z-index:26;
+} 
+
+ #Image_1 
+{ 
+	 left: 228px; 
+	 top: 2321px; 
+	 position: absolute; 
+	 width: 1052px;
+	 height: 866px;
+	 z-index:27;
+} 
+
+ #Rectangle2_0 
+{ 
+	 left: -1px; 
+	 top: 2444px; 
+	 position: absolute; 
+	 width: 323px;
+	 height: 241px;
+	 z-index:28;
+} 
+
+ #Image_2 
+{ 
+	 left: 0px; 
+	 top: 2318px; 
+	 position: absolute; 
+	 width: 468px;
+	 height: 453px;
+	 z-index:29;
+} 
+
+ #Rectangle2copy4_0 
+{ 
+	 left: 319px; 
+	 top: 2444px; 
+	 position: absolute; 
+	 width: 324px;
+	 height: 241px;
+	 z-index:30;
+} 
+
+ #Image_3 
+{ 
+	 left: 169px; 
+	 top: 2081px; 
+	 position: absolute; 
+	 width: 1111px;
+	 height: 866px;
+	 z-index:31;
+} 
+
+ #Rectangle2copy5_0 
+{ 
+	 left: 640px; 
+	 top: 2444px; 
+	 position: absolute; 
+	 width: 324px;
+	 height: 241px;
+	 z-index:32;
+} 
+
+ #Image_4 
+{ 
+	 left: 240px; 
+	 top: 2118px; 
+	 position: absolute; 
+	 width: 1040px;
+	 height: 818px;
+	 z-index:33;
+} 
+
+ #Rectangle2copy6_0 
+{ 
+	 left: 961px; 
+	 top: 2444px; 
+	 position: absolute; 
+	 width: 324px;
+	 height: 241px;
+	 z-index:34;
+} 
+
+ #Image_5 
+{ 
+	 left: 696px; 
+	 top: 1935px; 
+	 position: absolute; 
+	 width: 584px;
+	 height: 866px;
+	 z-index:35;
+} 
+
+ #layer_36 
+{ 
+	 left: 586px; 
+	 top: 2291px; 
+	 position: absolute; 
+	 width: 108px;
+	 height: 9px;
+	 z-index:36;
+} 
+
+ #Industry 
+{ 
+	 left: 519px; 
+	 top: 2225px; 
+	 position: absolute; 
+	 width: 246px;
+	 height: 34px;
+	 z-index:37;
+} 
+
+ #VectorSmartObject_0 
+{ 
+	 left: 602px; 
+	 top: 2115px; 
+	 position: absolute; 
+	 width: 76px;
+	 height: 76px;
+	 z-index:38;
+} 
+
+ #Loremipsumdolorsitam_0 
+{ 
+	 left: 303px; 
+	 top: 2330px; 
+	 position: absolute; 
+	 width: 677px;
+	 height: 58px;
+	 z-index:39;
+} 
+
+ #Bg_0 
+{ 
+	 left: 0px; 
+	 top: 1323px; 
+	 position: absolute; 
+	 width: 1280px;
+	 height: 728px;
+	 z-index:40;
+} 
+
+ #VectorSmartObject_1 
+{ 
+	 left: 645px; 
+	 top: 1317px; 
+	 position: absolute; 
+	 width: 1624px;
+	 height: 732px;
+	 z-index:41;
+} 
+
+ #layer_42 
+{ 
+	 left: 94px; 
+	 top: 1474px; 
+	 position: absolute; 
+	 width: 108px;
+	 height: 9px;
+	 z-index:42;
+} 
+
+ #StatutoryDetail 
+{ 
+	 left: 92px; 
+	 top: 1397px; 
+	 position: absolute; 
+	 width: 466px;
+	 height: 34px;
+	 z-index:43;
+} 
+
+ #Loremipsumdolorsitam_1 
+{ 
+	 left: 92px; 
+	 top: 1513px; 
+	 position: absolute; 
+	 width: 446px;
+	 height: 58px;
+	 z-index:44;
+} 
+
+ #VectorSmartObject_2 
+{ 
+	 left: 94px; 
+	 top: 1590px; 
+	 position: absolute; 
+	 width: 28px;
+	 height: 33px;
+	 z-index:45;
+} 
+
+ #Onsecteturadipisicin 
+{ 
+	 left: 94px; 
+	 top: 1676px; 
+	 position: absolute; 
+	 width: 163px;
+	 height: 11px;
+	 z-index:46;
+} 
+
+ #PANDetails 
+{ 
+	 left: 94px; 
+	 top: 1640px; 
+	 position: absolute; 
+	 width: 100px;
+	 height: 13px;
+	 z-index:47;
+} 
+
+ #VectorSmartObject_3 
+{ 
+	 left: 405px; 
+	 top: 1587px; 
+	 position: absolute; 
+	 width: 32px;
+	 height: 32px;
+	 z-index:48;
+} 
+
+ #Onsecteturadipisicin_0 
+{ 
+	 left: 404px; 
+	 top: 1676px; 
+	 position: absolute; 
+	 width: 163px;
+	 height: 11px;
+	 z-index:49;
+} 
+
+ #TINDetails 
+{ 
+	 left: 403px; 
+	 top: 1640px; 
+	 position: absolute; 
+	 width: 95px;
+	 height: 13px;
+	 z-index:50;
+} 
+
+ #VectorSmartObject_4 
+{ 
+	 left: 93px; 
+	 top: 1696px; 
+	 position: absolute; 
+	 width: 32px;
+	 height: 33px;
+	 z-index:51;
+} 
+
+ #Onsecteturadipisicin_1 
+{ 
+	 left: 94px; 
+	 top: 1786px; 
+	 position: absolute; 
+	 width: 163px;
+	 height: 11px;
+	 z-index:52;
+} 
+
+ #ServiceTaxNumber 
+{ 
+	 left: 93px; 
+	 top: 1750px; 
+	 position: absolute; 
+	 width: 170px;
+	 height: 13px;
+	 z-index:53;
+} 
+
+ #VectorSmartObject_5 
+{ 
+	 left: 403px; 
+	 top: 1696px; 
+	 position: absolute; 
+	 width: 32px;
+	 height: 32px;
+	 z-index:54;
+} 
+
+ #Onsecteturadipisicin_2 
+{ 
+	 left: 404px; 
+	 top: 1785px; 
+	 position: absolute; 
+	 width: 163px;
+	 height: 11px;
+	 z-index:55;
+} 
+
+ #ServiceType 
+{ 
+	 left: 403px; 
+	 top: 1749px; 
+	 position: absolute; 
+	 width: 108px;
+	 height: 17px;
+	 z-index:56;
+} 
+
+ #VectorSmartObject_6 
+{ 
+	 left: 93px; 
+	 top: 1806px; 
+	 position: absolute; 
+	 width: 32px;
+	 height: 33px;
+	 z-index:57;
+} 
+
+ #Onsecteturadipisicin_3 
+{ 
+	 left: 94px; 
+	 top: 1896px; 
+	 position: absolute; 
+	 width: 163px;
+	 height: 11px;
+	 z-index:58;
+} 
+
+ #CSTNumber 
+{ 
+	 left: 93px; 
+	 top: 1860px; 
+	 position: absolute; 
+	 width: 105px;
+	 height: 13px;
+	 z-index:59;
+} 
+
+ #VectorSmartObject_7 
+{ 
+	 left: 403px; 
+	 top: 1806px; 
+	 position: absolute; 
+	 width: 32px;
+	 height: 32px;
+	 z-index:60;
+} 
+
+ #Onsecteturadipisicin_4 
+{ 
+	 left: 404px; 
+	 top: 1895px; 
+	 position: absolute; 
+	 width: 163px;
+	 height: 11px;
+	 z-index:61;
+} 
+
+ #VATNumber 
+{ 
+	 left: 403px; 
+	 top: 1859px; 
+	 position: absolute; 
+	 width: 108px;
+	 height: 13px;
+	 z-index:62;
+} 
+
+ #Onsecteturadipisicin_5 
+{ 
+	 left: 94px; 
+	 top: 2006px; 
+	 position: absolute; 
+	 width: 163px;
+	 height: 11px;
+	 z-index:63;
+} 
+
+ #ExciseRegistrationNu 
+{ 
+	 left: 94px; 
+	 top: 1970px; 
+	 position: absolute; 
+	 width: 233px;
+	 height: 17px;
+	 z-index:64;
+} 
+
+ #layer_65 
+{ 
+	 left: 559px; 
+	 top: 783px; 
+	 position: absolute; 
+	 width: 162px;
+	 height: 9px;
+	 z-index:65;
+} 
+
+ #ABOUTVENDOR 
+{ 
+	 left: 447px; 
+	 top: 717px; 
+	 position: absolute; 
+	 width: 388px;
+	 height: 34px;
+	 z-index:66;
+} 
+
+ #Loremipsumdolorsitam_2 
+{ 
+	 left: 203px; 
+	 top: 828px; 
+	 position: absolute; 
+	 width: 874px;
+	 height: 99px;
+	 z-index:67;
+} 
+
+ #VectorSmartObject_8 
+{ 
+	 left: 342px; 
+	 top: 1043px; 
+	 position: absolute; 
+	 width: 31px;
+	 height: 33px;
+	 z-index:68;
+} 
+
+ #VectorSmartObject_9 
+{ 
+	 left: 282px; 
+	 top: 1007px; 
+	 position: absolute; 
+	 width: 150px;
+	 height: 150px;
+	 z-index:69;
+} 
+
+ #onsecteturadipisicin_0 
+{ 
+	 left: 277px; 
+	 top: 1221px; 
+	 position: absolute; 
+	 width: 161px;
+	 height: 32px;
+	 z-index:70;
+} 
+
+ #PublicLimitedCompany 
+{ 
+	 left: 258px; 
+	 top: 1175px; 
+	 position: absolute; 
+	 width: 199px;
+	 height: 17px;
+	 z-index:71;
+} 
+
+ #VectorSmartObject_10 
+{ 
+	 left: 627px; 
+	 top: 1044px; 
+	 position: absolute; 
+	 width: 32px;
+	 height: 32px;
+	 z-index:72;
+} 
+
+ #VectorSmartObject_11 
+{ 
+	 left: 568px; 
+	 top: 1007px; 
+	 position: absolute; 
+	 width: 150px;
+	 height: 150px;
+	 z-index:73;
+} 
+
+ #onsecteturadipisicin_1 
+{ 
+	 left: 560px; 
+	 top: 1221px; 
+	 position: absolute; 
+	 width: 161px;
+	 height: 32px;
+	 z-index:74;
+} 
+
+ #layer_1975 
+{ 
+	 left: 622px; 
+	 top: 1176px; 
+	 position: absolute; 
+	 width: 37px;
+	 height: 12px;
+	 z-index:75;
+} 
+
+ #VectorSmartObject_12 
+{ 
+	 left: 907px; 
+	 top: 1043px; 
+	 position: absolute; 
+	 width: 32px;
+	 height: 32px;
+	 z-index:76;
+} 
+
+ #VectorSmartObject_13 
+{ 
+	 left: 845px; 
+	 top: 1007px; 
+	 position: absolute; 
+	 width: 150px;
+	 height: 150px;
+	 z-index:77;
+} 
+
+ #onsecteturadipisicin_2 
+{ 
+	 left: 842px; 
+	 top: 1221px; 
+	 position: absolute; 
+	 width: 161px;
+	 height: 32px;
+	 z-index:78;
+} 
+
+ #Automobile 
+{ 
+	 left: 873px; 
+	 top: 1175px; 
+	 position: absolute; 
+	 width: 97px;
+	 height: 13px;
+	 z-index:79;
+} 
+
+ #Divider 
+{ 
+	 left: 497px; 
+	 top: 1005px; 
+	 position: absolute; 
+	 width: 3px;
+	 height: 254px;
+	 z-index:80;
+} 
+
+ #Divider_0 
+{ 
+	 left: 785px; 
+	 top: 1005px; 
+	 position: absolute; 
+	 width: 3px;
+	 height: 254px;
+	 z-index:81;
+} 
+
+ #Masking 
+{ 
+	 left: 0px; 
+	 top: 111px; 
+	 position: absolute; 
+	 width: 1280px;
+	 height: 539px;
+	 z-index:82;
+} 
+
+ #Image_6 
+{ 
+	 left: 0px; 
+	 top: 50px; 
+	 position: absolute; 
+	 width: 1280px;
+	 height: 866px;
+	 z-index:83;
+} 
+
+ #Rectangle1 
+{ 
+	 left: 540px; 
+	 top: 580px; 
+	 position: absolute; 
+	 width: 199px;
+	 height: 50px;
+	 z-index:84;
+} 
+
+ #KNOWMORE 
+{ 
+	 left: 584px; 
+	 top: 601px; 
+	 position: absolute; 
+	 width: 112px;
+	 height: 11px;
+	 z-index:85;
+} 
+
+ #layer_86 
+{ 
+	 left: 585px; 
+	 top: 584px; 
+	 position: absolute; 
+	 width: 110px;
+	 height: 27px;
+	 z-index:86;
+} 
+
+ #Shape3 
+{ 
+	 left: 522px; 
+	 top: 472px; 
+	 position: absolute; 
+	 width: 4px;
+	 height: 15px;
+	 z-index:87;
+} 
+
+ #Shape3copy 
+{ 
+	 left: 759px; 
+	 top: 472px; 
+	 position: absolute; 
+	 width: 4px;
+	 height: 15px;
+	 z-index:88;
+} 
+
+ #Shape3copy2 
+{ 
+	 left: 642px; 
+	 top: 439px; 
+	 position: absolute; 
+	 width: 4px;
+	 height: 15px;
+	 z-index:89;
+} 
+
+ #VENDORShop12320ABRoa 
+{ 
+	 left: 277px; 
+	 top: 305px; 
+	 position: absolute; 
+	 width: 738px;
+	 height: 252px;
+	 z-index:90;
+} 
+
+ #Polygon1 
+{ 
+	 left: 592px; 
+	 top: 528px; 
+	 position: absolute; 
+	 width: 30px;
+	 height: 28px;
+	 z-index:91;
+} 
+
+ #Polygon1copy 
+{ 
+	 left: 627px; 
+	 top: 528px; 
+	 position: absolute; 
+	 width: 30px;
+	 height: 28px;
+	 z-index:92;
+} 
+
+ #Polygon1copy2 
+{ 
+	 left: 663px; 
+	 top: 528px; 
+	 position: absolute; 
+	 width: 30px;
+	 height: 28px;
+	 z-index:93;
+} 
+
+ #Polygon1copy3 
+{ 
+	 left: 700px; 
+	 top: 528px; 
+	 position: absolute; 
+	 width: 30px;
+	 height: 28px;
+	 z-index:94;
+} 
+
+ #Polygon1copy4 
+{ 
+	 left: 735px; 
+	 top: 528px; 
+	 position: absolute; 
+	 width: 30px;
+	 height: 28px;
+	 z-index:95;
+} 
+
+ #VectorSmartObject_14 
+{ 
+	 left: 607px; 
+	 top: 205px; 
+	 position: absolute; 
+	 width: 76px;
+	 height: 76px;
+	 z-index:96;
+} 
+
+ #Bg_1 
+{ 
+	 left: 0px; 
+	 top: 50px; 
+	 position: absolute; 
+	 width: 1280px;
+	 height: 61px;
+	 z-index:97;
+} 
+
+ #Shape4 
+{ 
+	 left: 1178px; 
+	 top: 62px; 
+	 position: absolute; 
+	 width: 58px;
+	 height: 37px;
+	 z-index:98;
+} 
+
+ #Bgcopy 
+{ 
+	 left: 0px; 
+	 top: -11px; 
+	 position: absolute; 
+	 width: 1280px;
+	 height: 61px;
+	 z-index:99;
+} 
+
+ #Layer10 
+{ 
+	 left: -87px; 
+	 top: 25px; 
+	 position: absolute; 
+	 width: 1374px;
+	 height: 24px;
+	 z-index:100;
+} 
+
+ #Layer11 
+{ 
+	 left: 133px; 
+	 top: 15px; 
+	 position: absolute; 
+	 width: 154px;
+	 height: 22px;
+	 z-index:101;
+} 
+
+ #Rectangle1_0 
+{ 
+	 left: 48px; 
+	 top: 4px; 
+	 position: absolute; 
+	 width: 252px;
+	 height: 42px;
+	 z-index:102;
+} 
+
+ #Shape1 
+{ 
+	 left: 263px; 
+	 top: 8px; 
+	 position: absolute; 
+	 width: 28px;
+	 height: 33px;
+	 z-index:103;
+} 
+
+ #CallUs01234567890 
+{ 
+	 left: 867px; 
+	 top: 18px; 
+	 position: absolute; 
+	 width: 366px;
+	 height: 14px;
+	 z-index:104;
+} 
+
+ #Shape1_0 
+{ 
+	 left: 1024px; 
+	 top: 15px; 
+	 position: absolute; 
+	 width: 4px;
+	 height: 19px;
+	 z-index:105;
+} 
+
+ #Shape1copy 
+{ 
+	 left: 1120px; 
+	 top: 15px; 
+	 position: absolute; 
+	 width: 4px;
+	 height: 19px;
+	 z-index:106;
+} 
+
+ #highresalpha 
+{ 
+	 left: 50px; 
+	 top: 68px; 
+	 position: absolute; 
+	 width: 199px;
+	 height: 21px;
+	 z-index:107;
+} 

@@ -1,0 +1,103 @@
+#bottom-footer {
+  height: 60px;
+  background-color: #000000;
+  padding-top: 20px;
+}
+
+td{
+
+  color: #4C4C4C;
+  font-weight: bold;
+  font-size: 120%;
+
+}
+#footer> .table{
+    background-color: #0B0B0B;
+    margin-bottom: 0px;
+  cursor: pointer;
+  }
+
+
+.starRating:not(old){
+  display        : inline-block;
+  width          : 7.5em;
+  height         : 1.5em;
+  overflow       : hidden;
+  vertical-align : bottom;
+  cursor: pointer;
+}
+
+.starRating:not(old) > input{
+  margin-right : -100%;
+  opacity      : 0;
+  cursor: pointer;
+}
+
+.starRating:not(old) > label{
+  display         : block;
+  float           : right;
+  position        : relative;
+  background      : url('../photo/star-off.svg');
+  background-size : contain;
+  cursor: pointer;
+}
+
+.starRating:not(old) > label:before{
+  content         : '';
+  display         : block;
+  width           : 1.5em;
+  height          : 1.5em;
+  background      : url('../photo/star-on.svg');
+  background-size : contain;
+  opacity         : 0;
+  transition      : opacity 0.2s linear;
+  cursor: pointer;
+}
+
+.starRating:not(old) > label:hover:before,
+.starRating:not(old) > label:hover ~ label:before,
+
+.starRating:not(:hover) > :checked ~ label:before{
+  opacity : 1;
+  cursor: pointer;
+}
+
+
+
+#title{
+background-image:url(../images/Masking.png);
+
+z-index:35;
+}
+
+.jumbotron{
+  background-color: #ffffff;
+}
+
+#bg{
+  background-color: #f0f0e8;
+}
+
+.row-no-padding   >[class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+  margin-left: 0;
+  margin-right: 0;
+
+}
+
+
+.iconfonts{
+  font-size:20px;
+  font-color:black;
+  font-weight:600;
+}
+
+
+a.default{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #333;
+}
