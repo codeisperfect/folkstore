@@ -19,5 +19,5 @@
    </p>
   </div>
 <?php
-  load_view("template/popup.php",array("name"=>"login","body"=>"template/login.php","title"=>"Store Login","bodyinfo"=>array("defval"=>$_POST,"msg"=>($pageinfo["login"]["ec"]<0?"Error":"")  )));
+  load_view("template/popup.php",array("name"=>"login","body"=>"template/login.php","title"=>"Store Login","bodyinfo"=>array("defval"=>$_POST,"msg"=>($login["ec"]<0?$_ginfo["error"][$login["ec"]]:"")  )));
 ?>

@@ -3,10 +3,17 @@ include "includes/app.php";
 $pageinfo=array("login"=>array("ec"=>1));
 if(ispost("login")){
 	$pageinfo["login"]=handle_request("login",$_POST);
-	echo $pageinfo["login"]["ec"];
 }
 
+
+$pageinfo["dispbody"]=false;
+
+
 load_view("template/top.php");
+
+
+print_r($pageinfo["login"]);
+
 
 load_view("template/navbar.php");
 
@@ -19,10 +26,10 @@ load_view("search.php");
 <?php
 
 
-load_view("template/footer.php");
+load_view("template/footer.php",$pageinfo);
 
 
-load_view("template/bottom.php",array("dispbody"=>false));
+load_view("template/bottom.php",$pageinfo);
 
 
 
