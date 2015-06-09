@@ -8,7 +8,7 @@ class User extends Sql{
 		return get($t,$dataANames);
 	}
 	public static function atypes(){
-		return array('a'=>'Admin','u'=>'User','f'=>"Free user");
+		return array('a'=>'Admin','u'=>'User','s'=>"Store");
 	}
 	public static function isValidType($t){
 		return in_array($t, self::accountTypes()  );

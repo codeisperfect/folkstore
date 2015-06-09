@@ -42,6 +42,39 @@ var mohit={
 			this.alerthelp.alertShowButton.click();
 			$("#confirmText").html(""+text);
 			$("#confirmconfirm").attr("onclick",f);
+		},
+		help:{
+			init:function(type){
+				mohit.alerthelp.init();
+				mohit.alerthelp.alertShowButton.setAttribute("data-target","#"+type+"PopupId");
+			},
+			isdisplayed:function (type){
+				var temp=$("#"+type+"PopupId")[0].style.display;
+				return (temp!="none" && temp!="" );
+			}
+		},
+		popup:function(data){
+			if(this.help.isdisplayed("popup"))
+				return;
+			this.help.init("popup");
+			this.alerthelp.alertShowButton.click();
+			$("#popupText").html(""+data["body"]);
+			$("#popupTitle").html(""+data["title"]);
+		},
+		popup_id:function(id,data){
+			if(this.help.isdisplayed(id))
+				return;
+			this.help.init(id);
+			this.alerthelp.alertShowButton.click();
+			if(data==null)
+				data={};
+			mergeifunset(data,{"body":null,"title":null});
+			var idmaps={"body":"Text","title":"Title"};
+			for(var i in idmaps){
+				if(data[i]!=null){
+					$("#"+id+idmaps[i]).html(data[i]);
+				}
+			}
 		}
 	};
 

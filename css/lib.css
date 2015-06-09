@@ -31,7 +31,12 @@ table.p20px > tbody >  tr > td {
 	clear:both;
 }
 
+
 a{
 	cursor: pointer;
+}
+
+a.default{
 	text-decoration: none;
 }
+

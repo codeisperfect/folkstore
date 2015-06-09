@@ -1,65 +1,24 @@
-  <div class="jumbotron text-center" id="title">
-    <div style="background: url(images/Image_6.png) no-repeat center center ;background-size:100% auto;"  >
-     <div>
-
-        <div align="left" style="margin-left:30px;">
-          <div style="padding-top:25px;" >
-          <img src="images/highresalpha.png" class="img-responsive"  >
-          </div>
-        </div>
-
-       <div class="container" style="height:auto;" >
-        <div style="margin-top:100px;" >
-          <img src="images/VectorSmartObject_14.png" />
-        </div>
-        <div style="margin-top:14px;" >
-          <img src='photo/vendername.png' />
-        </div>
-        <div style="color:white;font-size:20px;font-weight:550;" >
-          Shop 123, 20 A B road, Opposite XYZ Bank,
-          <br>
-          juhu, Mumbai - 440005, Maharastra, India
-          <br>
-          Latittude 5678.444 | Langitude 678.44
-          <br>
-          Landline +91 456 678 67889 | Whatapp: +91 7672 2736 76 | Mobile: +91 567 588 6666
-          <br>
-          Email: mohitsaini1196@gmail.com
-        </div>
-        <p style="" >
-         <span class="starRating">
-          <input id="rating5" type="radio" name="rating" value="5" />
-          <label for="rating5">
-           5
-          </label>
-          <input id="rating4" type="radio" name="rating" value="4" />
-          <label for="rating4">
-           4
-          </label>
-          <input id="rating3" type="radio" name="rating" value="3"  />
-          <label for="rating3">
-           3
-          </label>
-          <input id="rating2" type="radio" name="rating" value="2" />
-          <label for="rating2">
-           2
-          </label>
-          <input id="rating1" type="radio" name="rating" value="1" />
-          <label for="rating1">
-           1
-          </label>
-         </span>
-        </p>
-        <div>
-          <div class="btn"  style="border-radius:0px;outline:0;border:0;background:url(images/layer_86.png) center center no-repeat;background-color:#bbbb00;color:black;font-size:20px;font-weight:600;padding:15px;padding-left:30px;padding-right:30px;" >Know More</div>
-        </div>
-        <div style="height:100px;" ></div>
-       </div>
-     </div>
+  <div align=center style="padding:20px;margin-top:100px;" >
+    <div class="container" >
+    <?php
+      for($i=0;$i<5;$i++){
+    ?>
+    <div class="row-fluid" align=center style="padding:0px;margin:0px;" >
+      <?php
+        for($j=0;$j<3;$j++){
+      ?>
+      <div class="col-md-4" style="padding:0px;margin:0px;" >
+        <div class='oneproduct' ></div>
+      </div>
+      <?php
+        }
+      ?>
+    </div>
+    <?php
+      }
+    ?>
     </div>
   </div>
-
-
 
 
   <div class="container text-center">

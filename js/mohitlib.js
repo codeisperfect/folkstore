@@ -434,3 +434,13 @@ function extend(jobj,cfunc){
 }
 
 
+setifunset=function(data,key,val){
+	if(typeof(data[key])=='undefined')
+		data[key]=val;
+}
+
+mergeifunset=function(dict1,dict2){
+	for(i in dict2){
+		setifunset(dict1,i,dict2[i]);
+	}
+}

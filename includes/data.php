@@ -10,6 +10,7 @@ $view_default=array(
 		),
 	'template/bottom.php'=>array(
 		"needpopup"=>true,
+		"dispbody"=>true
 		),
 	"template/mselect.php"=>array(
 		"name"=>"",
@@ -31,6 +32,16 @@ $view_default=array(
 		"label"=>"",
 		"name"=>"",
 		"options"=>array("Yes","No")
+		),
+	"template/popup.php"=>array(
+		"title"=>"this popup is made in India",
+		"body"=>"",
+		"bodyinfo"=>array(),
+		"footer"=>"",
+		"footerinfo"=>array(),
+		"name"=>"",
+		'stylebody'=>'',
+		'stylemain'=>'min-width:200px;'
 		)
 	);
 

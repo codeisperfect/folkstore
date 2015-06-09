@@ -1,0 +1,23 @@
+  <div id="footer" style="background-color:#0B0B0B;padding-top:45px;padding-bottom:45px;" >
+    <div class="row-fluid"  >
+      <?php
+        for($i=0;$i<6;$i++){
+       ?>
+      <div class="col-md-2" align="center" style="padding:0px;margin:0px;" >
+        <a class="default" ><?php echo "Name".$i; ?></a>
+      </div>
+       <?php
+        }
+      ?>
+    </div>
+  </div>
+  <div id="bottom-footer">
+   <p class="text-muted text-center bottom">
+    <span class="glyphicon glyphicon-copyright-mark">
+    </span>
+    <b>FOLKSTORE</b>
+   </p>
+  </div>
+<?php
+  load_view("template/popup.php",array("name"=>"login","body"=>"template/login.php","title"=>"Store Login","bodyinfo"=>array("defval"=>$_POST,"msg"=>($pageinfo["login"]["ec"]<0?"Error":"")  )));
+?>

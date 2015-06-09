@@ -19,7 +19,7 @@
      <form class="navbar-form navbar-left" role="search">
       <div class="form-group">
        <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search" />
+        <input type="text" class="form-control" placeholder="Search Whatever you want" autofocus />
         <span class="input-group-btn">
          <button class="btn btn-default" type="button">
           <span class="glyphicon glyphicon-search">
@@ -39,8 +39,8 @@
        </a>
       </li>
       <li>
-       <a href="http://www.facebook.com">
-        Login/Register
+       <a onclick='mohit.popup_id("login");' >
+        Login
        </a>
       </li>
      </ul>
