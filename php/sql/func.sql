@@ -1,0 +1,1 @@
+DELIMITER $$ CREATE FUNCTION strSplit(x VARCHAR(65000), delim VARCHAR(12), pos INTEGER) RETURNS VARCHAR(65000) BEGIN DECLARE output VARCHAR(65000); SET output = REPLACE(SUBSTRING(SUBSTRING_INDEX(x, delim, pos) , LENGTH(SUBSTRING_INDEX(x, delim, pos - 1)) + 1) , delim , ''); IF output = '' THEN SET output = null; END IF; RETURN output; END $$

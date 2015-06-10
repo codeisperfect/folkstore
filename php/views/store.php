@@ -16,15 +16,19 @@
           <img src='photo/vendername.png' />
         </div>
         <div style="color:white;font-size:20px;font-weight:550;" >
-          Shop 123, 20 A B road, Opposite XYZ Bank,
+          <?php
+            echo $sinfo["address"];
+          ?>
           <br>
-          juhu, Mumbai - 440005, Maharastra, India
+          <?php echo rquery("{landmark}, {cityname} - {zipcode}, {statename}, {countryname} ",$sinfo); ?>
           <br>
-          Latittude 5678.444 | Langitude 678.44
+          <?php echo rquery("Latittude {lat} | Langitude {lan}",$sinfo); ?>
           <br>
-          Landline +91 456 678 67889 | Whatapp: +91 7672 2736 76 | Mobile: +91 567 588 6666
+          <?php
+            echo rquery("Landline {mobile} | Whatapp: {whatsapp} | Mobile: {mobile}",$sinfo);
+          ?>
           <br>
-          Email: mohitsaini1196@gmail.com
+          Email: <?php echo $sinfo["email"]; ?>
         </div>
         <p style="" >
          <span class="starRating">
@@ -95,14 +99,14 @@ Recalling Vajpayee's support to Bangladesh's freedom struggle, Modi said Bharati
      </div>
     </p>
     <p>
-     Our company is very Stud
+     We deals in <?php echo implode(", ",explode("\n",$sinfo["dealsin"])); ?>
     </p>
    </div>
    <div class="col-xs-12 col-sm-4" style="border-right: 1px solid #dddddd">
     <img class="img-circle" src="images/VectorSmartObject_11.png" />
     <p>
      <div class='iconfonts' >
-      1975
+      <?php echo $sinfo["year"]; ?>
      </div>
     </p>
     <p>
@@ -113,7 +117,7 @@ Recalling Vajpayee's support to Bangladesh's freedom struggle, Modi said Bharati
     <img class="img-circle" src="images/VectorSmartObject_13.png" />
     <p>
      <div class='iconfonts' >
-      Automobile
+      <?php echo $sinfo["shopcatgname"]; ?>
      </div>
     </p>
     <p>
@@ -139,15 +143,20 @@ Recalling Vajpayee's support to Bangladesh's freedom struggle, Modi said Bharati
   The function was attended by Premier Sheikh Hasina,
         </div>
         <?php
-        for($j=0;$j<4;$j++){
+        $sdetails=$sinfo["pan_details"];
+        $ind=0;
+        for($j=0;$j<5;$j++){
         ?>
         <div class="row" style="margin:10px;" >
         <?php
-          for($i=0;$i<2;$i++){
+          for($i=0;$i<2 && $ind<count($sdetails); $i++){
         ?>
           <div class="col-sm-6"  style="margin-top:20px;margin-bottom:20px;" >
-            <b>Pan Details</b><br>
-            rtyuiop erty 5678 
+            <b><?php echo $sdetails[$ind]["key"]; ?></b><br>
+            <?php 
+              echo $sdetails[$ind]["val"];
+              $ind++;
+             ?>
           </div>
         <?php
           }

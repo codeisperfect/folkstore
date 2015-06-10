@@ -36,18 +36,18 @@ for i in range(1,ws.nrows):
 
 for ii in range(len(data)):
 	i=data[ii];
-	setifunset(city,i[5].title(),len(city))
-	setifunset(state,i[6].title(),len(state))
-	setifunset(country,i[8].title(),len(country))
-	setifunset(companyname,i[15].title(),len(companyname))
-	setifunset(shopcatgs,i[20].title(),len(shopcatgs))
+	setifunset(city,i[5].title(),len(city)+1)
+	setifunset(state,i[6].title(),len(state)+1)
+	setifunset(country,i[8].title(),len(country)+1)
+	setifunset(companyname,i[15].title(),len(companyname)+1)
+	setifunset(shopcatgs,i[20].title(),len(shopcatgs)+1)
 
 	brand_list_list=[23,24,25];
 	for jjn in brand_list_list:
 		jj=i[jjn].split("\n");
 		brandid_list=[];
 		for j in jj:
-			setifunset(brands,j.title(),len(brands))
+			setifunset(brands,j.title(),len(brands)+1)
 			brandid_list.append(str(brands[j.title()]));
 		data[ii][jjn]=','.join(brandid_list);
 
@@ -60,13 +60,16 @@ for ii in range(len(data)):
 	data[ii][8]=country[i[8].title()];
 	data[ii][15]=companyname[i[15].title()];
 	data[ii][20]=shopcatgs[i[20].title()];
+	row=data[ii];
+	rowc=[row[1]+" "+row[2]]+[row[13]]+[row[0]]+row[3:13]+row[14:17]+[row[17]+" "+row[18]]+row[19:]
+	data[ii]=rowc;
 
 
 
 
 
 
-outp={"stores":data,"city":dict2list(city),"state":dict2list(state),"country":dict2list(country),"companyname":dict2list(companyname),"shopcatgs":dict2list(shopcatgs),"brands":dict2list(brands)};
+outp={"stores":data,"city":dict2list(city),"state":dict2list(state),"country":dict2list(country),"companytype":dict2list(companyname),"shopcatgs":dict2list(shopcatgs),"brands":dict2list(brands)};
 
 writefd( open("json_data.json",'w'), json.dumps(outp) );
 

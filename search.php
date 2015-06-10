@@ -22,8 +22,6 @@ load_view("search.php");
 
 
 load_view("template/footer.php",$pageinfo);
-
-
 load_view("template/bottom.php",$pageinfo);
 
 

@@ -197,6 +197,24 @@ var button={
 		$(obj).siblings().repClass("btn-primary","btn-default");
 		$(obj).parent().children("input[type=hidden]").val($(obj).attr("data-val"));
 	},
+	addmore:function(obj,id,selector,call_each,maxlimit){
+		if(maxlimit==null || $("#"+id).find(selector).length<maxlimit ){
+			$("#"+id).append( $("#"+id).find(selector)[0].outerHTML );
+			var allmatch=$("#"+id).find(selector);
+			if(call_each!=null){
+				for(var i=0;i<allmatch.length;i++){
+					call_each(allmatch[i],i);
+				}
+			}
+		}
+	},
+	remadded:function(obj,id,selector,minlimit,call_each){
+		if($("#"+id).find(selector).length>minlimit && minlimit>0){
+			var allm=$("#"+id).find(selector);
+			var lastchild=allm[allm.length-1];
+			$(lastchild).remove();
+		}
+	}
 };
 
 
