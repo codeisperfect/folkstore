@@ -1,18 +1,13 @@
 <?php
 include "includes/app.php";
-$pageinfo=array("login"=>array("ec"=>1));
-if(ispost("login")){
-	$pageinfo["login"]=handle_request("login",$_POST);
-}
+$pageinfo=array();
 
+$pageinfo["login"]=Funs::loginaction();
 
 $pageinfo["dispbody"]=false;
 
 
 load_view("template/top.php");
-
-
-print_r($pageinfo["login"]);
 
 
 load_view("template/navbar.php");
