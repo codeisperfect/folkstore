@@ -1,6 +1,5 @@
 				<div class='leftinfo' style='padding:0px;' align=left >
-					<form method=post  enctype="multipart/form-data" onsubmit="return submitForm(this);" >
-
+					<form method=post  enctype="multipart/form-data" onsubmit="return submitForm(this);" action="store.php?tab=uploadproduct" >
  						<?php
 							Disp::takeinp_v2(array('ph'=>'Title of product','style'=>'margin-bottom:-20px;','name'=>'title' ));
 						?>
@@ -26,8 +25,12 @@
 								</tr>
 							</tbody>
 						</table>
-						<button type="button" onclick="button.addmore(this,'venderuploadpics','tr',funcs.f1,5);" class="btn btn-default" >Add</button>
-						<button type="button" onclick="button.remadded(this,'venderuploadpics','tr',1);" class="btn btn-default" >Remove</button>
+						<button type="button" onclick="button.addmore(this,'venderuploadpics','tr',funcs.f1,5);" class="btn btn-default" >
+ 							Add
+ 						</button>
+						<button type="button" onclick="button.remadded(this,'venderuploadpics','tr',1);" class="btn btn-default" >
+							Remove
+						</button>
 						<div style='padding:5px;' >
 							<button type=submit class='btn btn-default' style='margin:4px;' >Post</button>
 						</div>

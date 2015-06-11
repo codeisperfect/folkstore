@@ -9,8 +9,8 @@ function dt($tn){
 
 
 function drop_tables(){
-//	$tl=array("users","stores","city","state","country","companytype","shopcatgs","brands");
-	$tl=array("users","stores");
+	$tl=array("users","stores","city","state","country","companytype","shopcatgs","brands");
+//	$tl=array("users","stores");
 	foreach($tl as $i=>$val){
 		dt($val);
 	}
@@ -50,7 +50,7 @@ function make_table(){
 
 
 
-drop_tables();
+//drop_tables();
 make_table();
 
 closedb();
