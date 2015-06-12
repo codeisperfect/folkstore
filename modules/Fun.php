@@ -198,7 +198,7 @@ abstract class Fun{
 					$ec=$temp['ec'];
 					break;
 				}
-				else
+				else if($temp["fn"]!="")
 					$outp[]=$temp['fn'];
 			}
 		}
@@ -426,6 +426,16 @@ abstract class Fun{
 				break;
 			}
 			$outp["files"][]=$uo["fn"];
+		}
+		return $outp;
+	}
+	public static function smallimg($imgarr,$w,$h){
+		$outp=array();
+		foreach($imgarr as $i=>$val){
+			$ext=pathinfo($val,PATHINFO_EXTENSION);
+			$fn="data/files/".Fun::getuploadfilename($ext,'small'.$i);
+			resizeimg($val,$fn, $w, $h);
+			$outp[]=$fn;
 		}
 		return $outp;
 	}

@@ -47,7 +47,7 @@ $view_default=array(
 	);
 
 
-$_ginfo["attributes"]=array("name","value","style","class","id","type","ph","onclick","dc",'rows',"disabled","align","valign","action","autofocus","style","rel","type","href","value","src");
+$_ginfo["attributes"]=array("name","value","style","class","id","type","ph","onclick","dc",'rows',"disabled","align","valign","action","autofocus","style","rel","type","href","value","src","height","width");
 $_ginfo["attrs_shortcut"]=array("ph"=>"placeholder","dc"=>"data-condition");
 
 $_ginfo["action_constrain"]=array(

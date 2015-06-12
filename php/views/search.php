@@ -1,16 +1,36 @@
   <div align=center style="padding:20px;margin-top:100px;" >
     <div class="container" >
     <?php
-      for($i=0;$i<5;$i++){
+      $pnum=0;
+      for($i=0;true && $pnum<count($sresults) ;$i++){
     ?>
     <div class="row-fluid" align=center style="padding:0px;margin:0px;" >
       <?php
-        for($j=0;$j<3;$j++){
+        for($j=0;$j<3 && $pnum<count($sresults) ;$j++){
+          $row=$sresults[$pnum];
       ?>
       <div class="col-md-4" style="padding:0px;margin:0px;" >
-        <div class='oneproduct' ></div>
+        <div class='oneproduct'  >
+          <div align="center" >
+            <div style="height:280px;width:280px;overflow-y:hidden;margin-top:15px;" >
+            <?php
+              resimg($row["simages"][0],array("class"=>"","style"=>"max-width:100%;max-height:100%;"));
+            ?>
+            </div>
+            <div align="center" >
+              <span style="text-transform: uppercase;font-size:20px;font-weight:600;color:#555555;" ><?php echo $row["title"]; ?></span><br>
+              <span><?php echo $row["abouttext_short"]; ?></span><br>
+              <div>
+                <span style='font-weight:600;' >Rs. <?php echo ceil($row['price']*(100-$row['sale'])/100.0); ?></span>
+                <span style='text-decoration:line-through;' >Rs. <?php echo $row['price'] ?></span>  
+                Flat <span style='color:green;font-weight:600;' ><?php echo  $row['sale'] ; ?></span> % Off
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <?php
+          $pnum++;
         }
       ?>
     </div>

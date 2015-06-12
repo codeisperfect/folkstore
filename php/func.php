@@ -178,6 +178,7 @@
 			case "png": imagepng($image_p,$tosave,0);break;
 			default: imagejpeg($image_p,$tosave,100);
 		}
+		chmod($tosave,0777);
 	}
 	function genfilearr($name,$len,$start=1){
 		$outp=array();
@@ -222,6 +223,24 @@
 		}
 		return $str;
 	}
+	function myexplode($n,$st){
+		$temp=explode($n,$st);
+		return (count($temp)==1 && $temp[0]=="") ? array() : $temp;
+	}
+	function smilymsg($data){
+		$data=str_replace("<3", ":heart:",$data );
+		$data=htmlspecialchars($data);
+		$exp=array(':)'=>'smile.png',':-)'=>'smile.png',':p'=>'p.png',':P'=>'p.png',':/'=>'angry.png',';)'=>'eye.png',':('=>'sad.png',':o'=>'question.png',':O'=>'question.png','<3'=>'heart.png',':*'=>'kiss.png',':-*'=>'kiss.png',':heart:'=>'heart.png');
+		$exp1=array("\n"=>"<br>", "  "=>"&nbsp;&nbsp;", "\t"=>"&nbsp;&nbsp;&nbsp;");
+		foreach($exp1 as $key=>$val){
+			$data=str_replace($key, $val ,$data);
+		}
+		foreach($exp as $key=>$val){
+			$data=str_replace($key,"<img  style='margin-bottom:-4px;' src='photo/usefull/".$val."' />"  ,$data);
+		}
+		return $data;
+	}
+
 
 
 ?>

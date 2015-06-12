@@ -106,8 +106,12 @@ a.default{
 div.oneproduct{
   width:300px;
   height:400px;
-  border:solid gray 1px;
   margin:20px;
   float:left;
+  cursor: pointer;
+
 }
 
+div.oneproduct:hover{
+background-color: #eeeeee;
+}

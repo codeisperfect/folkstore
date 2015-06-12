@@ -8,10 +8,10 @@ class Store{
 			$temp['utime']=time();
 
 			$ufiles=Fun::uploadfiles($_FILES["uploadpics"],array( ) );
-			print_r($ufiles);
-
-			if($ufiles["ec"]>0)
+			if($ufiles["ec"]>0){
 				$temp["images"]=implode(",",$ufiles["outp"]);
+				$temp["simages"]=implode(",",Fun::smallimg( Fun::myexplode(",",$temp["images"]), 300, 300));
+			}
 			$odata=Sqle::insertVal("products",$temp);
 		}
 		else
