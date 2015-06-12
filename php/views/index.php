@@ -59,7 +59,7 @@
    <div class="col-xs-12">
    </div>
    <div class="col-xs-12 col-sm-6" style="border-right: 1px solid #dddddd">
-    <img class="img-circle" src="images/VectorSmartObject_9.png" />
+    <img class="img-circle" src="image_home/VectorSmartObject_3.png" />
     <p>
      <div class='iconfonts' style='text-transform:uppercase;' >
       Digital Helpline
@@ -72,7 +72,7 @@
     </p>
    </div>
    <div class="col-xs-12 col-sm-6" style="">
-    <img class="img-circle" src="images/VectorSmartObject_11.png" />
+    <img class="img-circle" src="image_home/VectorSmartObject_6.png" />
     <p>
      <div class='iconfonts' style='text-transform:uppercase;' >
       Online Market Place
@@ -115,7 +115,7 @@ But After all we blv that <b style='font-size:20px;font-weight:800;' >Customer i
 
   <div class="jumbotron text-center">
 
-   <div class="container">
+   <div class="container-fluid" style="padding:3%;" >
    <?php
     for($j=0;$j<2;$j++){
    ?>

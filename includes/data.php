@@ -85,4 +85,12 @@ $_ginfo["error"]=array(
 	"1"=>"Positive"
 );
 
+$_ginfo["sorting"]=array(
+	"Sort by price [ low to high ]"=>"",
+	"Sort by price [ high to low ]"=>"",
+	"Sort by vender rating"=>"",
+	"Sort by last uploaded"=>"",
+	);
+
+
 ?>

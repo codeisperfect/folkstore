@@ -66,8 +66,8 @@ td{
 
 #title{
 background-image:url(../images/Masking.png);
-
 z-index:35;
+padding-bottom: 0px;
 }
 
 .jumbotron{
@@ -109,7 +109,6 @@ div.oneproduct{
   margin:20px;
   float:left;
   cursor: pointer;
-
 }
 
 div.oneproduct:hover{
