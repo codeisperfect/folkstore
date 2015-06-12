@@ -1,23 +1,22 @@
 <?php
 class Store{
-
-
-	function uploadpics($data){
-		$need=array("title","abouttext","price","sale","images","status","aclosedate","addinfo","warranty","deptt");
-		$ec=1;
-		$odata=0;
-		if(!Fun::isAllSet($need,$data))
-			$ec=-9;
-		else if(!User::isloginas('s'))
-			$ec=-8;
-		else{
-			$temp=Fun::getflds($need,$data);
+	function uploadproduct($data){
+		$outp=array("ec"=>1,"data"=>0);
+		if( isset($_FILES["uploadpics"])){
+			$temp=Fun::getflds(getmyneed("uploadproduct"),$data);
 			$temp['sid']=User::loginId();
 			$temp['utime']=time();
+
+			$ufiles=Fun::uploadfiles($_FILES["uploadpics"],array( ) );
+			print_r($ufiles);
+
+			if($ufiles["ec"]>0)
+				$temp["images"]=implode(",",$ufiles["outp"]);
 			$odata=Sqle::insertVal("products",$temp);
 		}
-		return array('ec'=>$ec,'data'=>$odata);
+		else
+			$outp["ec"]=-23;
+		return $outp;
 	}
-
 }
 ?>

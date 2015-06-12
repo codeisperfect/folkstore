@@ -1,10 +1,17 @@
 <?php
 include "includes/app.php";
+
 $sid=0+get("sid",User::loginId());
+
+print_r($uploadproduct);
+
+
 $sinfo=Sqle::getRow("select shopcatgs.name as shopcatgname,  users.name,users.email,stores.*,city.name as cityname,state.name as statename,country.name as countryname from stores left join users on users.id=stores.sid left join city on city.id=stores.cityid left join state on state.id=stores.stateid left join country on stores.countryid=country.id left join shopcatgs on shopcatgs.id=stores.shopcatg where stores.sid=? limit 1",'i',array(&$sid));
 
 // select sid,brand2wheel,group_concat(brands.name) from stores left join brands on ( concat(",",brand2wheel,",") like concat("%,",brands.id,",%") ) group by sid;
 Fun::redirectinv($sinfo==null);
+
+
 
 
 

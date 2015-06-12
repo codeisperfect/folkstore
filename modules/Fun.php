@@ -165,7 +165,7 @@ abstract class Fun{
 		$fn=$timenow."_".(User::loginId())."_".Fun::encode2(User::loginId()).$change.".".$ext;
 		return $fn;
 	}
-	public static function uploadfile($data,$const,$change='') {
+	public static function uploadfile($data,$const,$change=''){
 		$outp=array();
 		$ext=pathinfo($data['name'],PATHINFO_EXTENSION);
 		if(isset($const["maxsize"]) && $data["size"]>$const["maxsize"])
@@ -414,6 +414,18 @@ abstract class Fun{
 		$outp=array();
 		foreach($data as $i=>$row){
 			$outp[$row[$key]]=$row;
+		}
+		return $outp;
+	}
+	public static function upload_mul_files($data,$const=array()){
+		$outp=array("files"=>array(),"ec"=>1);
+		foreach($data as $i=>$val){
+			$uo=Fun::uploadfile($val,$const);
+			if($uo["ec"]<0){
+				$outp["ec"]=$uo["ec"];
+				break;
+			}
+			$outp["files"][]=$uo["fn"];
 		}
 		return $outp;
 	}

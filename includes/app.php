@@ -1,4 +1,5 @@
 <?php
+
 	include_once( 'includes/setting.php' ) ;
 	include_once( 'includes/data.php' ) ;
 	include_once( 'includes/password.php' ) ;
@@ -26,9 +27,10 @@
 	else if($config["session_start"]!=0)
 		session_id($config["set_session_id"]);
 
-	include_once( 'includes/data_loadonce.php' ) ;
+	include_once( 'includes/data_loadonce.php' );
 	include_once('includes/initdb.php');
 	include "php/display.php";
 	include "php/specf_display.php";
+	include "includes/ccode.php";
 
 ?>

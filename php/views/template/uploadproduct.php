@@ -1,5 +1,5 @@
 				<div class='leftinfo' style='padding:0px;' align=left >
-					<form method=post  enctype="multipart/form-data" onsubmit="return submitForm(this);" action="store.php?tab=uploadproduct" >
+					<form method=post  enctype="multipart/form-data" onsubmit="return submitForm(this);" action="" >
  						<?php
 							Disp::takeinp_v2(array('ph'=>'Title of product','style'=>'margin-bottom:-20px;','name'=>'title' ));
 						?>

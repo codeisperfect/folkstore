@@ -1,4 +1,5 @@
 <?php
+
 $_ginfo=array();
 
 $_ginfo["default_user_type"]='s';
@@ -55,13 +56,11 @@ $_ginfo["action_constrain"]=array(
 	"logout"=>array("need"=>array()),
 	"sendmsg"=>array("need"=>array("msg","rid","type","formid"),"users"=>"au","isfilter"=>"sisi"),
 	"loadmsg"=>array("need"=>array("uid","num_msg","minid","maxid","is_load_newer"),"users"=>"au","isfilter"=>""),
+	"uploadproduct"=>array("need"=>array("title","abouttext","price","sale","addinfo"))
 );
 
 
 $_ginfo["autoinsert"]=array(
-	"addcontent"=>array("fixed"=>array("time","uid"),"table"=>"content"),
-	"addform"=>array("fixed"=>array("time"),"table"=>"forms"),
-	"addexercise"=>array("fixed"=>array("time","uid"),"table"=>"exercise")
 );
 
 
@@ -82,6 +81,7 @@ $_ginfo["error"]=array(
 	"-20"=>"You Cannot generate link",
 	"-21"=>"Your account deactivated",
 	"-22"=>"Nobody is login",
+	"-23"=>"File not uploaded",
 	"1"=>"Positive"
 );
 

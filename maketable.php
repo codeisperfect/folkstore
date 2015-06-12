@@ -44,7 +44,11 @@ function make_table(){
 	echo Sql::query("CREATE TABLE msg (id int NOT NULL AUTO_INCREMENT, sid int, rid int, aid int, msgid int, isseen varchar(1), PRIMARY KEY ( id) ) ");
 	echo Sql::query("CREATE TABLE msgdata (id int NOT NULL AUTO_INCREMENT, msg varchar(1000), type varchar(1), formid int, time int, PRIMARY KEY ( id) ) ");
 
-
+	echo Sql::query("CREATE TABLE products (id int NOT NULL AUTO_INCREMENT,sid int,title varchar(100),abouttext varchar(10000),price int,sale int,images varchar(500),status varchar(1),aclosedate int,addinfo varchar(1000),warranty varchar(1000),deptt int,PRIMARY KEY ( id) ) ");
+	echo Sql::query("ALTER TABLE products add utime int");
+	echo Sql::query("ALTER TABLE products add bwimages varchar(500)");
+	echo Sql::query("ALTER TABLE products add simages varchar(500)");
+	echo Sql::query("ALTER TABLE products add sbwimages varchar(500)");
 }
 
 

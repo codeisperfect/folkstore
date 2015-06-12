@@ -105,6 +105,8 @@
 			$a=new Userc();
 		else if(User::isloginas('a'))
 			$a=new Admin();
+		else if(User::isloginas('s'))
+			$a=new Store();
 		else
 			$a=$b;
 		$outp=array("ec"=>-11);
