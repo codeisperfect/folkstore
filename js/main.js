@@ -3,7 +3,9 @@ $( document ).ready(function(){
 	  $('[data-toggle="tooltip"]').tooltip()
 	});
 	$('.dropdown-menu').click(function(e) {
-		e.stopPropagation();
+		if(!(this.getAttribute("data-closeonclick")=="true")){
+			e.stopPropagation();
+		}
 	});
 	if(typeof(runonload)!='undefined')
 		runonload();

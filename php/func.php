@@ -206,7 +206,10 @@
 			return $arr[0];
 	}
 	function curfilename(){
-		return firstelm(explode(".",lastelm(explode("/",$_SERVER['SCRIPT_FILENAME']))));
+		$cfname=firstelm(explode(".",lastelm(explode("/",$_SERVER['SCRIPT_FILENAME']))));
+		if($cfname=='')
+			$cfname="index";
+		return $cfname;
 	}
 	function dict2keyval($arr){
 		$outp=array();

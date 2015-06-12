@@ -1,3 +1,28 @@
+  <div class="jumbotron text-center" id="title">
+    <div style="background: url(images/Image_6.png) no-repeat center center ;background-size:100% auto;"  >
+     <div style="min-height:400px;" >
+
+
+        <div align="left" style="margin-left:30px;">
+          <div style="padding-top:25px;" >
+          <img src="images/highresalpha.png" class="img-responsive"  >
+          </div>
+        </div>
+
+       <div class="container" style="height:auto;" >
+        <div style="margin-top:100px;" >
+          <img src="images/VectorSmartObject_14.png" />
+        </div>
+        <div style="margin-top:14px;" >
+          <img src='photo/vendername.png' />
+        </div>
+       </div>
+     </div>
+    </div>
+  </div>
+
+
+
   <div align=center style="padding:20px;margin-top:100px;" >
     <div class="container" >
     <?php

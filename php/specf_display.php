@@ -10,4 +10,9 @@
 	</div>
 <?php
 	}
+	function lia($name,$params){
+		opent("li");
+		ocloset("a",$name,$params);
+		closet("li");
+	}
 ?>

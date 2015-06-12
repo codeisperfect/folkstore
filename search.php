@@ -16,8 +16,6 @@ foreach($sresults as $i=>$row){
 	foreach($need_to_conv as $j){
 		$row[$j]=smilymsg($row[$j]);
 	}
-	
-
 	$sresults[$i]=$row;
 }
 $pageinfo["sresults"]=$sresults;

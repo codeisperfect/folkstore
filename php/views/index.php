@@ -1,59 +1,40 @@
   <div class="jumbotron text-center" id="title">
-    <div style="background: url(images/Image_6.png) no-repeat center center ;background-size:100% auto;"  >
-     <div>
+    <div style="background: url(image_home/shutterstockFC00020.png) no-repeat center center ;background-size:100% auto;"  >
+     <div style='min-height:550px;' >
 
         <div align="left" style="margin-left:30px;">
           <div style="padding-top:25px;" >
           <img src="images/highresalpha.png" class="img-responsive"  >
           </div>
         </div>
-
-       <div class="container" style="height:auto;" >
-        <div style="margin-top:100px;" >
-          <img src="images/VectorSmartObject_14.png" />
+       <div class="container" style="height:auto;" align="center" >
+        <div style='color:white;margin-top:200px;max-width:800px;'  >
+          <div class="row-fluid"  >
+            <form action="search.php" >
+              <div class="col-md-5" style="margin:0px;padding:1px;" >
+               <div class="input-group"  >
+                <input type="text" class="form-control " placeholder="Search Localoty" style='font-size:20px;padding:5px;height:auto;padding-left:14px;' id="localitysearch" name="locsearch" >
+                <div class="input-group-btn" style='' >
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style='height:41px;' ><span class="caret"></span></button>
+                  <ul class="dropdown-menu pull-right" role="menu" data-closeonclick="true" >
+                    <?php
+                    foreach($topcity as $name){
+                      lia($name,array("onclick"=>'$("#localitysearch").val(this.innerHTML);'));
+                    }
+                    ?>
+                  </ul>
+                </div>
+               </div>
+              </div>
+              <div class="col-md-5" style="margin:0px;padding:1px;"  >
+                <input  class='form-control indexsearchinput ' placeholder="Search Product" name="prosearch" />
+              </div>
+              <div class="col-md-2" align=left style="margin:0px;padding:0px;" >
+                <button class='btn btn-success indexsearchbutton' style="width:100%;" type="submit" >Search</button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div style="margin-top:14px;" >
-          <img src='photo/vendername.png' />
-        </div>
-        <div style="color:white;font-size:20px;font-weight:550;" >
-          Shop 123, 20 A B road, Opposite XYZ Bank,
-          <br>
-          juhu, Mumbai - 440005, Maharastra, India
-          <br>
-          Latittude 5678.444 | Langitude 678.44
-          <br>
-          Landline +91 456 678 67889 | Whatapp: +91 7672 2736 76 | Mobile: +91 567 588 6666
-          <br>
-          Email: mohitsaini1196@gmail.com
-        </div>
-        <p style="" >
-         <span class="starRating">
-          <input id="rating5" type="radio" name="rating" value="5" />
-          <label for="rating5">
-           5
-          </label>
-          <input id="rating4" type="radio" name="rating" value="4" />
-          <label for="rating4">
-           4
-          </label>
-          <input id="rating3" type="radio" name="rating" value="3"  />
-          <label for="rating3">
-           3
-          </label>
-          <input id="rating2" type="radio" name="rating" value="2" />
-          <label for="rating2">
-           2
-          </label>
-          <input id="rating1" type="radio" name="rating" value="1" />
-          <label for="rating1">
-           1
-          </label>
-         </span>
-        </p>
-        <div>
-          <div class="btn"  style="border-radius:0px;outline:0;border:0;background:url(images/layer_86.png) center center no-repeat;background-color:#bbbb00;color:black;font-size:20px;font-weight:600;padding:15px;padding-left:30px;padding-right:30px;" >Know More</div>
-        </div>
-        <div style="height:100px;" ></div>
        </div>
      </div>
     </div>
@@ -65,125 +46,74 @@
   <div class="container text-center">
    <div class="col-xs-12">
     <div align="center" style="" >
-     <img src='images/ABOUTVENDOR.png' class="img-responsive" />
+     <img src='image_home/ABOUTUS.png' class="img-responsive" />
     </div>
      <div style="margin-top:20px;margin-bottom:20px;" >
       <img  src="images/seprator.png"  />
      </div>
    </div>
    <div align="center" >
-     Dhaka: Prime Minister Narendra Modi on Sunday received on behalf of Atal Bihari Vajpayee Bangladesh's prestigious Liberation War Honour for his "active role" in the country's freedom struggle, saying the BJP veteran was an "inspiration" to him and other political workers.
-
-President Abdul Hamid handed over the Bangladesh Liberation War Honour to Modi at a glittering ceremony at Bangabhaban, the President's house, as 90-year-old Vajpayee is ailing and unable to travel.
-
-The function was attended by Premier Sheikh Hasina, her Cabinet colleagues, eminent citizens, diplomats and top Bangladeshi officials.
-
-Modi, while receiving the honour, hailed Vajpayee's leadership, saying the "great leader" was a source of inspiration for political workers including him.
-
-"This day is a matter of great pride for all Indians that a great leader like Atal Bihari Vajpayee is being honoured. He dedicated his entire life to the service of the country and he fought for the rights of the common man and from a political point of view he was an inspiration for political workers like myself," Modi said after receiving the award.
-
-Recalling Vajpayee's support to Bangladesh's freedom struggle, Modi said Bharatiya Jana Sangh, under Vajpayee's leadership had organised a Satyagraha supporting the Liberation War and as a "young volunteer" he had come from his village to attend i
+     Folkstore is unique idea, we can add some more text here. store is unique idea, we can add some more text here. store is unique idea, we can add some more text here. store is unique idea, we can add some more text here. store is unique idea, we can add some more text here. store is unique idea, we can add some more text here. store is unique idea, we can add some more text here. 
    </div>
    <div style="height:100px;" ></div>
    <div class="col-xs-12">
    </div>
-   <div class="col-xs-12 col-sm-4" style="border-right: 1px solid #dddddd">
+   <div class="col-xs-12 col-sm-6" style="border-right: 1px solid #dddddd">
     <img class="img-circle" src="images/VectorSmartObject_9.png" />
     <p>
-     <div class='iconfonts' >
-      Public Limited Company
+     <div class='iconfonts' style='text-transform:uppercase;' >
+      Digital Helpline
      </div>
     </p>
     <p>
-     Our company is very Stud
+     Our company is very Stud  ed over the Bangladesh Liberation War Honour to Modi at a glittering ceremony at Bangabhaban, the President's house, as 90-year-old Vajpayee is ailing and unable to travel.
+
+  The function was attended by Premier Sheikh Hasi
     </p>
    </div>
-   <div class="col-xs-12 col-sm-4" style="border-right: 1px solid #dddddd">
+   <div class="col-xs-12 col-sm-6" style="">
     <img class="img-circle" src="images/VectorSmartObject_11.png" />
     <p>
-     <div class='iconfonts' >
-      1975
+     <div class='iconfonts' style='text-transform:uppercase;' >
+      Online Market Place
      </div>
     </p>
     <p>
-     Text goes here
-    </p>
-   </div>
-   <div class="col-xs-12 col-sm-4">
-    <img class="img-circle" src="images/VectorSmartObject_13.png" />
-    <p>
-     <div class='iconfonts' >
-      Automobile
-     </div>
-    </p>
-    <p>
-     Text goes here
+      ed over the Bangladesh Liber esh Liberation War Honour to Modi at a glittering ceremony at Bangabhaban, the President's house, as 90-year-old Vajpayee i ation War Honour
     </p>
    </div>
   </div>
 
+  <div class="container text-center" style="margin-top:90px;" >
+   <div align="center" >
+       over the Bangladesh Liber esh Liberation War Honour to Modi at a glittering ceremony at Bangabhaban, the President's house, as 90-year-old Vajpayee i ation War Hon  assured early resolution of Delhi's garbage crisis. Jung met three mayors and commissioners of municipal corporations and informed them that the government of Delhi will release Rs 493 crore to pay salaries of striking sanitation workers.
 
-  <div class="container-fluid" style="margin-top:100px;" >
-    <div class="row" style="background-color: #f0f0e8;" >
-     <div class="col-xs-6" style="padding:20px;padding-right:0px;" >
-      <div style="padding:5%;" >
-        <div align="left" >
-          <img src="images/StatutoryDetail.png" class="img-responsive"  >
-        </div>
-        <div align="left" style="margin-top:15px;margin-bottom:15px;" >
-          <img src="images/layer_42.png" class="img-responsive" > 
-        </div>
-        <div style="margin-bottom:30px;" >
-          This is some text ed over the Bangladesh Liberation War Honour to Modi at a glittering ceremony at Bangabhaban, the President's house, as 90-year-old Vajpayee is ailing and unable to travel.
+He appealed to the Mayors to persuade employees to call off the strike in the interest of the citizens of Delhi.
 
-  The function was attended by Premier Sheikh Hasina,
-        </div>
-        <?php
-        for($j=0;$j<4;$j++){
-        ?>
-        <div class="row" style="margin:10px;" >
-        <?php
-          for($i=0;$i<2;$i++){
-        ?>
-          <div class="col-sm-6"  style="margin-top:20px;margin-bottom:20px;" >
-            <b>Pan Details</b><br>
-            rtyuiop erty 5678 
-          </div>
-        <?php
-          }
-        ?>
-        </div>
-        <?php
-        }
-        ?>
-      </div>
+Amid worsening garbage crisis in East Delhi due to agitation by sanitation workers since June 2, mayors of three BJP-ruled munici .. 
+But After all we blv that <b style='font-size:20px;font-weight:800;' >Customer is King</b> & we proved that too.
+
+   </div>
+  </div>
+
+
+  <div class="container-fluid" style="margin-top:100px;padding:3%;" >
+    <div class="row" style="background-color:#f0f0e8;" >
+     <div align="center" style='padding-top:20px;' >
+      <?php
+       resimg("image_home/VectorSmartObject_1.png",array("style"=>"margin-top:20px;margin-bottom:20px;"));
+       resimg("image_home/HowWeWork.png",array("style"=>"margin-top:30px;margin-bottom:30px;"));
+       resimg("image_home/layer_28.png",array("style"=>"margin-top:15px;margin-bottom:15px;"));
+      ?>
      </div>
-     <div class="col-xs-6" style="padding-left:0px;" >
-      <img src="res/image1.png" class="img-responsive" />
+     <div class="col-xs-12" style="padding:20px;background-color:#4b8eb4;" >
+      <img src="image_home/Inforgraphic.png" class="img-responsive" />
      </div>
     </div>
   </div>
 
 
   <div class="jumbotron text-center">
-   <div class="container">
-    <div align="center" >
-    <?php
-      resimg("images/VectorSmartObject_0.png",array("style"=>"margin-top:10px;margin-bottom:20px;"));
-      resimg("images/Industry.png");
-      resimg("images/seprator.png",array("style"=>"margin-top:15px;margin-bottom:15px;"));
-    ?>
-    </div>
-    <div style="margin-bottom:30px;" >
-     Modi on Sunday received on behalf of Atal Bihari Vajpayee Bangladesh's prestigious Liberation War Honour for his "active role" in the country's freedom struggle, saying the BJP veteran was an "inspiration" to him and other political workers.
-
-President Abdul Hamid handed over the Bangladesh Liberation War Honour to Modi at a glittering ceremony at Bangabhaban, the President's house, as 90-year-old Vajpayee is ailing and unable to travel.
-
-The function was attended by Premier Sheikh Hasina, her Cabinet colleagues, eminent citizens, diplomats and top Bangladeshi officials.
-    </div>
-   </div>
-
-
 
    <div class="container">
    <?php
@@ -206,24 +136,5 @@ The function was attended by Premier Sheikh Hasina, her Cabinet colleagues, emin
     <?php
     }
     ?>
-   </div>
-  </div>
-  <div class="jumbotron text-center">
-   <div class="container"  >
-    <?php
-      opent("div",array("align"=>"center"));
-      resimg("images/VectorSmartObject.png",array("style"=>"margin-bottom:30px;"));
-      resimg("images/serviceAreas.png");
-      resimg("images/seprator.png",array("style"=>"margin-top:20px;margin-bottom:20px;"));
-      closet("div");
-    ?>
-    <div>
-     
-The function was attended by Premier Sheikh Hasina, her Cabinet colleagues, eminent citizens, diplomats and top Bangladeshi officials.
-
-Modi, while receiving the honour, hailed Vajpayee's leadership, saying the "great leader" was a source of inspiration for political workers including him.
-
-"This day is a matter of great pride for all Indians that a great leader like Atal Bihari Vajpayee is being honoured. He dedicated his entire life to the service of the country and he fought for the rights of the common man and from a poli
-    </div>
    </div>
   </div>

@@ -5,13 +5,14 @@ Fun::issetlogout();
 
 $pageinfo=array();
 $pageinfo["login"]=Funs::loginaction();
+$pageinfo["topcity"]=array("Delhi","Jaipur","Mumbai");
 
 
 load_view("template/top.php");
 
 load_view("template/navbar.php");
 
-load_view("index.php");
+load_view("index.php",$pageinfo);
 
 ?>
 

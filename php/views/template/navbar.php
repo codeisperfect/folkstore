@@ -22,7 +22,7 @@
      <form class="navbar-form navbar-left" role="search" >
       <div class="form-group">
        <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search Whatever you want" autofocus />
+        <input type="text" class="form-control" placeholder="Search Whatever you want" <?php echo ($page=="index"?"":"autofocus"); ?> />
         <span class="input-group-btn">
          <button class="btn btn-default" type="button">
           <span class="glyphicon glyphicon-search">
@@ -75,7 +75,7 @@
      <form class="navbar-form navbar-left" role="search" >
       <div class="form-group">
        <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search Whatever you want" autofocus />
+        <input type="text" class="form-control" placeholder="Search Whatever you want" <?php echo ($page=="index"?"":"autofocus"); ?>  />
         <span class="input-group-btn">
          <button class="btn btn-default" type="button">
           <span class="glyphicon glyphicon-search">

