@@ -125,3 +125,19 @@ font-size:20px;padding:5px;padding-left:14px;height:auto;
 font-size:20px;padding:5px;height:auto;
 }
 
+img.productimgothers{
+  width:85px;
+  height:85px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.2s;
+}
+
+
+
+img.productimgothers:hover{
+  margin:-3px;
+  width:91px;
+  height: 91px;
+}
+

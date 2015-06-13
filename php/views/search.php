@@ -50,7 +50,7 @@
           <div align="center" >
             <div style="height:280px;width:280px;overflow-y:hidden;margin-top:15px;" >
             <?php
-              resimg($row["simages"][0],array("class"=>"","style"=>"max-width:100%;max-height:100%;"));
+              resimg($row["dispimg"],array("class"=>"","style"=>"max-width:100%;max-height:100%;"));
             ?>
             </div>
             <div align="center" >

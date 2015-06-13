@@ -12,10 +12,6 @@ Fun::redirectinv($sinfo==null);
 
 
 
-
-
-$pageinfo=array();
-$pageinfo["login"]=Funs::loginaction();
 if($sinfo["address2"]!="")
 	$sinfo["address"].=("<br>".$sinfo["address2"]);
 $sinfo["lat"]=number_format($sinfo["lat"],3);

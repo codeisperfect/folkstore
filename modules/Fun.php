@@ -429,11 +429,11 @@ abstract class Fun{
 		}
 		return $outp;
 	}
-	public static function smallimg($imgarr,$w,$h){
+	public static function smallimg($imgarr,$w,$h,$change='small'){
 		$outp=array();
 		foreach($imgarr as $i=>$val){
 			$ext=pathinfo($val,PATHINFO_EXTENSION);
-			$fn="data/files/".Fun::getuploadfilename($ext,'small'.$i);
+			$fn="data/files/".Fun::getuploadfilename($ext,$change.$i);
 			resizeimg($val,$fn, $w, $h);
 			$outp[]=$fn;
 		}

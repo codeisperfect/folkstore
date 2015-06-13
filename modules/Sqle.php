@@ -76,7 +76,9 @@ class Sqle extends Sql{
 		return self::query($query,$str,$params);
 	}
 
-	public static function getRow($query,$param_string="",$param_array=array()){
+	public static function getRow($query,$param_string="",$param_array=array(),$directnull=false){
+		if($directnull)
+			return null;
 		$qoutp=Sql::getArray($query,$param_string,$param_array);
 		if(count($qoutp)>0)
 			return $qoutp[0];

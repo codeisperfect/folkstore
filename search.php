@@ -1,8 +1,5 @@
 <?php
 include "includes/app.php";
-$pageinfo=array();
-
-$pageinfo["login"]=Funs::loginaction();
 
 $pageinfo["dispbody"]=false;
 
@@ -16,6 +13,9 @@ foreach($sresults as $i=>$row){
 	foreach($need_to_conv as $j){
 		$row[$j]=smilymsg($row[$j]);
 	}
+	$row["dispimg"]=count($row['simages'])>0?$row["simages"][0]:"photo/noimg.jpg";
+
+
 	$sresults[$i]=$row;
 }
 $pageinfo["sresults"]=$sresults;

@@ -396,6 +396,13 @@ function timenow(){
 	return Math.floor(new Date().getTime()/1000);
 }
 
+function time(ms){
+	var tms=new Date().getTime();
+	if(ms==null)
+		return Math.floor(tms/1000.0);
+	else
+		return tms;
+}
 
 
 var inpmultiple={

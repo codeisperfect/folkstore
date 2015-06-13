@@ -11,11 +11,6 @@
   </div>
   <div style="border-bottom:solid black 3px;margin-top:-10px;padding-bottom:10px;padding-right:5px;" align="right" >
     <div style="float:right;width:230px;" >
-      <select class='form-control' >
-      <?php
-        disp_olist(arr2option(array_keys($_ginfo["sorting"])));
-      ?>
-      </select>
     </div>
     <?php
       clear();
@@ -24,55 +19,64 @@
 
 
 
+  <div id="test1" >Need to remove it</div>
   <div align=center style="padding:20px;margin-top:5px;" >
     <div class="container" >
-    <div class="row-fluid" align="center" style="padding:0px;margin:0px;" >
-      <div class="col-md-4"  >
-        <div  style="width:300px;margin:20px;float:left;" align="left" >
-          <span style="text-transform:uppercase;font-weight:600;font-size:20px;" >Products</span>
-        </div>
-      </div>
-      <?php
-        clear();
-      ?>
-    </div>
-    <?php
-      $pnum=0;
-      for($i=0;true && $pnum<count($sresults) ;$i++){
-    ?>
-    <div class="row-fluid" align=center style="padding:0px;margin:0px;" >
-      <?php
-        for($j=0;$j<3 && $pnum<count($sresults) ;$j++){
-          $row=$sresults[$pnum];
-      ?>
-      <div class="col-md-4" style="padding:0px;margin:0px;" >
-        <div class="oneproduct" >
-          <div align="center" >
-            <div style="height:280px;width:280px;overflow-y:hidden;margin-top:15px;" >
+      <div class="row" align=center style="padding:0px;margin:0px;" >
+        <div class="col-md-6" style="padding:0px;margin:0px;" >
+          <div align="left" style="position:relative;"   >
             <?php
-              resimg($row["simages"][0],array("class"=>"","style"=>"max-width:100%;max-height:100%;"));
+            //
+              resimg($pinfo["dispimg"],array("class"=>"img-responsive  img-thumbnail img-rounded","style"=>"max-width:100%;max-height:100%;","id"=>"dispproductimg","onmouseenter"=>"imagezoom.mousein(this,event);", "onmouseout"=>"imagezoom.mouseout(this,event);","onmousemove"=>"imagezoom.mousemove(this,event);" ));
+//              resimg($pinfo["dispimg"],array("class"=>"","style"=>"max-width:100%;max-height:100%;position:relative;top:0px;margin-top:-500px;","id"=>"dispproductimg"));
             ?>
+            <div style="position:absolute;width:100px;height:100px;background-color:rgba(255,255,255,0.5);top:100px;left:100px;border:solid #bbbbbb 1px;" onmousemove="imagezoom.zoomermove(this,event);"  id="zoomer" ></div>
+          </div>
+          <div align="left" >
+            <table class='p5px' ><tr>
+              <?php
+                for($i=0;$i<count($pinfo["simages"]);$i++){
+                  opent("td");
+                  resimg($pinfo["simages"][$i],array("class"=>"productimgothers","data-toopen"=>$pinfo["mimages"][$i],"onclick"=>"openproductimg(this);" ));
+                  closet("td");
+                }
+              ?>
+            </tr></table>
+          </div>
+        </div>
+
+        <div class="col-md-6" style="padding:0px;margin:0px;position:relative;"  >
+          <div style="position:absolute;display:none;" id="showzoomimg" >
+            <div align="left" >
+              <?php
+                resimg($pinfo["dispimg"]);
+              ?>
             </div>
-            <div align="center" >
-              <span style="text-transform: uppercase;font-size:20px;font-weight:600;color:#555555;" ><?php echo $row["title"]; ?></span><br>
-              <span><?php echo $row["abouttext_short"]; ?></span><br>
-              <div>
-                <span style='font-weight:600;' >Rs. <?php echo ceil($row['price']*(100-$row['sale'])/100.0); ?></span>
-                <span style='text-decoration:line-through;' >Rs. <?php echo $row['price'] ?></span>  
-                Flat <span style='color:green;font-weight:600;' ><?php echo  $row['sale'] ; ?></span> % Off
-              </div>
+          </div>
+          <div style="margin:20px;" >
+            <div align="left" style="" >
+              <span style="text-transform: uppercase;font-size:20px;font-weight:600;color:#555555;" ><?php echo $pinfo["title"]; ?></span><br><br>
+              <span style='color:#666666;' ><?php echo $pinfo["abouttext_short"]; ?>action against him for tarnishing Bihar's image by obtaining fake degrees, hurled eggs and sandals at him. They also tried to blacken his face.
+
+The students accosted the Delhi Police team accompanying Tomar when it was entering the TMBU campus on Friday evening.
+
+Bhagalpur SP Vivek Singh said some students tried to raise a ruckus near the university on Friday evening but police dispersed them. No arrest was made, the SP added.
+
+Earlier on Friday morning, Tomar was brought to Munger by the Delhi Police team in connection with the fake degree case. </span><br>
+              <?php
+                opent("table",array("class"=>"table-hover p10px "));
+                foreach($dispinfo as $i=>$info){
+                  opent("tr");
+                  ocloset("th",$i,array());
+                  ocloset("td",$info,array());
+                  closet("tr");
+                }
+                closet("table");
+              ?>
             </div>
           </div>
         </div>
       </div>
-      <?php
-          $pnum++;
-        }
-      ?>
-    </div>
-    <?php
-      }
-    ?>
     </div>
   </div>
 

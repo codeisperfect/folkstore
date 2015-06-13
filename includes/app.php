@@ -20,7 +20,7 @@
 
 	if(!isset($config))
 		$config=array();
-	$config=Fun::mergeifunset($config,array("session_start"=>true,"set_session_id"=>0));
+	$config=Fun::mergeifunset($config,array("session_start"=>true,"set_session_id"=>0,"addccode"=>true));
 
 	if($config["session_start"])
 		@session_start();
@@ -31,6 +31,7 @@
 	include_once('includes/initdb.php');
 	include "php/display.php";
 	include "php/specf_display.php";
-	include "includes/ccode.php";
-
+	if($config["addccode"]){
+		include "includes/ccode.php";
+	}
 ?>

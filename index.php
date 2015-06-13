@@ -3,8 +3,6 @@ include "includes/app.php";
 
 Fun::issetlogout();
 
-$pageinfo=array();
-$pageinfo["login"]=Funs::loginaction();
 $pageinfo["topcity"]=array("Delhi","Jaipur","Mumbai");
 
 
