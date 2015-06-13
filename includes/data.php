@@ -93,4 +93,8 @@ $_ginfo["sorting"]=array(
 	);
 
 
+$_ginfo["searchimg_size"]=300;
+$_ginfo["productimg_size"]=600;
+
+
 ?>

@@ -4,7 +4,7 @@
 
         <div align="left" style="margin-left:30px;">
           <div style="padding-top:25px;" >
-          <img src="images/highresalpha.png" class="img-responsive"  >
+          <a href="<?php echo HOST; ?>" ><img src="images/highresalpha.png" class="img-responsive" ></a>
           </div>
         </div>
 

@@ -3,7 +3,7 @@
      <div style="min-height:480px;background-color:rgba(0,25,0,0.7);" >
         <div align="left" style="margin-left:30px;">
           <div style="padding-top:25px;" >
-          <img src="images/highresalpha.png" class="img-responsive"  >
+            <a href="<?php echo HOST; ?>" ><img src="images/highresalpha.png" class="img-responsive" ></a>
           </div>
         </div>
      </div>
@@ -27,10 +27,10 @@
           <div align="left" style="position:relative;"   >
             <?php
             //
-              resimg($pinfo["dispimg"],array("class"=>"img-responsive  img-thumbnail img-rounded","style"=>"max-width:100%;max-height:100%;","id"=>"dispproductimg","onmouseenter"=>"imagezoom.mousein(this,event);", "onmouseout"=>"imagezoom.mouseout(this,event);","onmousemove"=>"imagezoom.mousemove(this,event);" ));
+              resimg($pinfo["dispimg"],array("class"=>"img-responsive  img-thumbnail img-rounded dispproductimg","style"=>'',"id"=>"dispproductimg","onmouseenter"=>"imagezoom.mousein(this,event);", "onmouseout"=>"imagezoom.mouseout(this,event);","onmousemove"=>"imagezoom.mousemove(this,event);" ));
 //              resimg($pinfo["dispimg"],array("class"=>"","style"=>"max-width:100%;max-height:100%;position:relative;top:0px;margin-top:-500px;","id"=>"dispproductimg"));
             ?>
-            <div style="position:absolute;width:100px;height:100px;background-color:rgba(255,255,255,0.5);top:100px;left:100px;border:solid #bbbbbb 1px;" onmousemove="imagezoom.zoomermove(this,event);"  id="zoomer" ></div>
+            <div style="position:absolute;width:100px;height:100px;background-color:rgba(255,255,255,0.5);top:100px;left:100px;border:solid #bbbbbb 1px;display:none;" onmousemove="imagezoom.zoomermove(this,event);"  id="zoomer" ></div>
           </div>
           <div align="left" >
             <table class='p5px' ><tr>

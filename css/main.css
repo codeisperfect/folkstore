@@ -136,8 +136,14 @@ img.productimgothers{
 
 
 img.productimgothers:hover{
-  margin:-3px;
-  width:91px;
-  height: 91px;
+  margin:-6px;
+  width:97px;
+  height: 97px;
 }
 
+
+img.dispproductimg{
+  max-width:100%;
+  max-height:100%;
+  cursor:url(photo/mohit.jpg),auto;
+}

@@ -19,12 +19,12 @@
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-     <form class="navbar-form navbar-left" role="search" >
+     <form class="navbar-form navbar-left" role="search" action="search.php" >
       <div class="form-group">
        <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search Whatever you want" <?php echo ($page=="index"?"":"autofocus"); ?> />
+        <input type="text" class="form-control" name="search" placeholder="Search Whatever you want" <?php echo ($page=="index"?"":"autofocus"); ?> />
         <span class="input-group-btn">
-         <button class="btn btn-default" type="button">
+         <button class="btn btn-default" type="submit">
           <span class="glyphicon glyphicon-search">
           </span>
          </button>
@@ -72,10 +72,10 @@
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-     <form class="navbar-form navbar-left" role="search" >
+     <form class="navbar-form navbar-left" role="search" action="search.php" >
       <div class="form-group">
        <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search Whatever you want" <?php echo ($page=="index"?"":"autofocus"); ?>  />
+        <input type="text" class="form-control" name="search" placeholder="Search Whatever you want" <?php echo ($page=="index"?"":"autofocus"); ?> />
         <span class="input-group-btn">
          <button class="btn btn-default" type="button">
           <span class="glyphicon glyphicon-search">

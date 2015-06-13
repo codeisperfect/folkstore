@@ -49,6 +49,8 @@ function make_table(){
 	echo Sql::query("ALTER TABLE products add bwimages varchar(500)");
 	echo Sql::query("ALTER TABLE products add simages varchar(500)");
 	echo Sql::query("ALTER TABLE products add mimages varchar(500)");
+	echo Sql::query("ALTER TABLE products add bigimages varchar(500)");
+
 	echo Sql::query("ALTER TABLE products add sbwimages varchar(500)");
 }
 

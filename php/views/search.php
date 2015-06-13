@@ -2,8 +2,8 @@
     <div style="background: url(image_search/shutterstockFC00016.jpg) no-repeat center center ;background-size:100% auto;"  >
      <div style="min-height:480px;background-color:rgba(0,25,0,0.7);" >
         <div align="left" style="margin-left:30px;">
-          <div style="padding-top:25px;" >
-          <img src="images/highresalpha.png" class="img-responsive"  >
+         <div style="padding-top:25px;" >
+          <a href="<?php echo HOST; ?>" ><img src="images/highresalpha.png" class="img-responsive" ></a>
           </div>
         </div>
      </div>
@@ -46,14 +46,14 @@
           $row=$sresults[$pnum];
       ?>
       <div class="col-md-4" style="padding:0px;margin:0px;" >
-        <div class="oneproduct" >
+        <a href="<?php echo HOST."product.php?pid=".$row["id"]; ?>" ><div class="oneproduct" >
           <div align="center" >
             <div style="height:280px;width:280px;overflow-y:hidden;margin-top:15px;" >
             <?php
               resimg($row["dispimg"],array("class"=>"","style"=>"max-width:100%;max-height:100%;"));
             ?>
             </div>
-            <div align="center" >
+            <div align="center" style='color:#333;' >
               <span style="text-transform: uppercase;font-size:20px;font-weight:600;color:#555555;" ><?php echo $row["title"]; ?></span><br>
               <span><?php echo $row["abouttext_short"]; ?></span><br>
               <div>
@@ -63,7 +63,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div></a>
       </div>
       <?php
           $pnum++;

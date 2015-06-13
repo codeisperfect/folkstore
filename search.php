@@ -7,7 +7,7 @@ $sresults=Sql::getArray("select * from products ");
 foreach($sresults as $i=>$row){
 	$row["images"]=myexplode(",",$row["images"]);
 	$row["simages"]=myexplode(",",$row["simages"]);
-	$row["abouttext_short"]=Fun::maxspace($row["abouttext"],70);
+	$row["abouttext_short"]=Fun::maxspace($row["abouttext"],80);
 
 	$need_to_conv=array("title","abouttext","abouttext_short");
 	foreach($need_to_conv as $j){
