@@ -3,17 +3,14 @@
      <div style='min-height:550px;' >
 
         <div align="left" style="margin-left:30px;">
-          <div style="padding-top:25px;" >
-          <a href="<?php echo HOST; ?>" ><img src="images/highresalpha.png" class="img-responsive" ></a>
-          </div>
         </div>
        <div class="container" style="height:auto;" align="center" >
         <div style='color:white;margin-top:200px;max-width:800px;'  >
           <div class="row-fluid"  >
             <form action="search.php" >
-              <div class="col-md-5" style="margin:0px;padding:1px;" >
+              <div class="col-md-5" style="margin:0px;padding:0px;" >
                <div class="input-group"  >
-                <input type="text" class="form-control " placeholder="Search Localoty" style='font-size:20px;padding:5px;height:auto;padding-left:14px;' id="localitysearch" name="locsearch" >
+                <input type="text" class="form-control " placeholder="Search Localoty" style='padding:5px;height:41px;padding-left:14px;' id="localitysearch" name="locsearch" >
                 <div class="input-group-btn" style='' >
                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style='height:41px;' ><span class="caret"></span></button>
                   <ul class="dropdown-menu pull-right" role="menu" data-closeonclick="true" >
@@ -26,8 +23,8 @@
                 </div>
                </div>
               </div>
-              <div class="col-md-5" style="margin:0px;padding:1px;"  >
-                <input  class='form-control indexsearchinput ' placeholder="Search Product" name="prosearch" />
+              <div class="col-md-5" style="margin:0px;padding:0px;"  >
+                <input  class='form-control  ' placeholder="Search Product" name="prosearch" style='padding:5px;height:41px;padding-left:14px;' />
               </div>
               <div class="col-md-2" align=left style="margin:0px;padding:0px;" >
                 <button class='btn btn-success indexsearchbutton' style="width:100%;" type="submit" >Search</button>
