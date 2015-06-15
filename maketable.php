@@ -57,7 +57,7 @@ function make_table(){
 
 
 
-//drop_tables();
+drop_tables();
 make_table();
 
 closedb();

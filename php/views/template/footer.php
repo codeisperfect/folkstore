@@ -23,6 +23,6 @@
     load_view("template/popup.php",array("name"=>"login","body"=>"template/login.php","title"=>"Store Login","bodyinfo"=>array("defval"=>$_POST,"msg"=>($login["ec"]<0?$_ginfo["error"][$login["ec"]]:"")  )));
   }
   if($islogin=='s'){
-    load_view("template/popup.php",array("name"=>"uploadproduct","body"=>"template/uploadproduct.php","title"=>"Upload Product" ));
+    load_view("template/popup.php",array("name"=>"uploadproduct","body"=>"template/uploadproduct.php","title"=>"Upload Product","footer"=>"template/uploadproductfooter.php" ));
   }
 ?>

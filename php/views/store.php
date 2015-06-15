@@ -129,8 +129,8 @@ Recalling Vajpayee's support to Bangladesh's freedom struggle, Modi said Bharati
 
   <div class="container-fluid" style="margin-top:100px;" >
     <div class="row" style="background-color: #f0f0e8;" >
-     <div class="col-xs-6" style="padding:20px;padding-right:0px;" >
-      <div style="padding:5%;" >
+     <div class="col-xs-6" style="padding:20px;padding-right:0px;padding-bottom:0px;" >
+      <div style="padding:5%;padding-bottom:0px;" >
         <div align="left" >
           <img src="images/StatutoryDetail.png" class="img-responsive"  >
         </div>
@@ -147,11 +147,11 @@ Recalling Vajpayee's support to Bangladesh's freedom struggle, Modi said Bharati
         $ind=0;
         for($j=0;$j<5;$j++){
         ?>
-        <div class="row" style="margin:10px;" >
+        <div class="row" style="margin:10px;margin-bottom:0px;" >
         <?php
           for($i=0;$i<2 && $ind<count($sdetails); $i++){
         ?>
-          <div class="col-sm-6"  style="margin-top:20px;margin-bottom:20px;" >
+          <div class="col-sm-6"  style="margin-top:20px;margin-bottom:5px;" >
             <b><?php echo $sdetails[$ind]["key"]; ?></b><br>
             <?php 
               echo $sdetails[$ind]["val"];
@@ -167,7 +167,7 @@ Recalling Vajpayee's support to Bangladesh's freedom struggle, Modi said Bharati
         ?>
       </div>
      </div>
-     <div class="col-xs-6" style="padding-left:0px;" >
+     <div class="col-xs-6" style="padding-left:0px;" align="right" >
       <img src="res/image1.png" class="img-responsive" />
      </div>
     </div>

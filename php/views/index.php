@@ -1,4 +1,4 @@
-  <div class="jumbotron text-center" id="title">
+  <div class="jumbotron text-center" id="title"  >
     <div style="background: url(image_home/shutterstockFC00020.png) no-repeat center center ;background-size:100% auto;"  >
      <div style='min-height:550px;' >
 
