@@ -5,6 +5,7 @@ $_ginfo=array();
 $_ginfo["default_user_type"]='s';
 
 
+
 $view_default=array(
 	'template/top.php'=>array(
 		"title"=>"FolkStore",
