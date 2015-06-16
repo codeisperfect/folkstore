@@ -39,6 +39,9 @@ function make_table(){
 
 
 	echo Sql::query("CREATE TABLE stores (sid int, sdate int, address varchar(1000), address2 varchar(100), cityid int, stateid int, zipcode varchar(10), countryid int, landmark varchar(100), lat float, lan float, mobile varchar(20), whatsapp varchar(20), comptype int, ssaf varchar(100), ownername varchar(100), year int, shopcatg int, servrange varchar(100), dealsin varchar(200), brand2wheel varchar(100), brand3wheel varchar(100), brand4wheel varchar(100), bustruckaxel varchar(100), servicedelarea varchar(100), pan varchar(100), tin varchar(100), stex varchar(100), stype varchar(100), cstno varchar(100), vatno varchar(100), excisereg varchar(100), acard varchar(100), licence varchar(100), photo varchar(100)  ) ");
+	echo Sql::query("ALTER TABLE stores add aboutstore varchar(2000)");
+	echo Sql::query("ALTER TABLE stores add industorytext varchar(2000)");
+
 
 
 	echo Sql::query("CREATE TABLE msg (id int NOT NULL AUTO_INCREMENT, sid int, rid int, aid int, msgid int, isseen varchar(1), PRIMARY KEY ( id) ) ");

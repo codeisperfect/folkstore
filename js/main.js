@@ -223,3 +223,34 @@ if(true){
 	};
 
 }
+
+
+function animreplce(e,showid,allids){
+	if(e!=null)
+		e.preventDefault();
+	showid1=showid;
+	allids1=allids;
+	var otherlist=remove(allids,showid);
+	doforall(otherlist,function(elm){
+		$('#'+elm).removeClass().addClass('animated fadeOutDown');
+	});
+	setTimeout(function() {
+		doforall(otherlist,function(elm){
+			$('#'+elm).removeClass().hide();
+		});
+		$('#'+showid).show().addClass('animated fadeInUp');
+	}, 700);
+}
+
+
+function runonload(){
+	$(document).ready(function(){
+	  var allids=["login_form","forget_form","register_form"];
+	  doforall(allids,function(elm){
+	    $('.open_'+elm).click(function(e){
+	      animreplce(e,elm,allids);
+	    });
+	  });
+	});
+}
+

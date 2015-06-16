@@ -24,7 +24,7 @@ foreach($alls as $i=>$val){
 	echo $sh["ec"]."<br>";
 	if($sh["ec"]>0){
 		array_unshift($sa,$sh["data"]["id"]);
-		$query="insert into stores select * from (".Fun::makeDummyTableColumns(array($sa),null,'sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss')." ) temp";
+		$query="insert into stores (sid,sdate,address,address2,cityid,stateid,zipcode,countryid,landmark,lat,lan,mobile,whatsapp,comptype,ssaf,ownername,year,shopcatg,servrange,dealsin,brand2wheel,brand3wheel,brand4wheel,bustruckaxel,servicedelarea,pan,tin,stex,stype,cstno,vatno,excisereg,acard,licence,photo) select * from (".Fun::makeDummyTableColumns(array($sa),null,'sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss')." ) temp";
 		echo $query;
 		echo Sql::query($query);
 	}

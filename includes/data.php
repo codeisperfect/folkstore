@@ -13,6 +13,11 @@ $view_default=array(
 		"needpopup"=>true,
 		"dispbody"=>true
 		),
+	'template/login.php'=>array(
+		"msg"=>"",
+		"defval"=>null,
+		"defopen"=>"signup"
+		),
 	"template/mselect.php"=>array(
 		"name"=>"",
 		"data"=>"all",
@@ -42,7 +47,16 @@ $view_default=array(
 		"footerinfo"=>array(),
 		"name"=>"",
 		'stylebody'=>'',
-		'stylemain'=>'min-width:200px;'
+		'stylemain'=>'min-width:200px;',
+		'defaultfooter'=>true
+		),
+	"template/input.php"=>array(
+		"inpattr"=>array(),
+		"divattr"=>array(),
+		"label"=>"Enter",
+		"name"=>"",
+		"type"=>"",
+		"closediv"=>true
 		)
 	);
 

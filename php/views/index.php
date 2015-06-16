@@ -1,9 +1,7 @@
-  <div class="jumbotron text-center" id="title"  >
+  <div class="jumbotron text-center" id="title" >
     <div style="background: url(image_home/shutterstockFC00020.png) no-repeat center center ;background-size:100% auto;"  >
-     <div style='min-height:550px;' >
+     <div style='min-height:550px;' class="" >
 
-        <div align="left" style="margin-left:30px;">
-        </div>
        <div class="container" style="height:auto;" align="center" >
         <div style='color:white;margin-top:200px;max-width:800px;'  >
           <div class="row-fluid"  >

@@ -243,6 +243,14 @@
 		}
 		return $data;
 	}
+	function mergeifunset(&$a,$b){
+		$keys=array_keys($b);
+		for($i=0;$i<count($keys);$i++){
+			if(!isset($a[$keys[$i]]))
+				$a[$keys[$i]]=$b[$keys[$i]];
+		}
+		return $a;
+	}
 
 
 
