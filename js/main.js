@@ -1,4 +1,5 @@
 $( document ).ready(function(){
+	mylib();
 	$(function () {
 	  $('[data-toggle="tooltip"]').tooltip()
 	});
@@ -244,13 +245,11 @@ function animreplce(e,showid,allids){
 
 
 function runonload(){
-	$(document).ready(function(){
-	  var allids=["login_form","forget_form","register_form"];
-	  doforall(allids,function(elm){
-	    $('.open_'+elm).click(function(e){
-	      animreplce(e,elm,allids);
-	    });
-	  });
-	});
+  var allids=["login_form","forget_form","register_form"];
+  doforall(allids,function(elm){
+    $('.open_'+elm).click(function(e){
+      animreplce(e,elm,allids);
+    });
+  });
 }
 

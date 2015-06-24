@@ -1,7 +1,20 @@
 <?php
 ?>
 
+<<<<<<< HEAD
 <div style='' align="left" >
+=======
+<?php
+load_view("input2", array("dc"=>"email"));
+?>
+
+
+<?php
+if(false){
+
+?>
+<div style='width:400px;' align="left" >
+>>>>>>> 13141a1e02a4898dc86de3a0f41bd1dcf907d29a
 	<div style="display:none;" >
 		<div style='color:red;' ><?php echo $msg; ?></div>
 		<form  method=post onsubmit='return submitForm(this);' >
@@ -96,3 +109,7 @@
 	</form>
 	</div>
 </div>
+
+<?php
+}
+?>

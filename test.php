@@ -2,22 +2,28 @@
 include "includes/app.php";
 load_view("template/top.php");
 
-$a=Sqle::getArray("show columns from stores");
-$b=array();
-
-foreach($a as $i=>$row){
-	$b[]=array($row["Field"]);
-}
-
-Disp::disp_table($b);
 
 
 ?>
 <div align=center  >
-	<div style='width:600px;border:solid #dddddd 1px;padding:10px;margin:10px;' >
-	<?php
-	load_view("template/login.php",array("msg"=>""));
-	?>
+	<div style='padding:40px;margin:10px;' class="shadowbox" >
+
+<?php
+load_view("input2", array("dc"=>"email"));
+?>
+
+
+
+<form role="form" class="">
+  <div class="form-group has-feedback" >
+    <label class="control-label">Username</label>
+    <input type="text" class="form-control myform" placeholder="Username" />
+    <i class="form-control-feedback glyphicon "></i>
+  </div>
+</form>
+
+
+
 	</div>
 </div>
 <?php

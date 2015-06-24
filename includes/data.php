@@ -58,6 +58,16 @@ $view_default=array(
 		"name"=>"",
 		"type"=>"",
 		"closediv"=>true
+		),
+	"input2"=>array(
+		"inpattr"=>array(),
+		"divattr"=>array(),
+		"label"=>"Enter",
+		"name"=>"",
+		"type"=>"",
+		"closediv"=>true,
+		"dc"=>"simple",
+		"icon"=>""
 		)
 	);
 
