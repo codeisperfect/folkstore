@@ -1,6 +1,15 @@
 <?php
 ?>
 
+<?php
+load_view("input2", array("dc"=>"email"));
+?>
+
+
+<?php
+if(false){
+
+?>
 <div style='width:400px;' align="left" >
 	<div style="display:none;" >
 		<div style='color:red;' ><?php echo $msg; ?></div>
@@ -115,3 +124,7 @@
 	</div>
   </div>
 </div>
+
+<?php
+}
+?>

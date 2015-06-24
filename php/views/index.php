@@ -1,10 +1,11 @@
   <div class="jumbotron text-center" id="title" >
     <div style="background: url(image_home/shutterstockFC00020.png) no-repeat center center ;background-size:100% auto;"  >
-     <div style='min-height:550px;' class="" >
+     <div style='min-height:650px;' class="" >
 
        <div class="container" style="height:auto;" align="center" >
         <div style='color:white;margin-top:200px;max-width:800px;'  >
           <div class="row-fluid"  >
+            <div style="color:white;font-weight:900;font-size:45px;margin-bottom:50px;" >Create your online store.<br>It is free.</div>
             <form action="search.php" >
               <div class="col-md-5" style="margin:0px;padding:0px;" >
                <div class="input-group"  >
@@ -82,13 +83,17 @@
   <div class="container text-center" style="margin-top:90px;" >
    <div align="center" >
        over the Bangladesh Liber esh Liberation War Honour to Modi at a glittering ceremony at Bangabhaban, the President's house, as 90-year-old Vajpayee i ation War Hon  assured early resolution of Delhi's garbage crisis. Jung met three mayors and commissioners of municipal corporations and informed them that the government of Delhi will release Rs 493 crore to pay salaries of striking sanitation workers.
-
-He appealed to the Mayors to persuade employees to call off the strike in the interest of the citizens of Delhi.
-
-Amid worsening garbage crisis in East Delhi due to agitation by sanitation workers since June 2, mayors of three BJP-ruled munici .. 
-But After all we blv that <b style='font-size:20px;font-weight:800;' >Customer is King</b> & we proved that too.
-
    </div>
+  </div>
+  <div class="container-fluid" style="margin-top:100px;padding:3%;" >
+    <div class="row" style="background-color:#f0f0e8;border-radius:5px;" >
+       <div align="center" style='padding-top:20px;' >
+          <div class="titlebn" >FEATURES</div>
+          <?php
+            resimg("image_home/layer_28.png",array("style"=>"margin-top:15px;margin-bottom:15px;"));
+          ?>
+       </div>
+    </div>
   </div>
 
 

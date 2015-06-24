@@ -487,3 +487,56 @@ function doforall(list1,f){
 		f(list1[i]);
 	}
 }
+
+function haskey(arr, key){
+	return (typeof(arr[key])!='undefined');
+}
+
+
+function mylib(){
+	function textareainc(obj){
+		var allattrs=button.attrs(obj);
+		mergeifunset(allattrs,{'data-maxrows':5});
+		if($(obj).outerHeight() < obj.scrollHeight + parseFloat($(obj).css("borderTopWidth")) + parseFloat($(obj).css("borderBottomWidth"))) {
+			if($(obj).attr("rows")<allattrs["data-maxrows"])
+				$(obj).attr("rows",1+parseInt($(obj).attr("rows")));
+		};
+	}
+	$("textarea.autoinc").on("keyup keydown",function(){
+		textareainc(this);
+	});
+	var valid={
+		setautotick:function(selector, correct, incorrect){
+			var inpobj=$(selector);
+			var keyaction=function(e){
+				if(e.keyCode!=9 && e.keyCode!=13){
+					var signobj=inpobj.parent().find(".glyphicon");
+					var isvalid=-1;
+					if(inpobj.attr("data-condition")!=null && haskey(checkValidInput, inpobj.attr("data-condition")) ){
+						isvalid=checkValidInput[inpobj.attr("data-condition")](inpobj[0]);
+					}
+					if(signobj.length>0){
+						doforall([correct, incorrect], function(cname){
+							signobj.removeClass(cname);
+						});
+						if(isvalid>=0)
+							signobj.addClass(isvalid ? correct:incorrect );
+					}
+					signobj.parent().removeClass("has-error");
+				}
+			};
+			doforall(["keyup", "change"], function(i){
+				inpobj.on(i, keyaction);
+			});
+		},
+		resetinp:function (){
+			$("input").on("kepup keydown", function(e){
+				if(e.keyCode!=9 && e.keyCode!=13 ){
+					this.setCustomValidity("");
+				}
+			});
+		}
+	};
+	valid.resetinp();
+	valid.setautotick("input.myinput", "glyphicon-correct", "glyphicon-incorrect");
+}
