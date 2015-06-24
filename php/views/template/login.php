@@ -1,7 +1,7 @@
 <?php
 ?>
 
-<div style='width:400px;' align="left" >
+<div style='' align="left" >
 	<div style="display:none;" >
 		<div style='color:red;' ><?php echo $msg; ?></div>
 		<form  method=post onsubmit='return submitForm(this);' >
@@ -13,7 +13,8 @@
 		</form>
 	</div>
 	<div class="login_container">
-	<form id="login_form"  method="post" onsubmit='return submitForm(this);' action="profile.php" style="<?php echo ($defopen=="login"?"":"display:none;"); ?>" >
+	<form id="login_form"  method="post" onsubmit='return submitForm(this);' action="" style="<?php echo ($defopen=="login"?"":"display:none;"); ?>" >
+		<div style='color:red;' ><?php echo $msg; ?></div>
 	<h3 class="login_heading">
 	 Login
 	 <span>
@@ -26,6 +27,7 @@
 	<?php
 	load_view("template/input.php",array("name"=>"email","label"=>"Username","inpattr"=>array("dc"=>"email")));
 	load_view("template/input.php",array("name"=>"password","label"=>"Password","type"=>"password","closediv"=>false));
+
 	?>
 	 <span class="help-block" >
 	  <a href="#" class="open_forget_form" >
@@ -35,7 +37,7 @@
 	</div>
 
 	 <div class="submit_section">
-	 <button class="btn btn-lg btn-success btn-block">
+	 <button class="btn btn-lg btn-success btn-block" name="login" >
 	  Continue
 	 </button>
 	</div>
@@ -81,7 +83,7 @@
 	 <label class="checkbox-inline">
 	  <input type="checkbox" name="register_terms" id="register_terms" />
 	  Agree to
-	  <a data-toggle="modal" data-target="#terms_modal">
+	  <a onclick='mohit.popup_id("tnc");' >
 	   terms&conitions;
 	  </a>
 	 </label>
@@ -93,25 +95,4 @@
 	</div>
 	</form>
 	</div>
-	<div class="modal fade" id="terms_modal">
-	<div class="modal-dialog">
-	<div class="modal-content">
-	 <div class="modal-header">
-	  <button type="button" class="close" data-dismiss="modal">
-	   &times;
-	  </button>
-	  <h4 class="modal-title">
-	   Terms & Conditions
-	  </h4>
-	 </div>
-	 <div class="modal-body">
-	 	<img src='photo/tnc.jpg' />
-	 	<br>
-	  1. You are not allowed to copy the code of our website.
-	  <br>
-	  2. 
-	 </div>
-	</div>
-	</div>
-  </div>
 </div>

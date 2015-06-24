@@ -17,7 +17,7 @@ $view_default=array(
 	'template/login.php'=>array(
 		"msg"=>"",
 		"defval"=>null,
-		"defopen"=>"signup"
+		"defopen"=>"login"
 		),
 	"template/mselect.php"=>array(
 		"name"=>"",

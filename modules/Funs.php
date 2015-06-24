@@ -7,6 +7,9 @@ abstract class Funs{
 			if($login["ec"]>0){
 				Fun::redirect("store.php");
 			}
+			else{
+				$pageinfo["logintabs"]=1;//Althought we don't need it, as it is default.
+			}
 		}
 		return $login;
 	}

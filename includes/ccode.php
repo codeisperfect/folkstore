@@ -6,6 +6,7 @@ if(User::isloginas("s")){
 }
 if(!User::islogin()){
 	$pageinfo["login"]=Funs::loginaction();	
+	$pageinfo["logintabs"]=1;
 }
 
 ?>
