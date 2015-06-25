@@ -146,7 +146,7 @@
        resimg("image_home/layer_28.png",array("style"=>"margin-top:15px;margin-bottom:15px;"));
       ?>
      </div>
-     <div class="col-xs-12" style="padding:20px;background-color:yellow;" >
+     <div class="col-xs-12" style="padding:20px;background-color:yellow;"  align="center" >
       <img src="image_homenew/VectorSmartObject_6.png" class="img-responsive" />
      </div>
     </div>
