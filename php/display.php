@@ -378,5 +378,9 @@
 	function pit($toprint, $cond=true, $toprint_false=''){
 		echo rit($toprint, $cond, $toprint_false);
 	}
+	function disperror($e, $params){
+		mergeifunset($params, array("class" => "error"));
+		ocloset("div", $e, $params);
+	}
 
 ?>

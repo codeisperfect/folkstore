@@ -228,3 +228,10 @@ cursor: pointer;
 .mybtn:active{
 	background-color: #00ff00;
 }
+
+
+div.error{
+	color:red;
+	
+
+}

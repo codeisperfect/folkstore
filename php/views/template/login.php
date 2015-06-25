@@ -22,14 +22,19 @@
 		<div class="col-md-6" >
 			<div class='pl10' align="left" >
 				<div id="login_form" >
-					<div class='titleline1' >Login</div>
-					<?php
-					load_view("input2", array("dc"=>"email", "label"=>"", "ph"=>"Email Id"));
-					load_view("input2", array("dc"=>"simple", "label"=>"", "ph"=>"Password", "type"=>"password"));
-					?>
-					<div style='height:3px;' ></div>
-					<a class='open_forget_form' >I forgot password!</a><br>
-					<button class="btn btn-success mybtn" style='margin-top:10px;' >Login</button>
+					<div class='error' >
+						<?php echo $msg."11"; ?>
+					</div>
+					<form method="post" >
+						<div class='titleline1' >Login</div>
+						<?php
+						load_view("input2", array("dc"=>"email", "label"=>"", "ph"=>"Email Id", "name"=>"email"));
+						load_view("input2", array("dc"=>"simple", "label"=>"", "ph"=>"Password", "type"=>"password", "name"=>"password"));
+						?>
+						<div style='height:3px;' ></div>
+						<a class='open_forget_form' >I forgot password!</a><br>
+						<button type="submit" class="btn btn-success mybtn" style='margin-top:10px;' name="login" >Login</button>
+					</form>
 				</div>
 				<div id="forget_form" style='display:none;' >
 					<div class='titleline1' >Resting Password</div>

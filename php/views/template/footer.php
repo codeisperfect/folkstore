@@ -1,4 +1,4 @@
-  <div id="footer" style="background-color:#0B0B0B;padding-top:45px;padding-bottom:45px;" >
+  <div id="footer" style="background-color:#0B0B0B;padding-top:45px;padding-bottom:45px;display:none;" >
     <div class="row-fluid"  >
       <?php
         for($i=0;$i<6;$i++){
@@ -11,7 +11,7 @@
       ?>
     </div>
   </div>
-  <div id="bottom-footer">
+  <div id="bottom-footer" style='' >
    <p class="text-muted text-center bottom">
     <span class="glyphicon glyphicon-copyright-mark">
     </span>
