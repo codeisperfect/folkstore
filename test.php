@@ -29,7 +29,11 @@ load_view("template/top.php");
  -->
 
 <?php
-load_view("template/login.php");
+
+//load_view("template/login.php");
+
+print_r(gets("login"));
+
 ?>
 
 

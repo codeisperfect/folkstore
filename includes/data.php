@@ -62,7 +62,7 @@ $view_default=array(
 	"input2"=>array(
 		"inpattr"=>array(),
 		"divattr"=>array(),
-		"label"=>"Enter",
+		"label"=>"",
 		"name"=>"",
 		"type"=>"",
 		"closediv"=>true,
@@ -93,11 +93,9 @@ $_ginfo["shoudnotnull"]=array("id","name","value","style","class","type");
 
 
 $_ginfo["action_constrain"]=array(
-	"signup"=>array("need"=>array("name","email","password")),
+	"signup"=>array("need"=>array("name", "email", "password", "phone") ),
 	"login"=>array("need"=>array("email","password")),
-	"logout"=>array("need"=>array()),
-	"sendmsg"=>array("need"=>array("msg","rid","type","formid"),"users"=>"au","isfilter"=>"sisi"),
-	"loadmsg"=>array("need"=>array("uid","num_msg","minid","maxid","is_load_newer"),"users"=>"au","isfilter"=>""),
+	"logout"=>array(),
 	"uploadproduct"=>array("need"=>array("title","abouttext","price","sale","addinfo"))
 );
 

@@ -7,25 +7,26 @@
 	<div class="row" >
 		<div class="col-md-6" >
 			<div class='pr10' align='left' >
-				<div class='titleline1' >New Account</div>
-				<?php
-				load_view("input2", array("dc"=>"simple", "label"=>"", "ph"=>"Your Name"));
-				load_view("input2", array("dc"=>"email", "label"=>"", "ph"=>"Email"));
-				load_view("input2", array("dc"=>"phone", "label"=>"", "ph"=>"Mobile Number"));
-				load_view("input2", array("dc"=>"simple", "label"=>"", "ph"=>"Password", "id"=>"password", "type"=>"password"));
-				load_view("input2", array("dc"=>"password", "label"=>"", "ph"=>"Confirm Password", "type"=>"password"));
-				load_view("check1", array("label"=>"Inform Us for upcoming offers", "id"=>"newsletter", "divattr"=>array("style"=>"margin-top:20px;margin-bottom:20px;"), "checked"=>null));
-				?>
-				<button class="btn btn-success mybtn" style='' >CREATE ACCOUNT</button>
+				<?php disperror($signupmsg); ?>
+				<form method="post" onsubmit="return form.valid.action1(this);" >
+					<div class='titleline1' >New Account</div>
+					<?php
+					load_view("input2", array("dc"=>"simple", "label"=>"", "ph"=>"Your Name", "name"=>"name"));
+					load_view("input2", array("dc"=>"email", "label"=>"", "ph"=>"Email", "name"=>"email"));
+					load_view("input2", array("dc"=>"phone", "label"=>"", "ph"=>"Mobile Number", "name"=>"phone"));
+					load_view("input2", array("dc"=>"simple", "label"=>"", "ph"=>"Password", "id"=>"password", "type"=>"password", "name"=>"password"));
+					load_view("input2", array("dc"=>"password", "label"=>"", "ph"=>"Confirm Password", "type"=>"password"));
+					load_view("check1", array("label"=>"Inform me for upcoming offers", "id"=>"newsletter", "divattr"=>array("style"=>"margin-top:20px;margin-bottom:20px;"), "checked"=>null, "inpattr" => array( "name" => "informme", "value"=>"yes")));
+					?>
+					<button type="submit" name="signup" class="btn btn-success mybtn" style='' >CREATE ACCOUNT</button>
+				</form>
 			</div>
 		</div>
 		<div class="col-md-6" >
 			<div class='pl10' align="left" >
 				<div id="login_form" >
-					<div class='error' >
-						<?php echo $msg."11"; ?>
-					</div>
-					<form method="post" >
+					<?php disperror($loginmsg); ?>
+					<form method="post" onsubmit='return form.valid.action1(this);' >
 						<div class='titleline1' >Login</div>
 						<?php
 						load_view("input2", array("dc"=>"email", "label"=>"", "ph"=>"Email Id", "name"=>"email"));
@@ -37,13 +38,15 @@
 					</form>
 				</div>
 				<div id="forget_form" style='display:none;' >
-					<div class='titleline1' >Resting Password</div>
-					<?php
-					load_view("input2", array("dc"=>"email", "label"=>"", "ph"=>"Email Id"));
-					?>
-					<div style='height:3px;' ></div>
-					<a class='open_login_form' >Back</a><br>
-					<button class="btn btn-success mybtn" style='margin-top:10px;' >Reset</button>
+					<form method="post" onsubmit="return form.valid.action1(this);" >
+						<div class='titleline1' >Resting Password</div>
+						<?php
+						load_view("input2", array("dc"=>"email", "label"=>"", "ph"=>"Email Id"));
+						?>
+						<div style='height:3px;' ></div>
+						<a class='open_login_form' >Back</a><br>
+						<button class="btn btn-success mybtn" style='margin-top:10px;' >Reset</button>
+					</form>
 				</div>
 			</div>
 		</div>

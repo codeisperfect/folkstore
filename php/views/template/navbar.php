@@ -20,6 +20,26 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
      <ul class="nav navbar-nav navbar-left" style='color:white;' >
+
+     <?php
+     if($page!="index"){
+     ?>
+       <form class="navbar-form" role="search" action="search.php" >
+        <div class="form-group">
+         <div class="input-group">
+          <input type="text" class="form-control" name="search" placeholder="Search Whatever you want" <?php echo "autofocus"; ?> />
+          <span class="input-group-btn">
+           <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search">
+            </span>
+           </button>
+          </span>
+         </div>
+        </div>
+       </form>
+       <?php
+     }
+       ?>
      </ul>
      <ul class="nav navbar-nav navbar-right" style='color:white;' >
       <li style="padding-top:15px; color:white; ">
@@ -76,7 +96,6 @@
 
   <nav class="navbar navbar-default navbar-inverse navbar-fixed-top ">
    <div class="container-fluid" style='background-color:black;' >
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header" style="" >
      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
       <span class="sr-only">

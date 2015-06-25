@@ -1,15 +1,13 @@
 <?php
 abstract class Funs{
 	public static function loginaction(){
-		$login=array("ec"=>1);
-		if(ispost("login")){
-			$login=handle_request(Fun::setifunset($_POST,"action","login"));
-			if($login["ec"]>0){
+		$login=array("loginec"=>1, "signupec"=>1);
+		if(ispost("login") || ispost("signup") ){
+			$reqtype=ispost("login") ? "login" : "signup" ;
+			$login=handle_request( Fun::setifunset( $_POST, "action", $reqtype) );
+			if($login["ec"] > 0)
 				Fun::redirect("store.php");
-			}
-			else{
-				$pageinfo["logintabs"]=1;//Althought we don't need it, as it is default.
-			}
+			$login[$reqtype."ec"]=$login["ec"];
 		}
 		return $login;
 	}

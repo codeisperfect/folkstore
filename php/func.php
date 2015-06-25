@@ -20,6 +20,11 @@
 	function getval($key,$arr,$default=null){
 		 return (isset($arr[$key]) ? $arr[$key] : $default );
 	}
+	function setval($key, &$arr, $val, $cnd) {
+		 if($cnd)
+		 	$arr[$key]=$val;
+		 return $cnd;
+	}
 	function post($key,$default=null){
 		return getval($key,$_POST,$default);
 	}
@@ -85,18 +90,20 @@
 		}
 		return $outp;
 	}
+
 	function isvalid_action($post_data){
 		global $_ginfo;
 		if(isset($_ginfo["action_constrain"][$post_data["action"]])){
 			$sarr=$_ginfo["action_constrain"][$post_data["action"]];
 			$sarr=Fun::mergeifunset($sarr,array("users"=>"","need"=>array()));
-			if($sarr["users"]!="" && strpos($sarr['users'], User::loginType() )===false)
+			if(!(($sarr["users"]=="all" && User::islogin()) || $sarr["users"]=="" || in_array(User::loginType(), $sarr["users"]) ))
 				return -2;
 			if(!Fun::isAllSet($sarr["need"], $post_data))
 				return -9;
 		}
 		return true;
 	}
+
 	function islset($data,$arr){
 		for($i=0;$i<count($arr);$i++){
 			if(!isset($data[$arr[$i]]))
@@ -269,8 +276,9 @@
 		else
 			return $toprint_false;
 	}
-
-
-
+	function errormsg($ec,$cnd=true){
+		global $_ginfo;
+		return (($ec<0 && $cnd) ?getval($ec, $_ginfo["error"], "Error : ".$ec):"");
+	}
 
 ?>

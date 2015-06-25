@@ -293,6 +293,44 @@ var form={
 			}
 			
 		}});
+	},
+	valid:{
+		is:function (obj){
+			var errorlist=[];
+			var inputs=['INPUT','TEXTAREA','SELECT'];
+			var problem=false;
+			for(i=0;i<inputs.length;i++){
+				var ilist=$(obj).find(inputs[i]);
+				for(j=0;j<ilist.length;j++){
+					if(checkValidInput.isChecked( ilist[j]  ) ){
+						$(ilist[j]).parent().removeClass("has-error");
+					}
+					else{
+						$(ilist[j]).parent().addClass("has-error");
+						var errormsg=$(ilist[j]).attr("data-unfilled") || $(ilist[j]).attr("name") || null;
+						errorlist.push(errormsg);
+						if(!problem)
+							$(ilist[j]).focus();
+						problem=true;
+					}
+				}
+			}
+			return errorlist;
+		},
+		action:function(obj){
+			var errors=form.valid.is(obj);
+			if(errors.length>0){
+				for(var i=0;i<errors.length;i++){
+					errors[i]=(i+1)+". "+errors[i];
+				}
+				var dispmsg="You have to fill:<br>"+errors.join("<br>");
+				success.push(dispmsg,true);
+			}
+			return !(errors.length>0);
+		},
+		action1:function(obj){
+			return !(form.valid.is(obj).length>0);
+		}
 	}
 };
 
@@ -518,7 +556,7 @@ function mylib(){
 		setautotick:function(selector, correct, incorrect){
 			var keyaction=function(obj, e){
 				var inpobj=$(obj);
-				if(e.keyCode!=9 && e.keyCode!=13){
+				if(e.keyCode!=9 ){
 					var signobj=inpobj.parent().find(".glyphicon");
 					var isvalid=-1;
 					if(inpobj.attr("data-condition")!=null && haskey(checkValidInput, inpobj.attr("data-condition")) ){
@@ -535,7 +573,7 @@ function mylib(){
 				}
 			};
 			var inpobj=$(selector);
-			doforall(["keyup", "change"], function(i){
+			doforall(["keyup", "change", "keypress", "keydown"], function(i){
 				inpobj.on(i, function(e){keyaction(this,e);}  ) ;
 			});
 		},
@@ -550,6 +588,19 @@ function mylib(){
 	var awesome={
 		awesomelabel:function(){
 			var icons=["glyphicon-untick", "glyphicon-correct"];
+			var tickone=function(obj){
+				var groupid=$(obj).attr("data-gid");
+				if(groupid!=null){
+					var otherelms=$('.tickone[data-gid="'+groupid+'"]');
+					for(var i=0; i<otherelms.length; i++){
+						if(otherelms[i] != obj){
+							otherelms[i].checked=false;
+							labelchangehandle(otherelms[i]);
+							console.log(otherelms[i].checked);
+						}
+					}
+				}
+			}
 			var findlabel=function(obj){
 				if( $(obj).attr("id")!=null){
 					var label=$('label[for="'+$(obj).attr("id")+'"]');
@@ -571,6 +622,9 @@ function mylib(){
 			};
 			$(".mycheckbox").on("change", function(e){
 				labelchangehandle(this,e);
+			});
+			$(".tickone").on("change", function(e){
+				tickone(this);
 			});
 			doforall($(".mycheckbox"), function(elm){
 				var label=findlabel(elm);

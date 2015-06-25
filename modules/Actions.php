@@ -17,9 +17,13 @@ class Actions{
 	function signup($data){
 		global $_ginfo;
 		$outp=array("ec"=>1,"data"=>0);
-		$temp=User::signUp(Fun::getflds($_ginfo["action_constrain"]["signup"]["need"],$data));
-		if($temp>0)
+		$signupinfo = Fun::getflds($_ginfo["action_constrain"]["signup"]["need"],$data);
+		setval( "informme", $signupinfo, getval("informme", $data), getval("informme", $data) == "yes");
+		$temp=User::signUp($signupinfo);
+		if($temp>0){
+			Sqle::insertVal("stores", array("mobile" => $data["phone"], "sid"=>$temp["id"] ));
 			$outp["data"]=$temp;
+		}
 		else
 			$outp["ec"]=$temp;
 		return $outp;

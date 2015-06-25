@@ -18,7 +18,7 @@ if(true){
 $alls=$data["stores"];
 foreach($alls as $i=>$val){
 	$pass=rand(1000000,9999999);
-	$sh=handle_request(array("email"=>$val[1],"name"=>$val[0],"password"=>$pass,"action"=>"signup"));
+	$sh=handle_request(array("email"=>$val[1],"name"=>$val[0],"password"=>$pass,"action"=>"signup", "phone"=>$val[12] ));
 	$sa=array_slice($val,2,34);
 	$sa[0]=strtotime($sa[0]);
 	echo $sh["ec"]."<br>";
@@ -29,6 +29,14 @@ foreach($alls as $i=>$val){
 		echo Sql::query($query);
 	}
 }
+
+function makesomeaccounts(){
+	print_r(User::signUp(array("email"=>"admin@admin.com","password"=>"p","type"=>"a")));
+	print_r(User::signUp(array("email"=>"mohit@t.com","password"=>"p","type"=>"s")));
+	print_r(User::signUp(array("email"=>"mohit@s.com","password"=>"p","type"=>"s")));
+}
+
+makesomeaccounts();
 
 Sql::query("update users set password='p'");
 

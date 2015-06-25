@@ -328,7 +328,9 @@
 			addcss($src);
 	}
 	function disp_olist($inp,$option=array()){
-		$option=Fun::mergeifunset($option,array('selected'=>''));
+		$option=Fun::mergeifunset($option,array('selected'=>'', "addtext"=>null ));
+		if($option["addtext"]!=null)
+			array_unshift($inp, array("val"=>"", "disptext"=>$option["addtext"]));
 		$olist=$inp;
 		foreach($olist as $key=>$val){
 			$param=array("value"=>$val["val"]);
@@ -378,9 +380,14 @@
 	function pit($toprint, $cond=true, $toprint_false=''){
 		echo rit($toprint, $cond, $toprint_false);
 	}
-	function disperror($e, $params){
+	function disperror($e, $params=array()){
 		mergeifunset($params, array("class" => "error"));
 		ocloset("div", $e, $params);
+	}
+	function dummyheight($inp,$params=array()){
+		$inp=0+$inp;
+		mergeifunset($params,array("style"=>"height:".$inp."px",'innerHTML'=>''));
+		ocloset("div",$params['innerHTML'],$params);
 	}
 
 ?>

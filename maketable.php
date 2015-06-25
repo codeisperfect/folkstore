@@ -24,9 +24,10 @@ function drop_all(){
 }
 
 function make_table(){
-	echo Sql::query("CREATE TABLE users (id int NOT NULL AUTO_INCREMENT,username varchar(100), password varchar(100) , email varchar(100) ,  name varchar(100) , address varchar(500) , phone varchar(13) , type varchar(3) , create_time int,update_time int , last_login int,last_ip varchar(20),conf varchar(1),econf varchar(1), PRIMARY KEY ( id) ) ");
+	echo Sql::query("CREATE TABLE users (id int NOT NULL AUTO_INCREMENT,username varchar(100), password varchar(100) , email varchar(100) ,  name varchar(100) , address varchar(500) , phone varchar(20) , type varchar(3) , create_time int,update_time int , last_login int,last_ip varchar(20),conf varchar(1),econf varchar(1), PRIMARY KEY ( id) ) ");
 	echo Sql::query("ALTER TABLE users add profilepic varchar(100) NULL ");
 	echo Sql::query("ALTER TABLE users add dob int NULL ");
+	echo Sql::query("ALTER TABLE users add informme varchar(1) NULL ");
 
 
 
