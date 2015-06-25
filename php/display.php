@@ -374,4 +374,9 @@
 		$params=Fun::mergeifunset($params,array("src"=>$img,"class"=>"img-responsive"));
 		opent("img",$params);
 	}
+
+	function pit($toprint, $cond=true, $toprint_false=''){
+		echo rit($toprint, $cond, $toprint_false);
+	}
+
 ?>

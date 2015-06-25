@@ -15,6 +15,9 @@
   <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400&amp;subset=latin-ext,latin" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="css/login.css" />
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+<!--   <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+ -->
 	<script>
 		var redurl="<?php echo get("url"); ?>";
 		var cururl=window.location.href;

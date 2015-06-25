@@ -468,6 +468,7 @@ mergeifunset=function(dict1,dict2){
 	for(i in dict2){
 		setifunset(dict1,i,dict2[i]);
 	}
+	return dict1;
 }
 
 
@@ -492,6 +493,14 @@ function haskey(arr, key){
 	return (typeof(arr[key])!='undefined');
 }
 
+function listjoin(l1, l2){
+	var outp=[];
+	for(var i=0; i<l1.length+l2.length; i++){
+		outp.push( i<l1.length ? l1[i]:l2[i-l1.length]);
+	}
+	return outp;
+}
+
 
 function mylib(){
 	function textareainc(obj){
@@ -507,8 +516,8 @@ function mylib(){
 	});
 	var valid={
 		setautotick:function(selector, correct, incorrect){
-			var inpobj=$(selector);
-			var keyaction=function(e){
+			var keyaction=function(obj, e){
+				var inpobj=$(obj);
 				if(e.keyCode!=9 && e.keyCode!=13){
 					var signobj=inpobj.parent().find(".glyphicon");
 					var isvalid=-1;
@@ -525,8 +534,9 @@ function mylib(){
 					signobj.parent().removeClass("has-error");
 				}
 			};
+			var inpobj=$(selector);
 			doforall(["keyup", "change"], function(i){
-				inpobj.on(i, keyaction);
+				inpobj.on(i, function(e){keyaction(this,e);}  ) ;
 			});
 		},
 		resetinp:function (){
@@ -537,6 +547,70 @@ function mylib(){
 			});
 		}
 	};
+	var awesome={
+		awesomelabel:function(){
+			var icons=["glyphicon-untick", "glyphicon-correct"];
+			var findlabel=function(obj){
+				if( $(obj).attr("id")!=null){
+					var label=$('label[for="'+$(obj).attr("id")+'"]');
+					if(label.length>0){
+						return label;//Jquery selector for it.
+					}
+				}
+				return null;
+			};
+			var labelchangehandle=function(obj, e){
+				var label=findlabel(obj);
+				if(label!=null){
+					var iconobj=label.find("span.myicon");
+					doforall(icons, function(d){
+						iconobj.removeClass(d);
+					});
+					iconobj.addClass(icons[0+obj.checked]);
+				}
+			};
+			$(".mycheckbox").on("change", function(e){
+				labelchangehandle(this,e);
+			});
+			doforall($(".mycheckbox"), function(elm){
+				var label=findlabel(elm);
+				if(label!=null && label.find("span.myicon").length==0){
+					label.prepend("<span class='myicon' ></span> &nbsp;");
+				}
+				labelchangehandle(elm);
+			});
+		},
+		imagehoverbig:function(){
+			var hw = ["height", "width"];
+			var mlist = ["padding-left", "padding-right", "padding-top", "padding-bottom"];
+			var calledonce=function(obj){
+				var backup = listjoin(hw, mlist);
+				doforall(backup, function(x){
+					$(obj).attr("data-"+x, parseInt($(obj).css(x)));
+				});
+			};
+			var animate=function(obj, shift){
+				doforall(hw, function(x){
+					//$(obj).css(x, ($(obj).attr("data-"+x)-shift)+"px");
+				});
+				doforall(mlist, function(x){
+					$(obj).css(x, ($(obj).attr("data-"+x)+1*shift)+"px");
+				});
+			}
+			var shift=2;
+			$(".imganimate").on("mouseenter", function(){
+				animate(this, shift);
+			});
+			$(".imganimate").on("mouseout", function(){
+				animate(this, 0);
+			});
+			doforall($(".imganimate"), function(x){
+				calledonce(x);
+			});
+		}
+	};
 	valid.resetinp();
 	valid.setautotick("input.myinput", "glyphicon-correct", "glyphicon-incorrect");
+	awesome.awesomelabel();
+	awesome.imagehoverbig();
 }

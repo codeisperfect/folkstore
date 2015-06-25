@@ -67,12 +67,27 @@ $view_default=array(
 		"type"=>"",
 		"closediv"=>true,
 		"dc"=>"simple",
-		"icon"=>""
-		)
+		"icon"=>"",
+		"ph"=>"",
+		"id"=>""
+		),
+	"check1"=>array(
+		"onchange"=>"",
+		"id"=>"",
+		"label"=>"Check",
+		"class"=>"mycheckbox",
+		"inpattr"=>array("value"=>""),
+		"divattr"=>array("style"=>"margin-top:10px;"),
+		"checked"=>null,
+		"indiv"=>true
+		),
 	);
 
 
-$_ginfo["attributes"]=array("name","value","style","class","id","type","ph","onclick","dc",'rows',"disabled","align","valign","action","autofocus","style","rel","type","href","value","src","height","width");
+$_ginfo["attributes"]=array("name","value","style","class","id","type","ph","onclick","dc",'rows',"disabled","align","valign","action","autofocus","style","rel","type","href","value","src","selected","target","for","checked", "width", "height");
+
+
+
 $_ginfo["attrs_shortcut"]=array("ph"=>"placeholder","dc"=>"data-condition");
 $_ginfo["shoudnotnull"]=array("id","name","value","style","class","type");
 

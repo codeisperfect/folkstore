@@ -3,9 +3,11 @@
      <div style='min-height:650px;' class="" >
 
        <div class="container" style="height:auto;" align="center" >
-        <div style='color:white;margin-top:200px;max-width:800px;'  >
+        <div style='color:white;margin-top:190px;max-width:800px;'  >
           <div class="row-fluid"  >
-            <div style="color:white;font-weight:900;font-size:45px;margin-bottom:50px;" >Create your online store.<br>It is free.</div>
+            <div style='margin-bottom:50px;' >
+              <img src='image_home/Createyouronlinestor.png' />
+            </div>
             <form action="search.php" >
               <div class="col-md-5" style="margin:0px;padding:0px;" >
                <div class="input-group"  >
@@ -55,26 +57,26 @@
    <div class="col-xs-12">
    </div>
    <div class="col-xs-12 col-sm-6" style="border-right: 1px solid #dddddd">
-    <img class="img-circle" src="image_home/VectorSmartObject_3.png" />
+    <img class="img-circle" src="image_homenew/VectorSmartObject_11.png" />
     <p>
      <div class='iconfonts' style='text-transform:uppercase;' >
-      Digital Helpline
+      <img src='image_homenew/adddetailsaboutyours.png' />
      </div>
     </p>
-    <p>
+    <p style='display:none;' >
      Our company is very Stud  ed over the Bangladesh Liberation War Honour to Modi at a glittering ceremony at Bangabhaban, the President's house, as 90-year-old Vajpayee is ailing and unable to travel.
 
   The function was attended by Premier Sheikh Hasi
     </p>
    </div>
    <div class="col-xs-12 col-sm-6" style="">
-    <img class="img-circle" src="image_home/VectorSmartObject_6.png" />
+    <img class="img-circle" src="image_homenew/VectorSmartObject_12.png" />
     <p>
      <div class='iconfonts' style='text-transform:uppercase;' >
-      Online Market Place
+      <img src='image_homenew/Uploadyourproducts.png' />
      </div>
     </p>
-    <p>
+    <p style='display:none;' >
       ed over the Bangladesh Liber esh Liberation War Honour to Modi at a glittering ceremony at Bangabhaban, the President's house, as 90-year-old Vajpayee i ation War Honour
     </p>
    </div>
@@ -87,14 +89,52 @@
   </div>
   <div class="container-fluid" style="margin-top:100px;padding:3%;" >
     <div class="row" style="background-color:#f0f0e8;border-radius:5px;" >
-       <div align="center" style='padding-top:20px;' >
-          <div class="titlebn" >FEATURES</div>
+       <div align="center" style='padding-top:20px;padding-bottom:40px;' >
+
+<!--           <div class="titlebn" >FEATURES</div>
+ -->
           <?php
-            resimg("image_home/layer_28.png",array("style"=>"margin-top:15px;margin-bottom:15px;"));
+            resimg("image_homenew/features.png",array("style"=>"margin-top:15px;margin-bottom:15px;"));
+            resimg("image_homenew/layer_28.png",array("style"=>"margin-top:15px;margin-bottom:45px;"));
           ?>
+
+  <div class="container text-center" >
+   <div class="col-xs-12 col-sm-1" >
+   </div>
+   <div class="col-xs-12 col-sm-3" style="border-right: 1px solid #dddddd" align='center' >
+    <img  src="image_homenew/VectorSmartObject_8.png" />
+    <p>
+     <div class='iconfonts' style='text-transform:uppercase;' >
+      <img src='image_homenew/simplebeautiful.png' />
+     </div>
+    </p>
+   </div>
+   <div class="col-xs-12 col-sm-4" style="border-right: 1px solid #dddddd">
+    <img  src="image_homenew/VectorSmartObject_9.png" />
+    <p>
+     <div class='iconfonts' style='text-transform:uppercase;' >
+      <img src='image_homenew/sellyourstuffonline.png' />
+     </div>
+    </p>
+   </div>
+   <div class="col-xs-12 col-sm-3" style="" align='center' >
+    <img   src="image_homenew/VectorSmartObject_10.png" />
+    <p>
+     <div class='iconfonts' style='text-transform:uppercase;' >
+      <img src='image_homenew/usercontrol.png' />
+     </div>
+    </p>
+   </div>
+   <div class="col-xs-12 col-sm-1" >
+   </div>
+  </div>
+
+
        </div>
     </div>
   </div>
+
+
 
 
   <div class="container-fluid" style="margin-top:100px;padding:3%;" >
@@ -102,12 +142,12 @@
      <div align="center" style='padding-top:20px;' >
       <?php
        resimg("image_home/VectorSmartObject_1.png",array("style"=>"margin-top:20px;margin-bottom:20px;"));
-       resimg("image_home/HowWeWork.png",array("style"=>"margin-top:30px;margin-bottom:30px;"));
+       resimg("image_homenew/HowWeWork.png",array("style"=>"margin-top:30px;margin-bottom:30px;"));
        resimg("image_home/layer_28.png",array("style"=>"margin-top:15px;margin-bottom:15px;"));
       ?>
      </div>
-     <div class="col-xs-12" style="padding:20px;background-color:#4b8eb4;" >
-      <img src="image_home/Inforgraphic.png" class="img-responsive" />
+     <div class="col-xs-12" style="padding:20px;background-color:yellow;" >
+      <img src="image_homenew/VectorSmartObject_6.png" class="img-responsive" />
      </div>
     </div>
   </div>

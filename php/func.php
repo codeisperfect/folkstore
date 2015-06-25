@@ -263,6 +263,13 @@
 		}
 		return $a;
 	}
+	function rit($toprint, $cond=true, $toprint_false=''){
+		if($cond)
+			return $toprint;
+		else
+			return $toprint_false;
+	}
+
 
 
 
