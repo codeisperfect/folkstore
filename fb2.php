@@ -1,7 +1,7 @@
 <?php
+include "includes/app.php";
 
-session_start();
-   
+
 include ( 'Facebook/FacebookSession.php' );
 require_once( 'Facebook/FacebookRedirectLoginHelper.php' );
 require_once( 'Facebook/FacebookRequest.php' );
@@ -59,4 +59,6 @@ if ( isset( $session ) ) {
   // show login url
   echo '<a href="' . $helper->getLoginUrl() . '">Login</a>';
 }
+
+closedb();
 ?>
