@@ -28,7 +28,7 @@ use Facebook\GraphObject;
 FacebookSession::setDefaultApplication('457445971082606','b1ad6a0427a41fe42195da22797b91ac');
  
 // login helper with redirect_uri
-$helper = new FacebookRedirectLoginHelper( 'http://localhost/folkstore/pankaj/signup.php' );
+$helper = new FacebookRedirectLoginHelper( 'http://getiitians.com/folkstore/pankaj/signup.php' );
  
 try {
   $session = $helper->getSessionFromRedirect();
