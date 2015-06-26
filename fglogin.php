@@ -26,7 +26,7 @@ if(isget("fblogin")){
 	use Facebook\GraphObject;
 	 
 	// init app with app id (APPID) and secret (SECRET)
-	FacebookSession::setDefaultApplication('457445971082606','b1ad6a0427a41fe42195da22797b91ac');
+	FacebookSession::setDefaultApplication('1002370053127010','c0ce96e351a4f9c702cda90139970975');
 	 
 	// login helper with redirect_uri
 	$helper = new FacebookRedirectLoginHelper( 'http://getiitians.com/folkstore/fglogin.php?fbogin' );
