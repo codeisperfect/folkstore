@@ -10,7 +10,7 @@ require_once 'Google/google-api-php-client/src/Google/autoload.php';
 
  $client_id = '61668863490-tal7lugl9tccc0qkeohdehfpuqg5an8p.apps.googleusercontent.com';
  $client_secret = 'di4rQU2r6eBsMTSqkPlygU0S';
- $redirect_uri = 'http://getiitians.com/folkstore/pankaj/gplus.php';
+ $redirect_uri = 'http://getiitians.com/folkstore/gplus.php';
  $simple_api_key = 'AIzaSyBJofNDlKImQgIq_eGx0IruHsp2JdnTriY';
  
 //Create Client Request to access Google API
