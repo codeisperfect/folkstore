@@ -56,8 +56,7 @@ if ($client->getAccessToken()) {
   //echo $gname;
   $_SESSION['access_token'] = $client->getAccessToken();
 } else {
-  $authUrl = $client->createAuthUrl();
-  ocloset("a", "Gplus login", array("href" => $authUrl));
+    Fun::redirect($client->createAuthUrl());
 }
 closedb();
 ?>

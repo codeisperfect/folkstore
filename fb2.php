@@ -28,7 +28,7 @@ use Facebook\GraphObject;
 FacebookSession::setDefaultApplication('457445971082606','b1ad6a0427a41fe42195da22797b91ac');
  
 // login helper with redirect_uri
-$helper = new FacebookRedirectLoginHelper( 'http://getiitians.com/folkstore/pankaj/fb2.php' );
+$helper = new FacebookRedirectLoginHelper( 'http://getiitians.com/folkstore/fb2.php' );
  
 try {
   $session = $helper->getSessionFromRedirect();
@@ -38,10 +38,7 @@ try {
   // When validation fails or other local issues
 }
  
-// see if we have a session
 if ( isset( $session ) ) {
-  echo 'mohit';
-  // graph api request for user data
   $request = new FacebookRequest( $session, 'GET', '/me' );
   $response = $request->execute();
   // get response
@@ -56,8 +53,7 @@ if ( isset( $session ) ) {
   echo $fbemail;
    
 } else {
-  // show login url
-  echo '<a href="' . $helper->getLoginUrl() . '">Login</a>';
+    Fun::redirect($helper->getLoginUrl());
 }
 
 closedb();
