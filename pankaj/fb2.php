@@ -40,6 +40,7 @@ try {
  
 // see if we have a session
 if ( isset( $session ) ) {
+  echo 'mohit';
   // graph api request for user data
   $request = new FacebookRequest( $session, 'GET', '/me' );
   $response = $request->execute();
