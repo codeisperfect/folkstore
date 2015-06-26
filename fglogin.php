@@ -1,29 +1,31 @@
 <?php
 include "includes/app.php";
 
+require_once( 'Facebook/FacebookSession.php' );
+require_once( 'Facebook/FacebookRedirectLoginHelper.php' );
+require_once( 'Facebook/FacebookRequest.php' );
+require_once( 'Facebook/FacebookResponse.php' );
+require_once( 'Facebook/FacebookSDKException.php' );
+require_once( 'Facebook/FacebookRequestException.php' );
+require_once( 'Facebook/FacebookAuthorizationException.php' );
+require_once( 'Facebook/GraphObject.php' );
+require_once( 'Facebook/FacebookHttpable.php' );
+require_once( 'Facebook/FacebookCurl.php' );
+require_once( 'Facebook/FacebookCurlHttpClient.php' );
+
+ 
+use Facebook\FacebookSession;
+use Facebook\FacebookRedirectLoginHelper;
+use Facebook\FacebookRequest;
+use Facebook\FacebookResponse;
+use Facebook\FacebookSDKException;
+use Facebook\FacebookRequestException;
+use Facebook\FacebookAuthorizationException;
+use Facebook\GraphObject;
+
+
 if(isget("fblogin")){
 		 
-	require_once( 'Facebook/FacebookSession.php' );
-	require_once( 'Facebook/FacebookRedirectLoginHelper.php' );
-	require_once( 'Facebook/FacebookRequest.php' );
-	require_once( 'Facebook/FacebookResponse.php' );
-	require_once( 'Facebook/FacebookSDKException.php' );
-	require_once( 'Facebook/FacebookRequestException.php' );
-	require_once( 'Facebook/FacebookAuthorizationException.php' );
-	require_once( 'Facebook/GraphObject.php' );
-	require_once( 'Facebook/FacebookHttpable.php' );
-	require_once( 'Facebook/FacebookCurl.php' );
-	require_once( 'Facebook/FacebookCurlHttpClient.php' );
-
-	 
-	use Facebook\FacebookSession;
-	use Facebook\FacebookRedirectLoginHelper;
-	use Facebook\FacebookRequest;
-	use Facebook\FacebookResponse;
-	use Facebook\FacebookSDKException;
-	use Facebook\FacebookRequestException;
-	use Facebook\FacebookAuthorizationException;
-	use Facebook\GraphObject;
 	 
 	// init app with app id (APPID) and secret (SECRET)
 	FacebookSession::setDefaultApplication('1002370053127010','c0ce96e351a4f9c702cda90139970975');
