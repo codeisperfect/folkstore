@@ -28,6 +28,8 @@ function make_table(){
 	echo Sql::query("ALTER TABLE users add profilepic varchar(100) NULL ");
 	echo Sql::query("ALTER TABLE users add dob int NULL ");
 	echo Sql::query("ALTER TABLE users add informme varchar(1) NULL ");
+	echo Sql::query("ALTER TABLE users add fblogin varchar(1) NULL ");
+	echo Sql::query("ALTER TABLE users add gpluslogin varchar(1) NULL ");
 
 
 

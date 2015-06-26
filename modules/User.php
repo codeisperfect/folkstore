@@ -101,5 +101,8 @@ class User extends Sql{
 		$timenow=time();
 		Sqle::updateVal("users",array('last_login'=>$timenow),array('id'=>User::loginId()));
 	}
+	public static function fglogin($data){//must have key, { type, id} Additional : { name, phone}
+
+	}
 }
 ?>

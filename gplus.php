@@ -53,11 +53,12 @@ if ($client->getAccessToken()) {
   $gemail=$userData['email'];
   $gname=$userData['name'];
   echo $gemail;
+  echo $gname;
   //echo $gname;
   $_SESSION['access_token'] = $client->getAccessToken();
 } else {
   $authUrl = $client->createAuthUrl();
+  ocloset("a", "Gplus login", array("href" => $authUrl));
 }
 ?>
 
-<a href="<?php echo $authUrl; ?>">Gplus login</a>

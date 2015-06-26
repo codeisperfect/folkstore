@@ -115,7 +115,7 @@ else if(isget("googlelogin")){
 	} else {
 	  $authUrl = $client->createAuthUrl();
 	}
-	ocloset("a", "Gplus login", array("href" => $authUrl));
+	
 }
 else
  echo "No Args";
