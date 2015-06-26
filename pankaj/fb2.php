@@ -25,7 +25,7 @@ use Facebook\FacebookAuthorizationException;
 use Facebook\GraphObject;
  
 // init app with app id (APPID) and secret (SECRET)
-FacebookSession::setDefaultApplication('497385850412698','6805dfee8918f078a703abeeac51978a');
+FacebookSession::setDefaultApplication('457445971082606','b1ad6a0427a41fe42195da22797b91ac');
  
 // login helper with redirect_uri
 $helper = new FacebookRedirectLoginHelper( 'http://localhost/folkstore/pankaj/signup.php' );
