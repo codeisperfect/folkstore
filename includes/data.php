@@ -69,17 +69,20 @@ $view_default=array(
 		"dc"=>"simple",
 		"icon"=>"",
 		"ph"=>"",
-		"id"=>""
+		"id"=>"",
+		"data"=>null
 		),
 	"check1"=>array(
 		"onchange"=>"",
 		"id"=>"",
 		"label"=>"Check",
 		"class"=>"mycheckbox",
-		"inpattr"=>array("value"=>""),
+		"inpattr"=>array(),
 		"divattr"=>array("style"=>"margin-top:10px;"),
 		"checked"=>null,
-		"indiv"=>true
+		"indiv"=>true,
+		"value"=>"",
+		"data" => null
 		),
 	);
 
@@ -89,14 +92,15 @@ $_ginfo["attributes"]=array("name","value","style","class","id","type","ph","onc
 
 
 $_ginfo["attrs_shortcut"]=array("ph"=>"placeholder","dc"=>"data-condition");
-$_ginfo["shoudnotnull"]=array("id","name","value","style","class","type");
+$_ginfo["shoudnotnull"]=array("id","name", "style","class","type");
 
 
 $_ginfo["action_constrain"]=array(
 	"signup"=>array("need"=>array("name", "email", "password", "phone") ),
 	"login"=>array("need"=>array("email","password")),
 	"logout"=>array(),
-	"uploadproduct"=>array("need"=>array("title","abouttext","price","sale","addinfo"))
+	"uploadproduct"=>array("need"=>array("title","abouttext","price","sale","addinfo")),
+	"savedetails"=>array("need" => array('name', 'address', 'city', 'state', 'zipcode', 'landmark', 'country', 'lat', 'lan', 'email', 'mobile', 'mobile2', 'whatsapp', 'comptype', 'ownername', 'shopcatg', 'pan', 'tin', 'stex', 'stype', 'cstno', 'vatno', 'excisereg', 'aboutstore', 'industorytext') )
 );
 
 

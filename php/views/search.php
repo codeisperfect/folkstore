@@ -1,6 +1,9 @@
+<?php
+if(true){
+?>
   <div class="jumbotron text-center" id="title" style="background-image:none;" >
-    <div style="background: url(image_search/shutterstockFC00016.jpg) no-repeat center center ;background-size:100% auto;"  >
-     <div style="min-height:480px;background-color:rgba(0,25,0,0.7);" >
+    <div style="background: url(image_search/shutterstockFC00016.jpg) no-repeat center center ;background-size:100% auto;height:auto;background-color:rgba(0,25,0,0.7);"  >
+     <div style="min-height:400px;background-color:rgba(0,25,0,0.7);" >
         <div align="left" style="margin-left:30px;">
          <div style="padding-top:25px;" >
           <a href="<?php echo HOST; ?>" ><img src="images/highresalpha.png" class="img-responsive" ></a>
@@ -9,6 +12,26 @@
      </div>
     </div>
   </div>
+<?php
+}
+else{
+?>
+  <div class="jumbotron text-center" id="title" style="background-image:none;" >
+    <div style="background: url(image_edit/shutterstockFC00020.png) no-repeat center center ;background-size:100% auto;padding-top:300px;background-color:rgba(0,25,0,0.4);"  >
+     <div style="min-height:300px;" align="center" >
+      <div style="position:relative;border:solid rgba(0,0,0,0) 1px;margin:auto;"  >
+        <div style='margin-top:-130px;' >
+          <img src='image_edit/VendorRegistration.png' style='' />
+        </div>
+      </div>
+     </div>
+    </div>
+  </div>
+  <div style='margin-top:-300px;background-color:white;min-height:300px;margin-bottom:-300px;' ></div>
+<?php
+}
+?>
+
   <div style="border-bottom:solid black 3px;margin-top:-10px;padding-bottom:10px;padding-right:5px;" align="right" >
     <div style="float:right;width:230px;" >
       <select class='form-control' >

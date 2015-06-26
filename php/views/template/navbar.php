@@ -29,7 +29,7 @@
          <div class="input-group">
           <input type="text" class="form-control" name="search" placeholder="Search Whatever you want" <?php echo "autofocus"; ?> />
           <span class="input-group-btn">
-           <button class="btn btn-default" type="button">
+           <button class="btn btn-default" type="submit">
             <span class="glyphicon glyphicon-search">
             </span>
            </button>
@@ -120,7 +120,7 @@
          <div class="input-group">
           <input type="text" class="form-control" name="search" placeholder="Search Whatever you want" <?php echo "autofocus"; ?> />
           <span class="input-group-btn">
-           <button class="btn btn-default" type="button">
+           <button class="btn btn-default" type="submit">
             <span class="glyphicon glyphicon-search">
             </span>
            </button>
@@ -133,6 +133,11 @@
        ?>
      </ul>
      <ul class="nav navbar-nav navbar-right" style='color:white;' >
+      <li>
+       <a href="edit.php" >
+        Edit
+       </a>
+      </li>
       <li>
        <a href="store.php" >
         Profile

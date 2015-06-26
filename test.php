@@ -2,6 +2,8 @@
 include "includes/app.php";
 load_view("template/top.php");
 
+print_r(  gets("login") );
+
 
 
 ?>

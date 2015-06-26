@@ -18,7 +18,7 @@
 			$DB->close();
 	}
 	function getval($key,$arr,$default=null){
-		 return (isset($arr[$key]) ? $arr[$key] : $default );
+		 return ( ($arr!==null && isset($arr[$key])) ? $arr[$key] : $default );
 	}
 	function setval($key, &$arr, $val, $cnd) {
 		 if($cnd)
@@ -279,6 +279,13 @@
 	function errormsg($ec,$cnd=true){
 		global $_ginfo;
 		return (($ec<0 && $cnd) ?getval($ec, $_ginfo["error"], "Error : ".$ec):"");
+	}
+	function convchars($inp){
+		$conv=array("&" => "&amp;", '"' => "&quot;", "'" => "&#039;", "<" => "&lt;", ">" => "&gt;");
+		foreach($conv as $i => $val) {
+			$inp=str_replace($i, $val, $inp);
+		}
+		return $inp;
 	}
 
 ?>

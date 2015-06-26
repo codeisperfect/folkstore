@@ -595,12 +595,17 @@ function mylib(){
 					for(var i=0; i<otherelms.length; i++){
 						if(otherelms[i] != obj){
 							otherelms[i].checked=false;
-							labelchangehandle(otherelms[i]);
-							console.log(otherelms[i].checked);
 						}
+						labelchangehandle(otherelms[i]);
 					}
 				}
-			}
+			};
+			var createhiddeninp=function(obj){
+				var groupid=$(obj).attr("data-gid");
+				if(groupid!=null && $("input[name="+groupid+"]").length == 0){
+					$(obj).parent().append('<input type="hidden" value="" name="'+groupid+'" />');
+				}
+			};
 			var findlabel=function(obj){
 				if( $(obj).attr("id")!=null){
 					var label=$('label[for="'+$(obj).attr("id")+'"]');
@@ -612,6 +617,16 @@ function mylib(){
 			};
 			var labelchangehandle=function(obj, e){
 				var label=findlabel(obj);
+				var gid=$(obj).attr("data-gid");
+				if(gid!=null){
+					var otherelms=$('input.mycheckbox[data-gid="'+gid+'"]');
+					var values=[];
+					doforall(otherelms, function(elm){
+						if(elm.checked)
+							values.push(elm.value);
+					});
+					$("input[name="+gid+"]").val(values.join("-"));
+				}
 				if(label!=null){
 					var iconobj=label.find("span.myicon");
 					doforall(icons, function(d){
@@ -632,6 +647,7 @@ function mylib(){
 					label.prepend("<span class='myicon' ></span> &nbsp;");
 				}
 				labelchangehandle(elm);
+				createhiddeninp(elm);
 			});
 		},
 		imagehoverbig:function(){

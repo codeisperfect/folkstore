@@ -226,7 +226,7 @@ class Disp extends Sql{
 			<?php
 				for($i=0;$i<count($ttitle);$i++){
 			?>
-				<td style='padding:10px;' ><?php echo $ttitle[$i]; ?></td>
+				<td style='padding:10px;' ><?php echo htmlspecialchars($ttitle[$i]); ?></td>
 			<?php
 				}
 			?>

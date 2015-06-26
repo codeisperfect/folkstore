@@ -111,6 +111,7 @@ div.oneproduct{
 	margin:20px;
 	float:left;
 	cursor: pointer;
+	border:solid #dddddd 1px;
 }
 
 div.oneproduct:hover{

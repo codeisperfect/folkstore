@@ -4,7 +4,7 @@ class Templates{
 	function input2($inp){
 		foreach($inp as $key=>$val)
 			$$key=$val;
-		$inpattr=Fun::mergeifunset($inpattr,array("name"=>$name,"type"=>$type,"class"=>"form-control myinput","dc"=>$dc, "ph"=>$ph, "id"=>$id));
+		$inpattr=Fun::mergeifunset($inpattr,array("name"=>$name,"type"=>$type,"class"=>"form-control myinput","dc"=>$dc, "ph"=>$ph, "id"=>$id, "value" => convchars( getval( $name, $data ) ) ));
 		mergeifunset($divattr,array("class"=>"form-group has-feedback", "style"=>"border:solid red 0px;margin-top:-10px;margin-bottom:0px;"));
 ?>
 		<div <?php echo param2str($divattr); ?> >
@@ -49,7 +49,9 @@ class Templates{
 	function check1($inp){
 		foreach($inp as $key=>$val)
 			$$key=$val;
-		mergeifunset($inpattr,array("class"=>$class,"id"=>$id==''?'':"check_".$id,"onchange"=>$onchange,"type"=>"checkbox" ));
+		mergeifunset($inpattr,array("class"=>$class,"id"=>$id==''?'':"check_".$id,"onchange"=>$onchange,"type"=>"checkbox", "value"=>$value ));
+		if($data != null && isset($data[getval("data-gid", $inpattr)]) && $data[$inpattr["data-gid"]]==$value )
+			$checked=true;
 		if($checked!==null)
 			$inpattr["checked"]="";
 		if($indiv)

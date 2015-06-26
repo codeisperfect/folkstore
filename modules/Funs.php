@@ -29,5 +29,11 @@ abstract class Funs{
 		}
 		return $outp;
 	}
+	public static function storeinfo($sid){
+		return Sqle::getRow("select shopcatgs.name as shopcatgname, users.phone, users.name,users.email,stores.*,city.name as cityname,state.name as statename,country.name as countryname from stores left join users on users.id=stores.sid left join city on city.id=stores.cityid left join state on state.id=stores.stateid left join country on stores.countryid=country.id left join shopcatgs on shopcatgs.id=stores.shopcatg where stores.sid=? limit 1",'i',array(&$sid));
+	}
+	public static function productinfo($pid){
+		return Sqle::getRow("select users.name as sellername, stores.address, stores.mobile, products.* from products left join users on users.id=products.sid left join stores on stores.sid=products.sid where products.id=? limit 1", 'i', array(&$pid),$pid==0);
+	}
 }
 ?>

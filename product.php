@@ -2,7 +2,7 @@
 include "includes/app.php";
 
 $pid=0+get("pid");
-$pinfo=Sqle::getRow("select * from products where id=? limit 1", 'i', array(&$pid),$pid==0);
+$pinfo=Funs::productinfo($pid);
 Fun::redirectinv($pinfo==null);
 
 $pinfo["images"]=myexplode(",",$pinfo["images"]);
@@ -23,9 +23,9 @@ $pageinfo["dispinfo"]=array(
 	"Sale"=>$pinfo["sale"]." %",
 	"Price to paid"=>ceil($pinfo['price']*(100-$pinfo['sale'])/100.0)." Rs.",
 	"Category"=>"Automobiles",
-	"Seller"=>"<a href='' >Seller Name</a>",
-	"Contact at"=>"",
-	"Store Address"=>""
+	"Seller"=>"<a href='".(HOST."store.php?sid=".$pinfo["sid"])."' >".$pinfo["sellername"]."</a>",
+	"Contact at"=>$pinfo["mobile"],
+	"Store Address"=>$pinfo["address"]
 );
 
 

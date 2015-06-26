@@ -19,7 +19,7 @@
 
 
 
-  <div id="test1" >Need to remove it</div>
+  <div id="test1" ></div>
   <div align=center style="padding:20px;margin-top:5px;" >
     <div class="container" >
       <div class="row" align=center style="padding:0px;margin:0px;" >
@@ -36,7 +36,7 @@
             <table class='p5px' ><tr>
               <?php
                 for($i=0;$i<count($pinfo["simages"]);$i++){
-                  opent("td");
+                  opent("td", array("style" => "border:solid #cccccc 2px;" ));
                   resimg($pinfo["simages"][$i],array("class"=>"productimgothers","data-toopen"=>$pinfo["mimages"][$i],"onclick"=>"openproductimg(this);" ));
                   closet("td");
                 }
@@ -56,13 +56,7 @@
           <div style="margin:20px;" >
             <div align="left" style="" >
               <span style="text-transform: uppercase;font-size:20px;font-weight:600;color:#555555;" ><?php echo $pinfo["title"]; ?></span><br><br>
-              <span style='color:#666666;' ><?php echo $pinfo["abouttext_short"]; ?>action against him for tarnishing Bihar's image by obtaining fake degrees, hurled eggs and sandals at him. They also tried to blacken his face.
-
-The students accosted the Delhi Police team accompanying Tomar when it was entering the TMBU campus on Friday evening.
-
-Bhagalpur SP Vivek Singh said some students tried to raise a ruckus near the university on Friday evening but police dispersed them. No arrest was made, the SP added.
-
-Earlier on Friday morning, Tomar was brought to Munger by the Delhi Police team in connection with the fake degree case. </span><br>
+              <span style='color:#666666;' ><?php echo $pinfo["abouttext"]; ?></span><br>
               <?php
                 opent("table",array("class"=>"table-hover p10px "));
                 foreach($dispinfo as $i=>$info){

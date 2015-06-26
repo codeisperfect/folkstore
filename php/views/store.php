@@ -69,6 +69,8 @@
   <div class="container text-center">
    <div class="col-xs-12">
     <div align="center" style="" >
+      <?php
+      ?>
      <img src='images/ABOUTVENDOR.png' class="img-responsive" />
     </div>
      <div style="margin-top:20px;margin-bottom:20px;" >

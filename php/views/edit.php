@@ -28,6 +28,7 @@
 	</div>
 
 	<div class="container text-center">
+		<form method="post" action="<?php echo HOST."store.php"; ?>" >
 
 	 	<?php
 	 		$info_text = array("Vendor Name", "Address");
@@ -45,7 +46,7 @@
 			</div>
 			<div class="col-xs-12 col-sm-9" >
 				<?php
-				load_view("input2", array("ph"=>$info_text[$i], "divattr"=>array("style"=>""), "name"=>$info_name[$i] ) );
+				load_view("input2", array("ph"=>$info_text[$i], "divattr"=>array("style"=>""), "name"=>$info_name[$i], "data" => $sinfo ) );
 				?>
 			</div>
 			<?php
@@ -66,7 +67,7 @@
 			</div>
 			<div class="col-xs-12 col-sm-4" >
 				<?php
-				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"city" ) );
+				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"city", "data" => $sinfo ) );
 				?>
 			</div>
 			<div class="col-xs-12 col-sm-1" align="left" >
@@ -79,7 +80,7 @@
 			</div>
 			<div class="col-xs-12 col-sm-4" >
 				<?php
-				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"state" ) );
+				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"state", "data" => $sinfo ) );
 				?>
 			</div>
 			<?php
@@ -99,7 +100,7 @@
 				<div class="row" >
 					<div class="col-md-5" style="margin-right:0px;" >
 						<?php
-						load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"city" ) );
+						load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"zipcode", "data" => $sinfo  ) );
 						?>
 					</div>
 					<div class="col-md-2" align="left" style="padding:0px;" >
@@ -109,7 +110,7 @@
 					</div>
 					<div class="col-md-5" >
 						<?php
-						load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"city" ) );
+						load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"landmark", "data" => $sinfo  ) );
 						?>
 					</div>
 				</div>
@@ -124,7 +125,7 @@
 			</div>
 			<div class="col-xs-12 col-sm-4" >
 				<?php
-				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"state" ) );
+				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"country", "data" => $sinfo ) );
 				?>
 			</div>
 			<?php
@@ -145,7 +146,7 @@
 				<div class="row" >
 					<div class="col-md-5" >
 						<?php
-						load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"city" ) );
+						load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"lat", "data" => $sinfo  ) );
 						?>
 					</div>
 					<div class="col-md-2" align="left" style="padding:0px;" >
@@ -155,7 +156,7 @@
 					</div>
 					<div class="col-md-5" >
 						<?php
-						load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"city" ) );
+						load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"lan", "data" => $sinfo  ) );
 						?>
 					</div>
 				</div>
@@ -170,7 +171,7 @@
 			</div>
 			<div class="col-xs-12 col-sm-4" >
 				<?php
-				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"state" ) );
+				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"email", "data" => $sinfo  ) );
 				?>
 			</div>
 			<?php
@@ -189,12 +190,12 @@
 			</div>
 			<div class="col-xs-12 col-sm-2" style="padding-right:3px;" >
 				<?php
-				load_view("input2", array("ph"=>"+91", "divattr"=>array("style"=>""), "name"=>"city" ) );
+				load_view("input2", array("ph"=>"+91", "divattr"=>array("style"=>""), "name"=>"mobile", "data" => $sinfo  ) );
 				?>
 			</div>
 			<div class="col-xs-12 col-sm-2" style="padding-left:3px;" >
 				<?php
-				load_view("input2", array("ph"=>"+91", "divattr"=>array("style"=>""), "name"=>"city" ) );
+				load_view("input2", array("ph"=>"+91", "divattr"=>array("style"=>""), "name"=>"mobile2", "data" => $sinfo  ) );
 				?>
 			</div>
 			<div class="col-xs-12 col-sm-1" align="left" >
@@ -207,7 +208,7 @@
 			</div>
 			<div class="col-xs-12 col-sm-4" >
 				<?php
-				load_view("input2", array("ph"=>"+91", "divattr"=>array("style"=>""), "name"=>"state" ) );
+				load_view("input2", array("ph"=>"+91", "divattr"=>array("style"=>""), "name"=>"whatsapp", "data" => $sinfo  ) );
 				?>
 			</div>
 			<?php
@@ -232,7 +233,7 @@
 			?>
 				<div class="col-md-3" style="" >
 				<?php
-					load_view("check1", array("id"=>"ctype".$i, "label"=>"&nbsp;&nbsp;".$ctypes[$i], "value" => $i, "class"=>"mycheckbox tickone", "inpattr"=>array( "data-gid" => "companytype" ) ));
+					load_view("check1", array("id"=>"ctype".$i, "label"=>"&nbsp;&nbsp;".$ctypes[$i], "value" => $i+1, "class"=>"mycheckbox tickone", "inpattr"=>array( "data-gid" => "comptype"  ), "data" => $sinfo ));
 				?>
 				</div>
 			<?php
@@ -250,7 +251,7 @@
 			</div>
 			<div class="col-xs-12 col-sm-4" style=""  >
 				<?php
-				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"city" ) );
+				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"ownername", "data" => $sinfo  ) );
 				?>
 			</div>
 			<div class="col-xs-12 col-sm-1" align="left"  style="padding:0px;" >
@@ -263,7 +264,7 @@
 			</div>
 			<div class="col-xs-12 col-sm-4" >
 				<?php
-				load_view("input2", array("ph"=>"+91", "divattr"=>array("style"=>""), "name"=>"state" ) );
+				load_view("input2", array("ph"=>"+91", "divattr"=>array("style"=>""), "name"=>"estd", "data" => $sinfo) );
 				?>
 			</div>
 			<?php
@@ -281,9 +282,9 @@
 			</div>
 			<div class="col-xs-12 col-sm-4" style="" >
 				<div class='form-group has-feedback'  >
-					<select class='form-control myinput' data-condition='simple' >
+					<select class='form-control myinput' data-condition='simple' name="shopcatg" >
 						<?php
-							disp_olist($shopcatgs, array("addtext"=>"Select Industory"));
+							disp_olist($shopcatgs, array("addtext"=>"Select Industory", "selected" => $sinfo["shopcatg"] ));
 						?>
 					</select>
 				</div>
@@ -307,7 +308,8 @@
 		</div>
 
 		<?php
-			$info_text=array("PAN No.", "TIN No. ", "Service Tex No.", "Service Type", "CST No.", "VAT No.");
+			$info_text = array("PAN No.", "TIN No. ", "Service Tex No.", "Service Type", "CST No.", "VAT No.");
+			$info_name = array("pan", "tin", "stex", "stype", "cstno", "vatno");
 			for($i=0, $count=0; $i<3; $i++, $count+=2){
 		?>
 		<div style='' >
@@ -321,7 +323,7 @@
 			</div>
 			<div class="col-xs-12 col-sm-4" style=""  >
 				<?php
-				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"city" ) );
+				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>$info_name[$count], "data" => $sinfo ) );
 				?>
 			</div>
 			<div class="col-xs-12 col-sm-1" align="left"  style="padding:0px;" >
@@ -334,7 +336,7 @@
 			</div>
 			<div class="col-xs-12 col-sm-4" >
 				<?php
-				load_view("input2", array("ph"=>"+91", "divattr"=>array("style"=>""), "name"=>"state" ) );
+				load_view("input2", array("ph"=>"+91", "divattr"=>array("style"=>""), "name"=>$info_name[$count+1], "data" => $sinfo ) );
 				?>
 			</div>
 			<?php
@@ -358,7 +360,7 @@
 			</div>
 			<div class="col-xs-12 col-sm-9" >
 				<?php
-				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"" ) );
+				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"excisereg", "data" => $sinfo ) );
 				?>
 			</div>
 			<?php
@@ -368,6 +370,9 @@
 
 
 
+		<?php
+			if(false){
+		?>
 
 		<div >
 			<div align="center" style="" >
@@ -387,13 +392,53 @@
 			?>
 				<div class="col-md-3" style="" >
 				<?php
-					load_view("check1", array("id"=>"doctype".$i, "label"=>"&nbsp;&nbsp;".$ctypes[$i], "value" => $i ));
+					load_view("check1", array("id"=>"doctype".$i, "label"=>"&nbsp;&nbsp;".$ctypes[$i], "value" => $i, "data" => $sinfo ));
 				?>
 				</div>
 			<?php
 				}
 			?>
 		</div>
+		<?php
+			}
+		?>
+		<div style='margin-bottom:30px;margin-top:20px;' >
+			<div class="col-xs-12 col-sm-2" align="left" >
+				<div class='mt25' style="" >
+					<div class="row" >
+						<div class="col-md-2" style="margin:0px;padding:0px;height:0px;" ></div>
+						<div class="col-md-10" >About Your Store</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-9" >
+				<textarea class='form-control myinput' name="aboutstore" ><?php echo convchars($sinfo["aboutstore"]); ?></textarea>
+			</div>
+			<?php
+			clear();
+			?>
+		</div>
+		<div style='margin-top:20px;margin-bottom:20px;' >
+			<div class="col-xs-12 col-sm-2" align="left" >
+				<div class='mt25' style="" >
+					<div class="row" >
+						<div class="col-md-2" style="margin:0px;padding:0px;height:0px;" ></div>
+						<div class="col-md-10" >Service Areas</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-9" >
+				<textarea class='form-control myinput' name="industorytext" ><?php echo convchars($sinfo["industorytext"]); ?></textarea>
+			</div>
+			<?php
+			clear();
+			?>
+		</div>
+
+		
+
+		<button type="submit" name="savedetails" class="btn btn-success mybtn" style='' >SAVE DETAILS</button>
+		</form>
 	</div>
 
 	<?php
