@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-ini_set('include_path', '/var/www/html/folkstore/pankaj/Google/');
+//ini_set('include_path', '/var/www/html/folkstore/pankaj/Google/');
 
 //Google API PHP Library includes
 //require_once 'Google/Client.php';
 //require_once 'Google/Service/Oauth2.php';
 // Fill CLIENT ID, CLIENT SECRET ID, REDIRECT URI from Google Developer Console
-require_once 'google-api-php-client/src/Google/autoload.php';
+require_once 'Google/google-api-php-client/src/Google/autoload.php';
 
  $client_id = '61668863490-vbrmmltmvjeqkmkmd2r1ntac91e8kliq.apps.googleusercontent.com';
  $client_secret = '5vGnL-JhT1DinYVDSggeOdif';
