@@ -1,6 +1,5 @@
 <?php
-session_start();
-
+include "includes/app.php";
 //ini_set('include_path', '/var/www/html/folkstore/pankaj/Google/');
 
 //Google API PHP Library includes
@@ -60,5 +59,6 @@ if ($client->getAccessToken()) {
   $authUrl = $client->createAuthUrl();
   ocloset("a", "Gplus login", array("href" => $authUrl));
 }
+closedb();
 ?>
 
