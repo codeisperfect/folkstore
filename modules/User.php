@@ -102,7 +102,15 @@ class User extends Sql{
 		Sqle::updateVal("users",array('last_login'=>$timenow),array('id'=>User::loginId()));
 	}
 	public static function fglogin($data){//must have key, { type, id} Additional : { name, phone}
-
+		if( in_array($data["type"], array("fblogin", "gpluslogin")) ){
+			$ins_data=Fun::getflds(array("name", "phone"), $data);
+			$ins_data[$data["type"]] = $data["id"];
+			$ins_data["type"] = "s";
+			$fgloginid=Sqle::insertValUniq("users", $ins_data, "id", array($data["type"] => $data["id"]));
+			$temp=array("id" =>$fgloginid, "type" => $ins_data["type"] );
+			sets("login", $temp);
+			return $temp;
+		}
 	}
 }
 ?>

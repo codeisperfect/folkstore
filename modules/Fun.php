@@ -89,8 +89,6 @@ abstract class Fun{
 			$k=$arr[$i];
 			if(isset($data[$k]))
 				$temp[$k]=$data[$k];
-			else
-				return null;
 		}
 		return $temp;
 	}
@@ -232,7 +230,7 @@ abstract class Fun{
 	}
 	public static function mycurl($url,$post_params=''){
 		$lc="curl -s -k --no-progress-bar -d '$post_params' '$url'";
- 		$lc="wget -O- --post-data='$post_params' '$url' -o  /tmp/null";
+		$lc="wget -O- --post-data='$post_params' '$url' -o  /tmp/null";
 		return shell_exec($lc);
 //		return shell_exec("python check_plogin.py '".$url."'");
 	}

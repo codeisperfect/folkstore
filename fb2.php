@@ -48,9 +48,8 @@ if ( isset( $session ) ) {
   $fbfullname = $graphObject->getProperty('name'); // To Get Facebook full name
   $fbemail = $graphObject->getProperty('email');
 
-  echo $fbid;
-  echo $fbfullname;
-  echo $fbemail;
+  $temp = User::fglogin(array("type" => "fblogin", "id"=>$fbid, "name" => $fbfullname, "email" => $fbemail ));
+  Fun::redirect(HOST."store.php");
    
 } else {
     Fun::redirect($helper->getLoginUrl());

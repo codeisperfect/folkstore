@@ -2,8 +2,11 @@
 include "includes/app.php";
 load_view("template/top.php");
 
-print_r(  gets("login") );
 
+//$a=User::fglogin(array("type" => "fblogin", "id"=>112, "name" => "Mohit.Saini" ));
+$b=User::fglogin(array("type" => "gpluslogin", "id"=>1162, "name" => "Mohit Saini" ));
+
+print_r($b);
 
 
 ?>
@@ -34,7 +37,6 @@ print_r(  gets("login") );
 
 //load_view("template/login.php");
 
-print_r(gets("login"));
 
 ?>
 
