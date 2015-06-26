@@ -1,6 +1,7 @@
 <?php
 session_start();
-ini_set('include_path', '/var/www/html/Google');
+
+ini_set('include_path', '/var/www/html/folkstore/pankaj/Google/');
 
 //Google API PHP Library includes
 //require_once 'Google/Client.php';
