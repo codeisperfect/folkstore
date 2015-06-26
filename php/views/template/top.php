@@ -25,4 +25,4 @@
 		var cururl=window.location.href;
 	</script>
  </head>
-<body style="overflow-y:scroll;" >
+<body style="overflow-y:scroll;overflow-x:hidden;" >

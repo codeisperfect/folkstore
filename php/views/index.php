@@ -6,7 +6,7 @@
 				<div style='color:white;margin-top:190px;max-width:800px;'  >
 					<div class="row-fluid"  >
 						<div style='margin-bottom:50px;' >
-							<img src='image_home/Createyouronlinestor.png' />
+							<img src='image_home/Createyouronlinestor.png' class='img-responsive' />
 						</div>
 						<form action="search.php" >
 							<div class="col-md-5" style="margin:0px;padding:0px;" >
