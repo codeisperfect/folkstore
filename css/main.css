@@ -1,7 +1,7 @@
 #bottom-footer {
-	height: 60px;
+	height:60px;
 	background-color: #000000;
-	padding-top: 20px;
+	color:#666666;
 }
 
 td{
@@ -236,3 +236,4 @@ div.error{
 	
 
 }
+

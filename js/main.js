@@ -1,7 +1,7 @@
 $( document ).ready(function(){
 	mylib();
 	$(function () {
-	  $('[data-toggle="tooltip"]').tooltip()
+		$('[data-toggle="tooltip"]').tooltip()
 	});
 	$('.dropdown-menu').click(function(e) {
 		if(!(this.getAttribute("data-closeonclick")=="true")){
@@ -245,11 +245,54 @@ function animreplce(e,showid,allids){
 
 
 function runonload(){
-  var allids=["login_form","forget_form","register_form"];
-  doforall(allids,function(elm){
-    $('.open_'+elm).click(function(e){
-      animreplce(e,elm,allids);
-    });
-  });
+	var allids=["login_form","forget_form","register_form"];
+	doforall(allids,function(elm){
+		$('.open_'+elm).click(function(e){
+			animreplce(e,elm,allids);
+		});
+	});
+	$('.button-collapse').sideNav();
+	$('.parallax').parallax();
+	$('.materialboxed').materialbox();
+	$('.slider').slider({
+		full_width: true,
+		height:350,
+		transition:400,
+		interval:3500
+	});
+	runmypagecode(page.curpage, {"oncecode" : false});
+	$( window ).resize(function() {
+		runmypagecode(page.curpage, {"oncecode" : false});
+	});
 }
+
+
+
+var page = {
+	curpage:'',
+	index:{
+		jsdesign: function() {
+			var issmall = !$(".hide-on-small-and-down").is(":visible");
+			if(!issmall) {
+				$(".rightborder").css({"border-right": "1px solid #dddddd"});
+			} else {
+				$(".rightborder").css({"border-right": "0px solid #dddddd"});
+			}
+		}
+	},
+};
+
+function runmypagecode(inp, args) {
+	args = setifn(args, {});
+	mergeifunset(args, {'jsdesign' : true, 'oncecode' : true});
+	page.curpage = inp;
+	if(haskey(page, inp)) {
+		if(args['jsdesign']) {
+			if(haskey(page[inp], "jsdesign" )) {
+				page[inp]["jsdesign"]();
+			}
+		}
+	}
+}
+
 

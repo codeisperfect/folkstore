@@ -1,3 +1,9 @@
+<?php
+load_view("template/top.php");
+
+load_view("template/navbar.php");
+
+?>
 	<div class="jumbotron text-center" id="title" >
 		<div style="background: url(image_home/shutterstockFC00020.png) no-repeat center center ;background-size:100% auto;"  >
 		 <div style='min-height:650px;' class="" >
@@ -229,3 +235,11 @@
 		?>
 	 </div>
 	</div>
+
+
+<?php
+
+load_view("template/footer.php", $inp);
+load_view("template/bottom.php", $inp);
+
+?>

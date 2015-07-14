@@ -510,6 +510,13 @@ mergeifunset=function(dict1,dict2){
 }
 
 
+function setifn(inp, val) {
+	if(inp == null) 
+		inp = val;
+	return inp;
+}
+
+
 function remove(list1,e,fsatis){
 	var outp=[];
 	for(var i=0;i<list1.length;i++){
@@ -684,3 +691,6 @@ function mylib(){
 	awesome.awesomelabel();
 	awesome.imagehoverbig();
 }
+
+
+
