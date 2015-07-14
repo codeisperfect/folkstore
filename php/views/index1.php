@@ -23,16 +23,44 @@ load_view("template/top.php");
 
 	<div id="home" ></div>
 
-	<div class="parallax-container valign-wrapper firstimg" style="" >
-		<div class="section no-pad-bot">
+	<div class="parallax-container valign-wrapper" style="" >
+		<div class="section no-pad-bot" style='margin-top:-20px;' >
+
+<!-- 
+				<div style='font-size:35px;font-weight:900;' >
+					<div class="row center" style='line-height:40px;' >
+						<b>Create Your online store.
+							<br>Its free.
+						</b>
+					</div>
+				</div>
+
+ -->
 			<div class="container">
 				<div class="row center">
-					<h5 class="header col s12 light">Responsive front-end designing is my food.</h5>
+					<div  >
+						<div class='row' style='padding:5px;' >
+							<div style='col s12 l12 m12' style='' >
+								<img src='image_home/Createyouronlinestor.png' class='img-responsive' style='max-width:100%;' />
+							</div>
+						</div>
+					</div>
+					<form>
+						<div class="col s10 offset-s1 m4 offset-m1 l4 offset-l1" style='padding:0px;'  >
+							<input name="locsearch" class='definput' style='height:36px;' placeholder='Locality' >
+						</div>
+						<div class="col s10 offset-s1 m4 l4"  style='padding:0px;' >
+							<input name="search" class='definput' style='height:36px;' placeholder='Search Product' >
+						</div>
+						<div class="col s10 offset-s1 m2 l2 " style='padding:0px;' >
+							<button class="btn waves-effect waves-light green accent-4" type="submit" style='width:100%;' >Search</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
 		<div class="parallax"  >
-			<img src="http://materializecss.com/templates/parallax-template/background2.jpg" alt="Unsplashed background img 2">
+			<img src="image_home/homepic.png" alt="Unsplashed background img 2">
 		</div>
 	</div>
 
@@ -125,16 +153,15 @@ load_view("template/top.php");
 
 
 	<div class="container-fluid" style="padding-top:0px;" >
-		<div class="row" style="" >
-			<div align="center" style='' >
-				<?php
-					resimg("image_home/VectorSmartObject_1.png",array("style"=>"margin-top:20px;margin-bottom:20px;"));
-					opent("br");
-					resimg("image_homenew/HowWeWork.png",array("style"=>"margin-top:30px;margin-bottom:30px;"));
-					opent("br");
-					resimg("image_home/layer_28.png",array("style"=>"margin-top:15px;margin-bottom:15px;"));
-				?>
-		 </div>
+		<div align="center" style='' >
+			<?php
+				resimg("image_home/VectorSmartObject_1.png",array("style"=>"margin-top:20px;margin-bottom:20px;"));
+				opent("br");
+				resimg("image_homenew/HowWeWork.png",array("style"=>"margin-top:30px;margin-bottom:30px;"));
+				opent("br");
+				resimg("image_home/layer_28.png",array("style"=>"margin-top:15px;margin-bottom:15px;"));
+				opent("br");
+			?>
 		</div>
 	</div>
 
@@ -143,9 +170,9 @@ load_view("template/top.php");
 
 	<div class="" style="" >
 		<div class="" style="background-color:#f0f0e8;" >
-			<div class="row" >
-			 <div class="col l12 s12" style="padding:20px;background-color:#ffcc00;"  align="center" >
-				<img src="image_homenew/VectorSmartObject_6.png" class="img-responsive  " />
+			<div class="row" style="background-color:#ffcc00;" >
+			 <div class="col l12 s12 m12"   align="center" style='padding:20px;' >
+				<img src="image_homenew/VectorSmartObject_6.png" class="img-responsive" style='max-width:100%;' />
 			 </div>
 			</div>
 			<div >

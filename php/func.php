@@ -1,4 +1,4 @@
-<?php
+	<?php
 	function jshref($url=""){
 		return "window.location.href='$url'";
 	}
@@ -262,6 +262,13 @@
 		}
 		return $data;
 	}
+
+	function setifunset(&$data,$key,$val){
+		if(!isset($data[$key]))
+			$data[$key]=$val;
+		return $data;
+	}
+
 	function mergeifunset(&$a,$b){
 		$keys=array_keys($b);
 		for($i=0;$i<count($keys);$i++){
