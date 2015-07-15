@@ -96,8 +96,6 @@ $view_default=array(
 		),
 	);
 
-$view_default["check2"] = mergeforce($view_default["check1"], array("class" => "selectall filled-in", "labattr" => array()));
-
 
 $_ginfo["attributes"]=array("name","value","style","class","id","type","ph","onclick","dc",'rows',"disabled","align","valign","action","autofocus","style","rel","type","href","value","src","selected","target","for","checked", "width", "height");
 

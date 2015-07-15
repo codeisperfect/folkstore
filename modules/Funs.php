@@ -9,6 +9,7 @@ abstract class Funs{
 				Fun::redirect("store.php");
 			$login[$reqtype."ec"]=$login["ec"];
 		}
+//		mergeifunset($login, map());
 		return $login;
 	}
 	public static function biggestimg($imgarr){
