@@ -4,13 +4,12 @@ class Templates{
 	function input2($inp){
 		foreach($inp as $key=>$val)
 			$$key=$val;
-		$inpattr=Fun::mergeifunset($inpattr,array("name"=>$name,"type"=>$type,"class"=>"form-control myinput","dc"=>$dc, "ph"=>$ph, "id"=>$id, "value" => convchars( getval( $name, $data ) ) ));
+		$inpattr=Fun::mergeifunset($inpattr,array("name"=>$name,"type"=>$type,"class"=>"definput myinput","dc"=>$dc, "ph"=>$ph, "id"=>$id, "value" => convchars( getval( $name, $data ) ) ));
 		mergeifunset($divattr,array("class"=>"form-group has-feedback", "style"=>"border:solid red 0px;margin-top:-10px;margin-bottom:0px;"));
 ?>
 		<div <?php echo param2str($divattr); ?> >
 			<label class="control-label"><?php echo $label; ?></label>
 			<input <?php echo param2str($inpattr); ?> />
-			<i class="form-control-feedback glyphicon <?php echo $icon; ?>" style='<?php pit("margin-top:-5px;", $ph!=''); ?>' ></i>
 		</div>
 <?php
 	}
@@ -61,5 +60,24 @@ class Templates{
 		if($indiv)
 			closet("div");
 	}
+
+	// function check2($inp) {
+	// 	foreach($inp as $key=>$val)
+	// 		$$key=$val;
+	// 	mergeifunset($inpattr,array("class"=>$class,"id"=>$id==''?'':"check_".$id,"onchange"=>$onchange,"type"=>"checkbox", "value"=>$value ));
+	// 	mergeifunset($labattr, array("for" => $inpattr["id"], "style" => "padding-left:26px;"));
+	// 	if($data != null && isset($data[getval("data-gid", $inpattr)]) && $data[$inpattr["data-gid"]]==$value )
+	// 		$checked=true;
+	// 	if($checked!==null)
+	// 		$inpattr["checked"]="";
+	// 	if($indiv)
+	// 		opent("div", $divattr);
+	// 	opent("input", $inpattr);
+	// 	ocloset("label", $label, $labattr);
+	// 	if($indiv)
+	// 		closet("div");
+	// }
+
+
 }
 ?>

@@ -143,3 +143,16 @@ a.default{
 .pointer{
   cursor: pointer;
 }
+
+.underline:hover{
+  text-decoration: underline;
+}
+
+.whitelink{
+  color:#eeeeee;
+}
+
+
+.whitelink:hover{
+  color:#dddddd;
+}

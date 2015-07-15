@@ -295,8 +295,9 @@ var form={
 		}});
 	},
 	valid:{
-		is:function (obj){
+		is:function (obj, type){
 			var errorlist=[];
+			var objlist=[];
 			var inputs=['INPUT','TEXTAREA','SELECT'];
 			var problem=false;
 			for(i=0;i<inputs.length;i++){
@@ -307,7 +308,8 @@ var form={
 					}
 					else{
 						$(ilist[j]).parent().addClass("has-error");
-						var errormsg=$(ilist[j]).attr("data-unfilled") || $(ilist[j]).attr("name") || null;
+						var errormsg=$(ilist[j]).attr("data-unfilled") || $(ilist[j]).attr("name")  ;
+						objlist.push(ilist[j]);
 						errorlist.push(errormsg);
 						if(!problem)
 							$(ilist[j]).focus();
@@ -315,21 +317,30 @@ var form={
 					}
 				}
 			}
-			return errorlist;
+			return [errorlist,objlist];
 		},
-		action:function(obj){
-			var errors=form.valid.is(obj);
+		action:function(obj, type){
+			var temp=form.valid.is(obj);
+			var errors=temp[0];
+			var objlist=temp[1];
 			if(errors.length>0){
-				for(var i=0;i<errors.length;i++){
-					errors[i]=(i+1)+". "+errors[i];
+				if(type==1){
+					for(var i=0; i<errors.length; i++){
+						objlist[i].setCustomValidity(errors[i]);
+					}
 				}
-				var dispmsg="You have to fill:<br>"+errors.join("<br>");
-				success.push(dispmsg,true);
+				else{
+					for(var i=0;i<errors.length;i++){
+						errors[i]=(i+1)+". "+errors[i];
+					}
+					var dispmsg="You have to fill:<br>"+errors.join("<br>");
+					success.push(dispmsg,true);
+				}
 			}
 			return !(errors.length>0);
 		},
 		action1:function(obj){
-			return !(form.valid.is(obj).length>0);
+			return form.valid.action(obj,1);
 		}
 	}
 };
@@ -692,5 +703,91 @@ function mylib(){
 	awesome.imagehoverbig();
 }
 
+
+
+setifunset=function(data,key,val){
+	if(typeof(data[key])=='undefined')
+		data[key]=val;
+}
+
+mergeifunset=function(dict1,dict2){
+	for(i in dict2){
+		setifunset(dict1,i,dict2[i]);
+	}
+}
+
+String.prototype.myreplace=function(findstr,repstr){
+	var regex=new RegExp(findstr,'g');
+	return this.replace(regex,repstr);
+};
+
+String.prototype.replaceall = function (repdict){
+	var inp=this;
+	for(var i in repdict){
+		inp=inp.myreplace(i,repdict[i]);
+	}
+	return inp;
+};
+
+
+function htmlspecialchars(str) {
+	return str.replaceall({"&":"&amp;", '"':"&quot;", "'":"&#039;", "<":"&lt;", ">":"&gt;"});
+}
+
+
+
+function smilymsg(inp){
+	inp=htmlspecialchars(inp);
+	inp=inp.replaceall({"\n":"<br>","\t":"&nbsp;&nbsp;&nbsp;","  ":"&nbsp;&nbsp;"});
+	return inp;
+}
+
+
+
+var success={
+	id:0,
+	opentime:{},
+	hideafter:8000,//milli seconds
+	push:function(msg,convert){
+		msg = ""+msg;
+		var sid=success.id;
+		success.opentime[sid]=time("m");
+		if(convert==null){
+			msg=smilymsg(msg);
+		}
+		else if(convert==false){
+
+		}
+		var addnew='<div id="alert_'+sid+'" class="success-msg" style="display:none;" ><span onclick="success.closeme($(this).parent());" class="closePopup closeSuccess" >&times;</span>'+msg+'</div>';
+		$("#success_alerts").append(addnew);
+		alobj=$("#alert_"+sid);
+		alobj.fadeIn(function(){
+			setTimeout(function(){
+				success.cleaner();
+			},success.hideafter);
+		});
+		success.id++;
+	},
+	closeme:function(alobj){
+		alobj.fadeOut(function(){
+			alobj.remove();
+		});
+	},
+	cleaner:function(){
+		var ot=success.opentime;
+		var zombies=[];
+		for(var i in ot){
+			if(time("m")-ot[i]>success.hideafter){
+				success.closeme($("#alert_"+i));
+				zombies.push(i);
+			}
+		}
+		for(var i in zombies){
+			if($("#alert_"+i).length<1){
+				delete success.opentime[i];
+			}
+		}
+	}
+};
 
 

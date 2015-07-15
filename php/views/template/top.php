@@ -22,7 +22,7 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
  -->
 
-  <link  type='text/css'  rel='stylesheet'  href='css/materialize.min.css'  >
+  <link  type='text/css'  rel='stylesheet'  href='css/materialize.css'  >
   <link  type='text/css'  rel='stylesheet'  href='css/custom-stylesheet.css'  >
   <link  type='text/css'  rel='stylesheet'  href='css/jquery.bxslider.css'  >
   <link  type='text/css'  rel='stylesheet'  href='https://fonts.googleapis.com/icon?family=Material+Icons'  >

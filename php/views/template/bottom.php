@@ -1,8 +1,13 @@
 
 <?php
 if($needpopup){
-	popupalert(null);
-	popupconfirm(null);
+	// popupalert(null);
+	// popupconfirm(null);
+
+  load_view("popup.php",array("name"=>"alert"));
+  load_view("popup.php",array("name"=>"confirm"));
+  load_view("template/success.php");
+
 }
 //addall_js(array("bootstrap/js/jquery.js", "bootstrap/js/bootstrap.js"));
 ?>

@@ -1,30 +1,16 @@
 <?php
 load_view("template/top.php");
+load_view("template/navbarnew.php");
 ?>
 
 
 
-	<div class="navbar-fixed" >
-		<nav class="white" role="navigation">
-			<div class="nav-wrapper container">
-				<a id="logo-container" href="" class="brand-logo"  >
-						<img src='photo/mylogo1.png' class="circle responsive-img " style="vertical-align:middle" />
-				</a>
-				<ul class="right hide-on-med-and-down">
-					<li  ><a  href='#aboutme'  >About me</a></li><li  ><a  href='#education'  >Education</a></li><li  ><a  href='#projects'  >Projects</a></li><li  ><a  href='#hiring'  >Hiring</a></li><li  ><a  href='#personal'  >Personal</a></li><li  ><a  href='#contactme'  >Contact me</a></li>        </ul>
-
-				<ul id="nav-mobile" class="side-nav">
-					<li  ><a  href='#aboutme'  >About me</a></li><li  ><a  href='#education'  >Education</a></li><li  ><a  href='#projects'  >Projects</a></li><li  ><a  href='#hiring'  >Hiring</a></li><li  ><a  href='#personal'  >Personal</a></li><li  ><a  href='#contactme'  >Contact me</a></li>        </ul>
-				<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-			</div>
-		</nav>
-	</div>
 
 
 	<div id="home" ></div>
 
 	<div class="parallax-container valign-wrapper" style="" >
-		<div class="section no-pad-bot" style='margin-top:-20px;' >
+		<div class="section no-pad-bot" style='margin-top:-10px;' >
 
 <!-- 
 				<div style='font-size:35px;font-weight:900;' >
@@ -38,9 +24,9 @@ load_view("template/top.php");
  -->
 			<div class="container">
 				<div class="row center">
-					<div  >
-						<div class='row' style='padding:5px;' >
-							<div style='col s12 l12 m12' style='' >
+					<div style='' >
+						<div class='row' style='width:100%;' >
+							<div class='col s10  offset-s1 l12 m12' >
 								<img src='image_home/Createyouronlinestor.png' class='img-responsive' style='max-width:100%;' />
 							</div>
 						</div>
@@ -224,6 +210,6 @@ load_view("template/top.php");
 	</div>
 
 <?php
-load_view("template/footer.php");
+load_view("template/footer.php", $inp);
 load_view("template/bottom.php");
 ?>

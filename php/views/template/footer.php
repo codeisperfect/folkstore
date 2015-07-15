@@ -34,10 +34,10 @@
 
 <?php
 	if(isset($inp["login"])) {
-		load_view("template/popup.php", array("name"=>"login", "body"=>"template/login.php", "title"=>"Store Login", "bodyinfo" => array("defval" => $_POST, "loginmsg" => errormsg($login["loginec"]), "defaultfooter"=>false, "stylemain"=>"min-width:600px;", "signupmsg"=>errormsg($login["signupec"]) )));
+		load_view("popup.php", array("name"=>"login", "body"=>"template/login.php", "title"=>"Store Login", "bodyinfo" => array("defval" => $_POST, "loginmsg" => errormsg($login["loginec"]), "defaultfooter"=>false, "stylemain"=>"min-width:600px;", "signupmsg"=>errormsg($login["signupec"]) )));
 		load_view("template/popup.php",array("name"=>"tnc","body"=>"template/tnc.php","title"=>"Terms&Conditions","defaultfooter"=>false));
 	}
 	if($islogin == 's') {
-		load_view("template/popup.php",array("name"=>"uploadproduct","body"=>"template/uploadproduct.php","title"=>"Upload Product","footer"=>"template/uploadproductfooter.php" ));
+		load_view("popup.php",array("name"=>"uploadproduct","body"=>"template/uploadproduct.php","title"=>"Upload Product","footer"=>"template/uploadproductfooter.php" ));
 	}
 ?>

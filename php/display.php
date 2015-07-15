@@ -389,5 +389,12 @@
 		mergeifunset($params,array("style"=>"height:".$inp."px",'innerHTML'=>''));
 		ocloset("div",$params['innerHTML'],$params);
 	}
+	function disptabs($inp, $linkp="#") {
+		foreach($inp as $i => $row) {
+			opent("li");
+			ocloset("a", $row, array("href" => $linkp.$i));
+			closet("li");
+		}
+	}
 
 ?>

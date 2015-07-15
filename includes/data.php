@@ -51,6 +51,16 @@ $view_default=array(
 		'stylemain'=>'min-width:200px;',
 		'defaultfooter'=>true
 		),
+	"popup.php"=>array(
+		"title"=>"This popup is made in India",
+		"body"=>"",
+		"bodyinfo"=>array(),
+		"footer"=>"",
+		"footerinfo"=>array(),
+		"name"=>"",
+		'stylebody'=>'',
+		'stylemain'=>'min-width:200px;'
+	),
 	"template/input.php"=>array(
 		"inpattr"=>array(),
 		"divattr"=>array(),
@@ -85,6 +95,8 @@ $view_default=array(
 		"data" => null
 		),
 	);
+
+$view_default["check2"] = mergeforce($view_default["check1"], array("class" => "selectall filled-in", "labattr" => array()));
 
 
 $_ginfo["attributes"]=array("name","value","style","class","id","type","ph","onclick","dc",'rows',"disabled","align","valign","action","autofocus","style","rel","type","href","value","src","selected","target","for","checked", "width", "height");
