@@ -1,0 +1,17 @@
+1. Upload backend.
+2. Search page refiners.
+		1. Price => options ( Less then 1000 , 1000 to 2000 .. .. Above 5000 ) [ Multiple select ] 
+		2. category => Select Category  [ Multiple select ] 
+		3. Active products only.
+		4. Sale % Filtering
+		5. Search by Keywords.
+
+		Sorting : 
+		1. Most Rated Products 
+		2. Recent uploaded first
+		3. Active Products First
+		4. Less price first
+3. Vender search page.
+4. Content in Home page.
+5. Correcting Store page content.
+6. Search page & products page & vender list page designing.

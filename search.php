@@ -1,9 +1,11 @@
 <?php
 include "includes/app.php";
 
-$pageinfo["dispbody"]=false;
 
+$search = get("search");
+$locsearch = get("locsearch");
 $sresults=Sql::getArray("select * from products ");
+
 foreach($sresults as $i=>$row){
 	$row["images"]=myexplode(",",$row["images"]);
 	$row["simages"]=myexplode(",",$row["simages"]);
@@ -21,22 +23,8 @@ foreach($sresults as $i=>$row){
 $pageinfo["sresults"]=$sresults;
 
 
-load_view("template/top.php");
-
-
-load_view("template/navbar.php");
-
+$pageinfo["search"] = $search;
 load_view("search.php",$pageinfo);
-
-?>
-
-
-
-<?php
-
-
-load_view("template/footer.php",$pageinfo);
-load_view("template/bottom.php",$pageinfo);
 
 
 

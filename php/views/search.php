@@ -1,102 +1,89 @@
 <?php
-if(true){
+load_view("template/top.php");
+load_view("template/navbarnew.php");
 ?>
-  <div class="jumbotron text-center" id="title" style="background-image:none;" >
-    <div style="background: url(image_search/shutterstockFC00016.jpg) no-repeat center center ;background-size:100% auto;height:auto;background-color:rgba(0,25,0,0.7);"  >
-     <div style="min-height:400px;background-color:rgba(0,25,0,0.7);" >
-        <div align="left" style="margin-left:30px;">
-         <div style="padding-top:25px;" >
-          <a href="<?php echo HOST; ?>" ><img src="images/highresalpha.png" class="img-responsive" ></a>
-          </div>
-        </div>
-     </div>
-    </div>
-  </div>
+
+
+	<div class="parallax-container valign-wrapper mainprlx" style='' >
+		<div class="section no-pad-bot" style='' >
+			<div class="container">
+				<div class="row center">
+				</div>
+			</div>
+		</div>
+		<div class="parallax"  >
+			<img src="photo/searchpic.png" alt="Unsplashed background img 2" >
+		</div>
+	</div>
+
+
+<br>&nbsp;<br>
+	<div style="border-bottom:solid black 3px;margin-top:-10px;padding-bottom:10px;padding-right:5px;" align="right" >
+		<div style="float:right;width:230px;" >
+			<select class='browser-default' >
+			<?php
+				disp_olist(arr2option(array_keys($_ginfo["sorting"])));
+			?>
+			</select>
+		</div>
+	</div>
+
+	<div class='container-fluid' >
+		<div class='row'  >
+			<div class='col s12 l3 m4 ' style='padding:0px;margin:0px;' >
+				<div class='card' >
+					<?php
+						load_view("template/searchfilter.php", $inp);
+					?>
+				</div>
+			</div>
+			<div class='col s12 l9 m8' style='padding:0px;margin:0px;' >
+				<div class='row' >
+
+					<?php
+						if(true){
+						$pnum=0;
+						for($i=0;true && $pnum<count($sresults) ;$i++){
+							for($j=0;$j<3 && $pnum<count($sresults) ;$j++){
+								$row=$sresults[$pnum];
+						?>
+						<div class="col s12 l4 m6" style="" >
+							<a href="<?php echo HOST."product.php?pid=".$row["id"]; ?>" ><div class='card' >
+								<div  >
+									<div style="padding:5px;" >
+									<?php
+										resimg($row["dispimg"],array("class"=>"","style"=>"max-width:100%;max-height:100%;"));
+									?>
+									</div>
+									<div align="center" style='color:#333;display:none;' >
+										<span style="text-transform: uppercase;font-size:20px;font-weight:600;color:#555555;" ><?php echo $row["title"]; ?></span><br>
+										<span><?php echo $row["abouttext_short"]; ?></span><br>
+										<div>
+											<span style='font-weight:600;' >Rs. <?php echo ceil($row['price']*(100-$row['sale'])/100.0); ?></span>
+											<span style='text-decoration:line-through;' >Rs. <?php echo $row['price'] ?></span>  
+											Flat <span style='color:green;font-weight:600;' ><?php echo  $row['sale'] ; ?></span> % Off
+										</div>
+									</div>
+								</div>
+							</div></a>
+						</div>
+						<?php
+								$pnum++;
+							}
+						}
+					}
+					?>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
 <?php
-}
-else{
+load_view("template/footer.php", $inp);
+load_view("template/bottom.php");
 ?>
-  <div class="jumbotron text-center" id="title" style="background-image:none;" >
-    <div style="background: url(image_edit/shutterstockFC00020.png) no-repeat center center ;background-size:100% auto;padding-top:300px;background-color:rgba(0,25,0,0.4);"  >
-     <div style="min-height:300px;" align="center" >
-      <div style="position:relative;border:solid rgba(0,0,0,0) 1px;margin:auto;"  >
-        <div style='margin-top:-130px;' >
-          <img src='image_edit/VendorRegistration.png' style='' />
-        </div>
-      </div>
-     </div>
-    </div>
-  </div>
-  <div style='margin-top:-300px;background-color:white;min-height:300px;margin-bottom:-300px;' ></div>
-<?php
-}
-?>
-
-  <div style="border-bottom:solid black 3px;margin-top:-10px;padding-bottom:10px;padding-right:5px;" align="right" >
-    <div style="float:right;width:230px;" >
-      <select class='form-control' >
-      <?php
-        disp_olist(arr2option(array_keys($_ginfo["sorting"])));
-      ?>
-      </select>
-    </div>
-    <?php
-      clear();
-    ?>
-  </div>
-
-
-
-  <div align=center style="padding:20px;margin-top:5px;" >
-    <div class="container" >
-    <div class="row-fluid" align="center" style="padding:0px;margin:0px;" >
-      <div class="col-md-4"  >
-        <div  style="width:300px;margin:20px;float:left;" align="left" >
-          <span style="text-transform:uppercase;font-weight:600;font-size:20px;" >Products</span>
-        </div>
-      </div>
-      <?php
-        clear();
-      ?>
-    </div>
-    <?php
-      $pnum=0;
-      for($i=0;true && $pnum<count($sresults) ;$i++){
-    ?>
-    <div class="row-fluid" align=center style="padding:0px;margin:0px;" >
-      <?php
-        for($j=0;$j<3 && $pnum<count($sresults) ;$j++){
-          $row=$sresults[$pnum];
-      ?>
-      <div class="col-md-4" style="padding:0px;margin:0px;" >
-        <a href="<?php echo HOST."product.php?pid=".$row["id"]; ?>" ><div class="oneproduct" >
-          <div align="center" >
-            <div style="height:280px;width:280px;overflow-y:hidden;margin-top:15px;" >
-            <?php
-              resimg($row["dispimg"],array("class"=>"","style"=>"max-width:100%;max-height:100%;"));
-            ?>
-            </div>
-            <div align="center" style='color:#333;' >
-              <span style="text-transform: uppercase;font-size:20px;font-weight:600;color:#555555;" ><?php echo $row["title"]; ?></span><br>
-              <span><?php echo $row["abouttext_short"]; ?></span><br>
-              <div>
-                <span style='font-weight:600;' >Rs. <?php echo ceil($row['price']*(100-$row['sale'])/100.0); ?></span>
-                <span style='text-decoration:line-through;' >Rs. <?php echo $row['price'] ?></span>  
-                Flat <span style='color:green;font-weight:600;' ><?php echo  $row['sale'] ; ?></span> % Off
-              </div>
-            </div>
-          </div>
-        </div></a>
-      </div>
-      <?php
-          $pnum++;
-        }
-      ?>
-    </div>
-    <?php
-      }
-    ?>
-    </div>
-  </div>
-
-

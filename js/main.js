@@ -262,6 +262,8 @@ function runonload(){
 	});
 	runmypagecode(page.curpage, {"oncecode" : false});
 	$( window ).resize(function() {
+		page.w = $(window).width();
+		page.h = $(window).height();
 		runmypagecode(page.curpage, {"oncecode" : false});
 	});
 }
@@ -270,6 +272,8 @@ function runonload(){
 
 var page = {
 	curpage:'',
+	w:$(window).width(),
+	h:$(window).height(),
 	index:{
 		jsdesign: function() {
 			var issmall = !$(".hide-on-small-and-down").is(":visible");
@@ -277,6 +281,22 @@ var page = {
 				$(".rightborder").css({"border-right": "1px solid #dddddd"});
 			} else {
 				$(".rightborder").css({"border-right": "0px solid #dddddd"});
+			}
+		}
+	},
+	store:{
+		jsdesign: function() {
+			var issmall = !$(".hide-on-small-and-down").is(":visible");
+			var ismed = !$(".hide-on-med-only").is(":visible");
+			if(!issmall) {
+				$(".rightborder").css({"border-right": "1px solid #dddddd"});
+			} else {
+				$(".rightborder").css({"border-right": "0px solid #dddddd"});
+				$(".mainprlx").css({"height": "450px" });
+				$("#prlxstore").css({'margin-top':'-160px'});
+			}
+			if(ismed) {
+				$("#prlxstore").css({'margin-top':'-100px'});
 			}
 		}
 	},

@@ -70,7 +70,7 @@ $view_default=array(
 		"closediv"=>true
 		),
 	"input2"=>array(
-		"inpattr"=>array(),
+		"inpattr"=>array("style" => "border-radius:2px;"),
 		"divattr"=>array(),
 		"label"=>"",
 		"name"=>"",
@@ -106,13 +106,15 @@ $_ginfo["shoudnotnull"]=array("id","name", "style","class","type");
 
 
 $_ginfo["action_constrain"]=array(
-	"signup"=>array("need"=>array("name", "email", "password", "phone") ),
+	"signup"=>array("need"=>array("name", "email1", "password1", "phone") ),
 	"login"=>array("need"=>array("email","password")),
 	"logout"=>array(),
 	"uploadproduct"=>array("need"=>array("title","abouttext","price","sale","addinfo")),
-	"savedetails"=>array("need" => array('name', 'address', 'city', 'state', 'zipcode', 'landmark', 'country', 'lat', 'lan', 'email', 'mobile', 'mobile2', 'whatsapp', 'comptype', 'ownername', 'shopcatg', 'pan', 'tin', 'stex', 'stype', 'cstno', 'vatno', 'excisereg', 'aboutstore', 'industorytext') )
+	"savedetails"=>array("need" => array('name', 'address', 'city', 'state', 'zipcode', 'landmark', 'country', 'lat', 'lan', 'mobile', 'mobile2', 'whatsapp', 'ownername', 'shopcatg', 'pan', 'tin', 'stex', 'stype', 'cstno', 'vatno', 'excisereg', 'aboutstore', 'industorytext') )
 );
 
+
+ 
 
 $_ginfo["autoinsert"]=array(
 );

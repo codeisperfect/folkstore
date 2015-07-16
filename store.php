@@ -41,19 +41,8 @@ $sinfo["pan_details"]=dict2keyval(array(
 
 $pageinfo["sinfo"]=$sinfo;
 
-load_view("template/top.php");
-load_view("template/navbar.php");
 
 load_view("store.php",$pageinfo);
-
-?>
-
-
-
-<?php
-load_view("template/footer.php",$pageinfo);
-load_view("template/bottom.php",$pageinfo);
-
 
 closedb();
 ?>

@@ -44,6 +44,12 @@
 		<input <?php echo getparams($data); ?> />
 <?php
 	}
+
+	function input_v2($data = array()) {
+		$data["value"] = convchars(getval(getval("name", $data), getval("data", $data)));
+		opent("input", $data);
+	}
+
 	function textarea($data=null){
 		$data=Fun::setifunset($data,"html","");
 ?>
@@ -395,6 +401,10 @@
 			ocloset("a", $row, array("href" => $linkp.$i));
 			closet("li");
 		}
+	}
+
+	function msprint($inp) {
+		echo msvalprint($inp);
 	}
 
 ?>

@@ -303,5 +303,20 @@
 		return $a;
 	}
 
+	function msvalprint($inp) {//recursive function.
+		if(gettype($inp) == "array") {
+			$isnindex = (array_keys($inp) == Fun::oneToN(count($inp)-1, 0));//is natural indexed
+			$otext = map(array_keys($inp), function($ind) use($isnindex, $inp) {
+				return ($isnindex?"":"'".$ind."'=>").msvalprint($inp[$ind]);
+			});
+			return "array(".implode(", ", $otext).")";
+		} else if(gettype($inp) == 'integer') {
+			return $inp;
+		} else {
+			$inp = str_replace("'", "\\'", "".$inp);
+			return "'".$inp."'";
+		}
+	}
+
 
 ?>

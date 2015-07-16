@@ -3,13 +3,57 @@ include "includes/app.php";
 load_view("template/top.php");
 
 ?>
-<div style='border:solid gray 1px;margin:50px;' >
-<?php
-	$login["signupmsg"] = 1;
-	$login["loginmsg"] = 1;
-	load_view("template/login.php", $login);
-?>
+
+<div style='background-image:url(image_search/shutterstockFC00016.jpg);'  >
+	<div style='background-color:rgba(0,0,0,0.7);' >
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	</div>
 </div>
+
 
 <?php
 

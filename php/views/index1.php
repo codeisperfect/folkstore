@@ -10,7 +10,7 @@ load_view("template/navbarnew.php");
 	<div id="home" ></div>
 
 	<div class="parallax-container valign-wrapper" style="" >
-		<div class="section no-pad-bot" style='margin-top:-10px;' >
+		<div class="section no-pad-bot" style='margin-top:-25px;' >
 
 <!-- 
 				<div style='font-size:35px;font-weight:900;' >
@@ -31,7 +31,7 @@ load_view("template/navbarnew.php");
 							</div>
 						</div>
 					</div>
-					<form>
+					<form action="<?php echo HOST."search.php"; ?>" >
 						<div class="col s10 offset-s1 m4 offset-m1 l4 offset-l1" style='padding:0px;'  >
 							<input name="locsearch" class='definput' style='height:36px;' placeholder='Locality' >
 						</div>

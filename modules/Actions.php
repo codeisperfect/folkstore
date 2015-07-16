@@ -17,7 +17,9 @@ class Actions{
 	function signup($data){
 		global $_ginfo;
 		$outp=array("ec"=>1,"data"=>0);
-		$signupinfo = Fun::getflds($_ginfo["action_constrain"]["signup"]["need"],$data);
+		$signupinfo = Fun::getflds(array("name", "phone"), $data);
+		$signupinfo["password"] = $data["password1"];
+		$signupinfo["email"] = $data["email1"];
 		setval( "informme", $signupinfo, getval("informme", $data), getval("informme", $data) == "yes");
 		$temp=User::signUp($signupinfo);
 		if($temp>0){

@@ -1,15 +1,31 @@
-	<div class="jumbotron text-center" id="title" style="background-image:none;" >
-		<div style="background: url(image_edit/shutterstockFC00020.png) no-repeat center center ;background-size:100% auto;padding-top:300px;background-color:rgba(0,25,0,0.4);"  >
-		 <div style="min-height:300px;" align="center" >
-			<div style="position:relative;border:solid rgba(0,0,0,0) 1px;margin:auto;"  >
-				<div style='margin-top:-130px;' >
-					<img src='image_edit/VendorRegistration.png' style='' />
+<?php
+load_view("template/top.php");
+load_view("template/navbarnew.php");
+?>
+
+
+
+	<div class="parallax-container valign-wrapper" style="" >
+		<div class="section no-pad-bot" style='' >
+			<div class="container">
+				<div class="row center">
+					<div style='' >
+						<div class='row' style='width:100%;' >
+							<div class='col s10  offset-s1 l12 m12' >
+								<img src='image_edit/VendorRegistration.png' style='max-width:100%;' />
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		 </div>
+		</div>
+		<div class="parallax"  >
+			<img src="image_home/homepic.png" alt="Unsplashed background img 2">
 		</div>
 	</div>
-	<div style='margin-top:-300px;background-color:white;min-height:300px;margin-bottom:-300px;' ></div>
+
+
+
 
 
 
@@ -19,428 +35,310 @@
 			<?php
 				dummyheight(30);
 			?>
-		 <img src='image_edit/generalinformation.png' class="img-responsive" />
+			<div>
+				<img src='image_edit/generalinformation.png' class="img-responsive" style='max-width:100%;' />
+			</div>
+			<div style="margin-top:20px;margin-bottom:20px;"  >
+				<img src="image_edit/layer_5.png" style='max-width:100%;' />
+			</div>
 		</div>
-		 <div style="margin-top:20px;margin-bottom:20px;" >
-			<img  src="image_edit/layer_5.png"  />
-		 </div>
 	 </div>
 	</div>
 
-	<div class="container text-center">
-		<form method="post" action="<?php echo HOST."store.php"; ?>" >
+	<div class="container-fluid text-center">
+		<div class='row' >
+			<div class='col s12 l10 offset-l1 m12' >
+				<form method="post" action="<?php echo HOST."store.php"; ?>" >
 
-	 	<?php
-	 		$info_text = array("Vendor Name", "Address");
-	 		$info_name = array("name", "address");
-	 		for($i=0; $i<2; $i++){
-	 	?>
-		<div style='' >
-			<div class="col-xs-12 col-sm-2" align="left" >
-				<div class='mt25' style="" >
-					<div class="row" >
-						<div class="col-md-2" style="margin:0px;padding:0px;height:0px;" ></div>
-						<div class="col-md-10" ><?php echo $info_text[$i]; ?>:</div>
+			 	<?php
+			 		$info_text = array("Vendor Name", "Address");
+			 		$info_name = array("name", "address");
+			 		for($i=0; $i<2; $i++){
+			 	?>
+				<div class='row' >
+					<div class="col s12 m2 l2" align="left" >
+						<div ><?php echo $info_text[$i]; ?>:</div>
 					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-9" >
-				<?php
-				load_view("input2", array("ph"=>$info_text[$i], "divattr"=>array("style"=>""), "name"=>$info_name[$i], "data" => $sinfo ) );
-				?>
-			</div>
-			<?php
-			clear();
-			?>
-		</div>
-		<?php
-			}
-		?>
-		<div style='' >
-			<div class="col-xs-12 col-sm-2" align="left" >
-				<div class='mt25' style="" >
-					<div class="row" >
-						<div class="col-md-2" style="margin:0px;padding:0px;height:0px;" ></div>
-						<div class="col-md-10" >City:</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-4" >
-				<?php
-				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"city", "data" => $sinfo ) );
-				?>
-			</div>
-			<div class="col-xs-12 col-sm-1" align="left" >
-				<div class='mt25' style="" >
-					<div class="row" >
-						<div class="col-md-2" style="margin:0px;padding:0px;height:0px;" ></div>
-						<div class="col-md-10" >State:</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-4" >
-				<?php
-				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"state", "data" => $sinfo ) );
-				?>
-			</div>
-			<?php
-			clear();
-			?>
-		</div>
-		<div style='' >
-			<div class="col-xs-12 col-sm-2" align="left" >
-				<div class='mt25' style="" >
-					<div class="row" >
-						<div class="col-md-2" style="margin:0px;padding:0px;height:0px;" ></div>
-						<div class="col-md-10" >Pincode:</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-4" >
-				<div class="row" >
-					<div class="col-md-5" style="margin-right:0px;" >
+					<div class="col s12 m9 l9" align='left' >
 						<?php
-						load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"zipcode", "data" => $sinfo  ) );
+						input_v2(array("ph"=>$info_text[$i], "name"=>$info_name[$i], "data" => $sinfo, "class" => "definput myinput" ));
+		//				load_view("input2", array("ph"=>$info_text[$i], "divattr"=>array("style"=>"margin-top:-20px;"), "name"=>$info_name[$i], "data" => $sinfo ) );
 						?>
 					</div>
-					<div class="col-md-2" align="left" style="padding:0px;" >
-						<div class='mt25' style="" >
-							Landmark:
+				</div>
+				<?php
+					}
+				?>
+				<div class='row' >
+					<div class="col s12 m2 l2" align="left" >
+						City:
+					</div>
+					<div class="col s12 m4 l4" align="left" >
+						<?php
+						input_v2(array("name"=>"city", "data" => $sinfo, "class" => "definput myinput" ) );
+						?>
+					</div>
+					<div class="col s12 m1 l1" align="left" >
+						State:
+					</div>
+					<div class="col s12 m4 l4" align="left" >
+						<?php
+						input_v2(array("name"=>"state", "data" => $sinfo, "class" => "definput myinput" ) );
+						?>
+					</div>
+				</div>
+
+				<div class='row' >
+					<div class="col s12 m2 l2 mt5" align="left" >
+						Pincode:
+					</div>
+					<div class="col s12 m4 l2 mt5 " style='' >
+						<?php
+							input_v2(array("name"=>"zipcode", "data" => $sinfo, "class" => "definput myinput"  ) );
+						?>
+					</div>
+					<div class="col s12 m1 l1 mt5 " align="left" style='' >
+						Landmark:
+					</div>
+					<div class="col s12 m4 l2 mt5" >
+						<?php
+							input_v2(array("name"=>"landmark", "data" => $sinfo, "class" => "definput myinput" ) );
+						?>
+					</div>
+					<div class="col s12 m2 l1 mt5" align="left" >
+						Country:
+					</div>
+					<div class="col s12 m9 l3 mt5" >
+						<?php
+							input_v2(array("name"=>"country", "data" => $sinfo, "class" => "definput myinput") );
+						?>
+					</div>
+				</div>
+
+				<div class='row' >
+					<div class="col s12 m2 l2 mt5" align="left" >
+						Latitude:
+					</div>
+					<div class="col s12 m4 l2 mt5 " style='' >
+						<?php
+							input_v2(array("name"=>"lat", "data" => $sinfo, "class" => "definput myinput"  ) );
+						?>
+					</div>
+					<div class="col s12 m1 l1 mt5 " align="left" style='' >
+						Longitute:
+					</div>
+					<div class="col s12 m4 l2 mt5" >
+						<?php
+							input_v2(array("name"=>"lan", "data" => $sinfo, "class" => "definput myinput" ) );
+						?>
+					</div>
+					<div class="col s12 m2 l1 mt5" align="left" >
+						Email:
+					</div>
+					<div class="col s12 m9 l3 mt5" >
+						<?php
+							input_v2(array("name"=>"email", "data" => $sinfo, "class" => "definput myinput", "disabled" => "true") );
+						?>
+					</div>
+				</div>
+
+
+				<div class='row' >
+					<div class="col s12 m2 l2 mt5" align="left" >
+						Mobile:
+					</div>
+					<div class="col s12 m4 l2 mt5 " style='' >
+						<?php
+							input_v2(array("name"=>"mobile", "data" => $sinfo, "class" => "definput myinput"  ) );
+						?>
+					</div>
+					<div class="col s12 m4 l3 mt5" >
+						<?php
+							input_v2(array("name"=>"mobile2", "data" => $sinfo, "class" => "definput myinput" ) );
+						?>
+					</div>
+					<div class="col s12 m2 l1 mt5" align="left" >
+						Whatsapp:
+					</div>
+					<div class="col s12 m9 l3 mt5" >
+						<?php
+							input_v2(array("name"=>"whatsapp", "data" => $sinfo, "class" => "definput myinput") );
+						?>
+					</div>
+				</div>
+
+
+				<div class='pt25' align="center"  >
+						<div class=''  >
+							<img src='image_edit/aboutvendor.png' class="img-responsive" style='max-width:100%;' />
 						</div>
-					</div>
-					<div class="col-md-5" >
-						<?php
-						load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"landmark", "data" => $sinfo  ) );
-						?>
-					</div>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-1" align="left" >
-				<div class='mt25' style="" >
-					<div class="row" >
-						<div class="col-md-2" style="margin:0px;padding:0px;height:0px;" ></div>
-						<div class="col-md-10" >Country:</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-4" >
-				<?php
-				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"country", "data" => $sinfo ) );
-				?>
-			</div>
-			<?php
-			clear();
-			?>
-		</div>
-
-		<div style='' >
-			<div class="col-xs-12 col-sm-2" align="left" >
-				<div class='mt25' style="" >
-					<div class="row" >
-						<div class="col-md-2" style="margin:0px;padding:0px;height:0px;" ></div>
-						<div class="col-md-10" >Latitude:</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-4" >
-				<div class="row" >
-					<div class="col-md-5" >
-						<?php
-						load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"lat", "data" => $sinfo  ) );
-						?>
-					</div>
-					<div class="col-md-2" align="left" style="padding:0px;" >
-						<div class='mt25' style="" >
-							Longitute:
+				<div class='row' align="center"  >
+						<div style="margin-top:20px;margin-bottom:20px;" >
+							<img  src="image_edit/layer_5.png"  />
 						</div>
-					</div>
-					<div class="col-md-5" >
+				</div>
+				<div class="row" style="" >
+					<?php
+						$ctypes=array("Public Ltd.", "Private Ltd.", "Partnership", "Propeieter");
+						for($i=0; $i<4; $i++){
+					?>
+						<div class="col s6 m3 l3" style="" >
 						<?php
-						load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"lan", "data" => $sinfo  ) );
+							load_view("check2", array("id"=>"ctype".$i, "label"=>"&nbsp;&nbsp;".$ctypes[$i], "value" => $i+1, "class"=>"filled-in tickone", "inpattr"=>array( "data-gid" => "comptype"  ), "data" => $sinfo ));
+						?>
+						</div>
+					<?php
+						}
+					?>
+				</div>
+				<div class='row' >
+					<div class="col s12 m2 l2" align="left" >
+						Owner's Name:
+					</div>
+					<div class="col s12 m4 l4" style=""  >
+						<?php
+						input_v2(array("name"=>"ownername", "data" => $sinfo, "class" => "definput myinput"  ) );
+						?>
+					</div>
+					<div class="col s12 m1 l1" align="left"  >
+						Your Estd:
+					</div>
+					<div class="col s12 m4 l4" align="left" >
+						<?php
+						input_v2(array("name"=>"estd", "data" => $sinfo, "class" => "definput myinput") );
 						?>
 					</div>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-1" align="left" >
-				<div class='mt25' style="" >
-					<div class="row" >
-						<div class="col-md-2" style="margin:0px;padding:0px;height:0px;" ></div>
-						<div class="col-md-10" >Email:</div>
+				<div class='row' >
+					<div class="col s12 l2 m2" align="left" >
+						Industory type
+					</div>
+					<div class="col s12 l4 m4" style="" >
+						<select class='browser-default myinput' data-condition='simple' name="shopcatg" >
+							<?php
+								disp_olist($shopcatgs, array("addtext"=>"Select Industory", "selected" => $sinfo["shopcatg"] ));
+							?>
+						</select>
 					</div>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-4" >
-				<?php
-				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"email", "data" => $sinfo  ) );
-				?>
-			</div>
-			<?php
-			clear();
-			?>
-		</div>
 
-		<div style='' >
-			<div class="col-xs-12 col-sm-2" align="left" >
-				<div class='mt25' style="" >
-					<div class="row" >
-						<div class="col-md-2" style="margin:0px;padding:0px;height:0px;" ></div>
-						<div class="col-md-10" >Mobile:</div>
+
+
+				<div class='pt25' align="center"  >
+						<div class=''  >
+							<img src='image_edit/StatutoryDetails.png' class="img-responsive" style='max-width:100%;' />
+						</div>
+				</div>
+				<div class='row' align="center"  >
+						<div style="margin-top:20px;margin-bottom:20px;" >
+							<img  src="image_edit/layer_5.png"  />
+						</div>
+				</div>
+
+
+				<?php
+					$info_text = array("PAN No.", "TIN No. ", "Service Tex No.", "Service Type", "CST No.", "VAT No.");
+					$info_name = array("pan", "tin", "stex", "stype", "cstno", "vatno");
+					for($i=0, $count=0; $i<3; $i++, $count+=2){
+				?>
+				<div class='row' >
+					<div class="col s12 l2 m2" align="left" >
+						<?php echo $info_text[$count]; ?>:
 					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-2" style="padding-right:3px;" >
-				<?php
-				load_view("input2", array("ph"=>"+91", "divattr"=>array("style"=>""), "name"=>"mobile", "data" => $sinfo  ) );
-				?>
-			</div>
-			<div class="col-xs-12 col-sm-2" style="padding-left:3px;" >
-				<?php
-				load_view("input2", array("ph"=>"+91", "divattr"=>array("style"=>""), "name"=>"mobile2", "data" => $sinfo  ) );
-				?>
-			</div>
-			<div class="col-xs-12 col-sm-1" align="left" >
-				<div class='mt25' style="" >
-					<div class="row" >
-						<div class="col-md-2" style="margin:0px;padding:0px;height:0px;" ></div>
-						<div class="col-md-10" >Whatsapp:</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-4" >
-				<?php
-				load_view("input2", array("ph"=>"+91", "divattr"=>array("style"=>""), "name"=>"whatsapp", "data" => $sinfo  ) );
-				?>
-			</div>
-			<?php
-			clear();
-			?>
-		</div>
-		<div >
-			<div align="center" style="" >
-				<?php
-				dummyheight(60);
-				?>
-				<img src='image_edit/aboutvendor.png' class="img-responsive" />
-			</div>
-			<div style="margin-top:20px;margin-bottom:20px;" >
-				<img  src="image_edit/layer_5.png"  />
-			</div>
-		</div>
-		<div class="row" style="" >
-			<?php
-				$ctypes=array("Public Ltd.", "Private Ltd.", "Partnership", "Propeieter");
-				for($i=0; $i<4; $i++){
-			?>
-				<div class="col-md-3" style="" >
-				<?php
-					load_view("check1", array("id"=>"ctype".$i, "label"=>"&nbsp;&nbsp;".$ctypes[$i], "value" => $i+1, "class"=>"mycheckbox tickone", "inpattr"=>array( "data-gid" => "comptype"  ), "data" => $sinfo ));
-				?>
-				</div>
-			<?php
-				}
-			?>
-		</div>
-		<div style='' >
-			<div class="col-xs-12 col-sm-2" align="left" >
-				<div class='mt25' style="" >
-					<div class="row" >
-						<div class="col-md-2" style="margin:0px;padding:0px;height:0px;" ></div>
-						<div class="col-md-10" >Owner's Name:</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-4" style=""  >
-				<?php
-				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"ownername", "data" => $sinfo  ) );
-				?>
-			</div>
-			<div class="col-xs-12 col-sm-1" align="left"  style="padding:0px;" >
-				<div class='mt25' style="" >
-					<div class="row" >
-						<div class="col-md-2" style="margin:0px;padding:0px;height:0px;" ></div>
-						<div class="col-md-10" >Your Estd:</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-4" >
-				<?php
-				load_view("input2", array("ph"=>"+91", "divattr"=>array("style"=>""), "name"=>"estd", "data" => $sinfo) );
-				?>
-			</div>
-			<?php
-			clear();
-			?>
-		</div>
-		<div style='' >
-			<div class="col-xs-12 col-sm-2" align="left" >
-				<div class="mt10" >
-					<div class="row" >
-						<div class="col-md-2" style="margin:0px;padding:0px;height:0px;" ></div>
-						<div class="col-md-10" >Industory type</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-4" style="" >
-				<div class='form-group has-feedback'  >
-					<select class='form-control myinput' data-condition='simple' name="shopcatg" >
+					<div class="col s12 l4 m4" style=""  >
 						<?php
-							disp_olist($shopcatgs, array("addtext"=>"Select Industory", "selected" => $sinfo["shopcatg"] ));
+							input_v2(array("name"=>$info_name[$count], "data" => $sinfo, "class" => "definput myinput" ) );
 						?>
-					</select>
-				</div>
-			</div>
-			<?php
-			clear();
-			?>
-		</div>
-
-
-		<div >
-			<div align="center" style="" >
-				<?php
-				dummyheight(60);
-				?>
-				<img src='image_edit/StatutoryDetails.png' class="img-responsive" />
-			</div>
-			<div style="margin-top:20px;margin-bottom:20px;" >
-				<img  src="image_edit/layer_5.png"  />
-			</div>
-		</div>
-
-		<?php
-			$info_text = array("PAN No.", "TIN No. ", "Service Tex No.", "Service Type", "CST No.", "VAT No.");
-			$info_name = array("pan", "tin", "stex", "stype", "cstno", "vatno");
-			for($i=0, $count=0; $i<3; $i++, $count+=2){
-		?>
-		<div style='' >
-			<div class="col-xs-12 col-sm-2" align="left" >
-				<div class='mt25' style="" >
-					<div class="row" >
-						<div class="col-md-2" style="margin:0px;padding:0px;height:0px;" ></div>
-						<div class="col-md-10" ><?php echo $info_text[$count]; ?>:</div>
+					</div>
+					<div class="col s12 l1 m1" align="left" >
+						<?php echo $info_text[$count+1]; ?>:
+					</div>
+					<div class="col s12 l4 m4" >
+						<?php
+							input_v2(array("name"=>$info_name[$count+1], "data" => $sinfo, "class" => "definput myinput" ) );
+						?>
 					</div>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-4" style=""  >
 				<?php
-				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>$info_name[$count], "data" => $sinfo ) );
+					}
 				?>
-			</div>
-			<div class="col-xs-12 col-sm-1" align="left"  style="padding:0px;" >
-				<div class='mt25' style="" >
-					<div class="row" >
-						<div class="col-md-2" style="margin:0px;padding:0px;height:0px;" ></div>
-						<div class="col-md-10" ><?php echo $info_text[$count+1]; ?>:</div>
+
+
+
+				<div class='row' >
+					<div class="col s12 l2 m2" align="left" >
+						Excise reg No:
+					</div>
+					<div class="col s12 l9 m9" >
+						<?php
+							input_v2(array("name"=>"excisereg", "data" => $sinfo, "class" => "definput myinput"));
+						?>
 					</div>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-4" >
+
 				<?php
-				load_view("input2", array("ph"=>"+91", "divattr"=>array("style"=>""), "name"=>$info_name[$count+1], "data" => $sinfo ) );
+					if(false){
 				?>
-			</div>
-			<?php
-			clear();
-			?>
-		</div>
-		<?php
-			}
-		?>
 
-
-
-		<div style='' >
-			<div class="col-xs-12 col-sm-2" align="left" >
-				<div class='mt25' style="" >
-					<div class="row" >
-						<div class="col-md-2" style="margin:0px;padding:0px;height:0px;" ></div>
-						<div class="col-md-10" >Excise reg No:</div>
+				<div >
+					<div align="center" style="" >
+						<?php
+						dummyheight(60);
+						?>
+						<img src='image_edit/Documents.png' class="img-responsive" />
+					</div>
+					<div style="margin-top:20px;margin-bottom:20px;" >
+						<img  src="image_edit/layer_5.png"  />
 					</div>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-9" >
-				<?php
-				load_view("input2", array("ph"=>"&nbsp;", "divattr"=>array("style"=>""), "name"=>"excisereg", "data" => $sinfo ) );
-				?>
-			</div>
-			<?php
-			clear();
-			?>
-		</div>
-
-
-
-		<?php
-			if(false){
-		?>
-
-		<div >
-			<div align="center" style="" >
-				<?php
-				dummyheight(60);
-				?>
-				<img src='image_edit/Documents.png' class="img-responsive" />
-			</div>
-			<div style="margin-top:20px;margin-bottom:20px;" >
-				<img  src="image_edit/layer_5.png"  />
-			</div>
-		</div>
-		<div class="row" style="" >
-			<?php
-				$ctypes=array("Aadhar Card", "Licence", "Pan Card", "Photo");
-				for($i=0; $i<4; $i++){
-			?>
-				<div class="col-md-3" style="" >
-				<?php
-					load_view("check1", array("id"=>"doctype".$i, "label"=>"&nbsp;&nbsp;".$ctypes[$i], "value" => $i, "data" => $sinfo ));
-				?>
+				<div class="row" style="" >
+					<?php
+						$ctypes=array("Aadhar Card", "Licence", "Pan Card", "Photo");
+						for($i=0; $i<4; $i++){
+					?>
+						<div class="col-md-3" style="" >
+						<?php
+							load_view("check1", array("id"=>"doctype".$i, "label"=>"&nbsp;&nbsp;".$ctypes[$i], "value" => $i, "data" => $sinfo ));
+						?>
+						</div>
+					<?php
+						}
+					?>
 				</div>
-			<?php
-				}
-			?>
-		</div>
-		<?php
-			}
-		?>
-		<div style='margin-bottom:30px;margin-top:20px;' >
-			<div class="col-xs-12 col-sm-2" align="left" >
-				<div class='mt25' style="" >
-					<div class="row" >
-						<div class="col-md-2" style="margin:0px;padding:0px;height:0px;" ></div>
-						<div class="col-md-10" >About Your Store</div>
+				<?php
+					}
+				?>
+
+				<div class='row' >
+					<div class="col s12 l2 m2" align="left" >
+						About Store:
+					</div>
+					<div class="col s12 l9 m9" >
+						<textarea name="aboutstore" class='materialize-textarea' placeholder='Breif About your store' ><?php echo convchars($sinfo["aboutstore"]); ?></textarea>
 					</div>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-9" >
-				<textarea class='form-control myinput' name="aboutstore" ><?php echo convchars($sinfo["aboutstore"]); ?></textarea>
-			</div>
-			<?php
-			clear();
-			?>
-		</div>
-		<div style='margin-top:20px;margin-bottom:20px;' >
-			<div class="col-xs-12 col-sm-2" align="left" >
-				<div class='mt25' style="" >
-					<div class="row" >
-						<div class="col-md-2" style="margin:0px;padding:0px;height:0px;" ></div>
-						<div class="col-md-10" >Service Areas</div>
+
+				<div class='row' >
+					<div class="col s12 l2 m2" align="left" >
+						Service Area:
+					</div>
+					<div class="col s12 l9 m9" >
+						<textarea name="industorytext" class='materialize-textarea' placeholder='Breif About your store' ><?php echo convchars($sinfo["industorytext"]); ?></textarea>
 					</div>
 				</div>
+				<button type="submit" name="savedetails" class="btn btn-success mybtn" style='' >SAVE DETAILS</button>
+
+				</form>
 			</div>
-			<div class="col-xs-12 col-sm-9" >
-				<textarea class='form-control myinput' name="industorytext" ><?php echo convchars($sinfo["industorytext"]); ?></textarea>
-			</div>
-			<?php
-			clear();
-			?>
 		</div>
-
-		
-
-		<button type="submit" name="savedetails" class="btn btn-success mybtn" style='' >SAVE DETAILS</button>
-		</form>
 	</div>
 
 	<?php
 		dummyheight(100);
 	?>
+
+<?php
+load_view("template/footer.php");
+load_view("template/bottom.php");
+?>
