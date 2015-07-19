@@ -14,7 +14,7 @@
 												<?php
 													$count = 1;
 													foreach(gi("pricefilter") as $val1) {
-														load_view("check2",array('label'=>htmlspecialchars($val1[0]), 'value'=>$count,"id"=>"price".$count, "name"=>"price"));
+														load_view("check2",array('label'=>htmlspecialchars($val1[0]), 'value'=>$count,"id"=>"price".$count, "name"=>"price", 'inpattr' => array("data-gid" => "pricefilter", "data-onchange" => "searchrefine()") ));
 														$count++;
 													}
 												?>
@@ -26,7 +26,7 @@
 												<?php
 													$count = 1;
 													foreach(gi("salefilter") as $val1) {
-														load_view("check2",array('label'=>htmlspecialchars($val1[0]), 'value'=>$count,"id"=>"sale".$count, "name"=>"sale"));
+														load_view("check2",array('label'=>htmlspecialchars($val1[0]), 'value'=>$count,"id"=>"sale".$count, "name"=>"sale", "inpattr" => array("data-gid" => "salefilter", "data-onchange" => "searchrefine()") ));
 														$count++;
 													}
 												?>
@@ -37,7 +37,7 @@
 											<div class="collapsible-body" style="padding:10px;">
 												<?php
 													foreach($catgs as $i => $val1) {
-														load_view("check2",array('label'=>htmlspecialchars($val1), 'value'=>$i, "id"=>"sale".$i, "name"=>"sale"));
+														load_view("check2",array('label'=>htmlspecialchars($val1), 'value'=>$i, "id"=>"catg".$i, "name"=>"sale", "inpattr" => array("data-gid" => "catgfilter", "data-onchange" => "searchrefine()" )));
 													}
 												?>
 											</div>

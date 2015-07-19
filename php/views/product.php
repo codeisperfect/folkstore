@@ -1,77 +1,62 @@
-  <div class="jumbotron text-center" id="title" style="background-image:none;" >
-    <div style="background: url(image_search/shutterstockFC00016.jpg) no-repeat center center ;background-size:100% auto;"  >
-     <div style="min-height:480px;background-color:rgba(0,25,0,0.7);" >
-        <div align="left" style="margin-left:30px;">
-          <div style="padding-top:25px;" >
-            <a href="<?php echo HOST; ?>" ><img src="images/highresalpha.png" class="img-responsive" ></a>
-          </div>
-        </div>
-     </div>
-    </div>
-  </div>
-  <div style="border-bottom:solid black 3px;margin-top:-10px;padding-bottom:10px;padding-right:5px;" align="right" >
-    <div style="float:right;width:230px;" >
-    </div>
-    <?php
-      clear();
-    ?>
-  </div>
+<?php
+load_view("template/top.php");
+load_view("template/navbarnew.php");
+?>
 
 
+	<div class="parallax-container valign-wrapper mainprlx" style='' >
+		<div class="section no-pad-bot" style='' >
+			<div class="container">
+				<div class="row center">
+				</div>
+			</div>
+		</div>
+		<div class="parallax"  >
+			<img src="photo/searchpic.png" alt="Unsplashed background img 2" >
+		</div>
+	</div>
 
-  <div id="test1" ></div>
-  <div align=center style="padding:20px;margin-top:5px;" >
-    <div class="container" >
-      <div class="row" align=center style="padding:0px;margin:0px;" >
-        <div class="col-md-6" style="padding:0px;margin:0px;" >
-          <div align="left" style="position:relative;"   >
-            <?php
-            //
-              resimg($pinfo["dispimg"],array("class"=>"img-responsive  img-thumbnail img-rounded dispproductimg","style"=>'',"id"=>"dispproductimg","onmouseenter"=>"imagezoom.mousein(this,event);", "onmouseout"=>"imagezoom.mouseout(this,event);","onmousemove"=>"imagezoom.mousemove(this,event);" ));
-//              resimg($pinfo["dispimg"],array("class"=>"","style"=>"max-width:100%;max-height:100%;position:relative;top:0px;margin-top:-500px;","id"=>"dispproductimg"));
-            ?>
-            <div style="position:absolute;width:100px;height:100px;background-color:rgba(255,255,255,0.5);top:100px;left:100px;border:solid #bbbbbb 1px;display:none;" onmousemove="imagezoom.zoomermove(this,event);"  id="zoomer" ></div>
-          </div>
-          <div align="left" >
-            <table class='p5px' ><tr>
-              <?php
-                for($i=0;$i<count($pinfo["simages"]);$i++){
-                  opent("td", array("style" => "border:solid #cccccc 2px;" ));
-                  resimg($pinfo["simages"][$i],array("class"=>"productimgothers","data-toopen"=>$pinfo["mimages"][$i],"onclick"=>"openproductimg(this);" ));
-                  closet("td");
-                }
-              ?>
-            </tr></table>
-          </div>
-        </div>
-
-        <div class="col-md-6" style="padding:0px;margin:0px;position:relative;"  >
-          <div style="position:absolute;display:none;" id="showzoomimg" >
-            <div align="left" >
-              <?php
-                resimg($pinfo["dispimg"]);
-              ?>
-            </div>
-          </div>
-          <div style="margin:20px;" >
-            <div align="left" style="" >
-              <span style="text-transform: uppercase;font-size:20px;font-weight:600;color:#555555;" ><?php echo $pinfo["title"]; ?></span><br><br>
-              <span style='color:#666666;' ><?php echo $pinfo["abouttext"]; ?></span><br>
-              <?php
-                opent("table",array("class"=>"table-hover p10px "));
-                foreach($dispinfo as $i=>$info){
-                  opent("tr");
-                  ocloset("th",$i,array());
-                  ocloset("td",$info,array());
-                  closet("tr");
-                }
-                closet("table");
-              ?>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="container" style="margin-top:20px;" >
+		<div class="row"   >
+			<div class="col s12 m6 l6" style="" align="left"  >
+				<div class="row">
+					<div class="col s12 l12 m12 " style="padding:0px;margin:0px;" >
+						<?php
+							resimg($pinfo["dispimg"], array("style"=>'max-width:100%;',"id"=>"dispproductimg"));
+						?>
+					</div>
+					<?php
+						for($i=0;$i<count($pinfo["simages"]);$i++){
+							opent("div", array("class" => "col s2 l2 m2", "style" => "margin:2px;padding:0px;" ));
+								resimg($pinfo["simages"][$i],array("class"=>"img-responsive","data-toopen"=>$pinfo["mimages"][$i],"onclick"=>"openproductimg(this);", "style" => "max-width:100%;cursor:pointer;" ));
+							closet("div");
+						}
+					?>
+				</div>
+			</div>
+			<div class="col s12 m6 l6" style="" align="left" >
+				<div style="" >
+					<div >
+						<span style="text-transform: uppercase;font-size:20px;font-weight:600;color:#555555;" ><?php echo $pinfo["title"]; ?></span><br><br>
+						<span style='color:#666666;' ><?php echo $pinfo["abouttext"]; ?></span><br>
+						<?php
+							opent("table",array("class"=>"table-hover p10px" ));
+							foreach($dispinfo as $i=>$info){
+								opent("tr");
+								ocloset("th",$i,array());
+								ocloset("td",$info,array("align" => "left"));
+								closet("tr");
+							}
+							closet("table");
+						?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
+<?php
+load_view("template/footer.php", $inp);
+load_view("template/bottom.php");
+?>

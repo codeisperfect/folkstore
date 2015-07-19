@@ -29,23 +29,9 @@ $pageinfo["dispinfo"]=array(
 );
 
 
-load_view("template/top.php");
 
-
-load_view("template/navbar.php");
 
 load_view("product.php",$pageinfo);
-
-?>
-
-
-
-<?php
-
-
-load_view("template/footer.php",$pageinfo);
-load_view("template/bottom.php",$pageinfo);
-
 
 
 closedb();

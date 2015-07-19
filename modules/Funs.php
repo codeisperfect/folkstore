@@ -42,17 +42,27 @@ abstract class Funs{
 		foreach($sresults as $i=>$row){
 			$row["images"]=myexplode(",",$row["images"]);
 			$row["simages"]=myexplode(",",$row["simages"]);
-			$row["abouttext_short"]=Fun::maxspace($row["abouttext"],80);
-
-			$need_to_conv=array("title","abouttext","abouttext_short");
+			$row["title_short"]=Fun::maxspace($row["title"], 40);
+			$row["abouttext_short"]=Fun::maxspace($row["abouttext"], 25);
+			$need_to_conv=array("title","abouttext","abouttext_short", "title_short");
 			foreach($need_to_conv as $j){
 				$row[$j]=smilymsg($row[$j]);
 			}
 			$row["dispimg"]=count($row['simages'])>0?$row["simages"][0]:"photo/noimg.jpg";
-
-
 			$sresults[$i]=$row;
 		}
+		return $sresults;
+	}
+
+	public static function searchrefine($data) {
+		mergeifunset($data, array("search" => "", "salefilter" => "", "pricefilter" => "", "sort" => 1, "catgfilter" => ""));
+		$ps_constrain = map(array("pricefilter", "salefilter"), function($ctype) use($data){
+			return Fun::get_constrain($data[$ctype], map(gi($ctype), function($inp){
+				return $inp[1];
+				}));
+		}, array("isindexed" => true));
+		$query = "select * from products where (".$ps_constrain["pricefilter"].") AND (".$ps_constrain["salefilter"].") AND concat(title, abouttext, addinfo) like concat('%', {search}, '%' ) ";
+		$sresults = Funs::dispproductinfo(Sqle::getA( $query, $data ));
 		return $sresults;
 	}
 }

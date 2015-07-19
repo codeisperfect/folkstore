@@ -604,9 +604,38 @@ function mylib(){
 		}
 	};
 	var awesome={
-		awesomelabel:function(){
+		awesomelabel:function() {
+			var gclass = "group";
+			var gidattr = "data-gid";
+			var tickedclass = 'tickone';
+			var selectallclass = 'selectall';
 			var icons=["glyphicon-untick", "glyphicon-correct"];
-			var tickone=function(obj){
+			var groupinp = function(obj, isinit) {
+				if(isinit == null) {
+					isinit = false;
+				}
+				var gid = $(obj).attr(gidattr);
+				if(gid != null) {
+					var mygelms=$('input.'+gclass+'['+gidattr+'="'+gid+'"]');
+					var values = [];
+					for(var i=0; i < mygelms.length; i++) {
+						if( $(obj).hasClass(tickedclass) && obj != mygelms[i] && obj.checked ) {
+							mygelms[i].checked=false;
+						}
+						if( $(obj).hasClass(selectallclass) ) {
+							mygelms[i].checked = obj.checked;
+						}
+						if(mygelms[i].checked) {
+							values.push(mygelms[i].value);
+						}
+					}
+					$("input[name="+gid+"]").val(values.join("-"));
+					if($(obj).attr("data-onchange") != null && !isinit ) {
+						eval($(obj).attr("data-onchange"));
+					}
+				}
+			};
+			var tickone=function(obj){//this is useless, now onward
 				var groupid=$(obj).attr("data-gid");
 				if(groupid!=null){
 					var otherelms=$('.tickone[data-gid="'+groupid+'"]');
@@ -618,13 +647,14 @@ function mylib(){
 					}
 				}
 			};
-			var createhiddeninp=function(obj){
+			var createhiddeninp_ninit=function(obj){
 				var groupid=$(obj).attr("data-gid");
 				if(groupid!=null && $("input[name="+groupid+"]").length == 0){
 					$(obj).parent().append('<input type="hidden" value="" name="'+groupid+'" />');
+					groupinp(obj, true);
 				}
 			};
-			var findlabel=function(obj){
+			var findlabel=function(obj){//this is useless.
 				if( $(obj).attr("id")!=null){
 					var label=$('label[for="'+$(obj).attr("id")+'"]');
 					if(label.length>0){
@@ -633,7 +663,7 @@ function mylib(){
 				}
 				return null;
 			};
-			var labelchangehandle=function(obj, e){
+			var labelchangehandle=function(obj, e){//this is useless.
 				var label=findlabel(obj);
 				var gid=$(obj).attr("data-gid");
 				if(gid!=null){
@@ -653,19 +683,15 @@ function mylib(){
 					iconobj.addClass(icons[0+obj.checked]);
 				}
 			};
-			$(".mycheckbox").on("change", function(e){
+			$(".mycheckbox").on("change", function(e){//this is also useless.
 				labelchangehandle(this,e);
 			});
-			$(".tickone").on("change", function(e){
-				tickone(this);
+
+			doforall($("input.group"), function(elm){
+				createhiddeninp_ninit(elm);
 			});
-			doforall($(".mycheckbox"), function(elm){
-				var label=findlabel(elm);
-				if(label!=null && label.find("span.myicon").length==0){
-					label.prepend("<span class='myicon' ></span> &nbsp;");
-				}
-				labelchangehandle(elm);
-				createhiddeninp(elm);
+			$("input.group").on("change", function(e){
+				groupinp(this);
 			});
 		},
 		imagehoverbig:function(){
@@ -791,3 +817,18 @@ var success={
 };
 
 
+
+var ms = {
+	changesym: function(obj, slist) {
+		if(slist == null)
+			slist = ["keyboard_arrow_down", "keyboard_arrow_up"];
+		var elm = $(obj).children();
+		var curicon = slist.indexOf(elm.children().html());
+		var newicon = ((curicon+1)%slist.length);
+		elm.html(mt.icon(slist[newicon]));
+	},
+	changescreen: function(obj, id1, id2) {
+		hs_toggle([id1, id2], 700);
+		ms.changesym(obj);
+	}
+};

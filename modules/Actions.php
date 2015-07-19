@@ -72,6 +72,5 @@ class Actions{
 		return array("ec"=>1,"data"=>Sqle::loadtables($query,'id'));
 	}
 
-
 }
 ?>

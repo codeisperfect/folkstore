@@ -206,6 +206,31 @@ The function was attended by Premier Sheikh Hasina, her Cabinet colleagues, emin
 		}
 		?>
 	</div>
+	<div class="container "  style="margin-top:100px;" >
+		<a onclick="hs_toggle(['uploadproductdiv'], 1000);ms.changesym(this);" style="cursor:pointer;">
+			<span id="forgot_prefix_arrow"><i class="material-icons tiny">keyboard_arrow_up</i></span>&nbsp;Upload new product
+		</a>	
+		<div id="uploadproductdiv" style="display:none;" >
+			<?php
+				dummyheight(20);
+				load_view("template/uploadproductnew.php");
+			?>
+		</div>
+		<div class="row" style="margin-top:30px;" >
+			<?php
+			foreach($sresults as $i => $row ) {
+			?>
+			<div class="col s12 m6 l4" >
+			<?php
+				load_view("template/dispproduct.php", array("row" => $row));
+			?>
+			</div>
+			<?php
+			}
+			?>
+		</div>
+	</div>
+
 
 	
 

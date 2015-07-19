@@ -2,12 +2,25 @@
 <div style='position:relative;z-index: 998;height:40px;' class='' >
 	<div class='white' style='position:fixed;line-height:normal;width:100%;' >
 		<div class="black" >
+			<div class='left hide-on-small-and-down' style="display:non;" >
+				<div class="" style='margin:2px;'  >
+				<?php
+					if($page != 'index'){
+				?>
+					<form action="<?php echo BASE."search.php"; ?>" >
+						<input name="search" class='definput' style='' placeholder='Search' >
+						<button style="display:none;" type="submit" >Search</button>
+					</form>
+				<?php
+					}
+				?>
+				</div>
+			</div>
 			<div class='right hide-on-small-and-down' style='color:white;margin-right:20px;padding-top:10px;padding-bottom:10px;font-size:14px;' >
 				<?php
 					if(User::isloginas("s")) {
 				?>
 				<a class='pointer whitelink' href='<?php echo BASE."store.php"; ?>' >Profile</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-				<a class='pointer whitelink'  >Upload</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 				<a class='pointer whitelink' href='<?php echo BASE."edit.php"; ?>' >Edit</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 				<a class='pointer whitelink' href='<?php echo BASE."?logout"; ?>' >Logout</a>
 				<?php

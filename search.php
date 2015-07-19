@@ -5,12 +5,14 @@ include "includes/app.php";
 $search = get("search");
 $locsearch = get("locsearch");
 
-$pageinfo["sresults"] = Funs::dispproductinfo(Sqle::getA("select * from products "));
+if($locsearch != '' && false) {
 
-
-$pageinfo["search"] = $search;
-$pageinfo["catgs"] = Fun::idtovalarr(Sqle::getA("select * from shopcatgs"), "id", "name");
-load_view("search.php",$pageinfo);
+} else {
+	$pageinfo["sresults"] = Funs::searchrefine(array("search" => $search.$locsearch ));
+	$pageinfo["search"] = $search;
+	$pageinfo["catgs"] = Fun::idtovalarr(Sqle::getA("select * from shopcatgs"), "id", "name");
+	load_view("search.php",$pageinfo);
+}
 
 
 

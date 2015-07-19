@@ -316,3 +316,33 @@ function runmypagecode(inp, args) {
 }
 
 
+
+function hs_toggle(ids, timetaken) {
+	doforall(ids, function(e){
+		var elm = $("#"+e);
+		if(elm.is(":visible"))
+			elm.slideUp(timetaken);
+		else
+			elm.slideDown(timetaken);
+	});
+}
+
+
+var mt = {
+	icon: function(inp, size){
+		if(size==null)
+			size='tiny';
+		return '<i class="material-icons '+size+'">'+inp+'</i>';
+	}
+};
+
+
+function searchrefine() {
+	var leftinps = getFormInputs( $("#searchform")[0] );
+	mergeifunset( leftinps, {"sort":$("#sortoptions").val()} );
+	leftinps["action"] = "searchrefine";
+	button.sendreq_v2_t3( leftinps, null, function(d){
+		$("#searchresultdiv").html(d);
+	});
+}
+

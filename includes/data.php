@@ -110,7 +110,8 @@ $_ginfo["action_constrain"]=array(
 	"login"=>array("need"=>array("email","password")),
 	"logout"=>array(),
 	"uploadproduct"=>array("need"=>array("title","abouttext","price","sale","addinfo")),
-	"savedetails"=>array("need" => array('name', 'address', 'city', 'state', 'zipcode', 'landmark', 'country', 'lat', 'lan', 'mobile', 'mobile2', 'whatsapp', 'ownername', 'shopcatg', 'pan', 'tin', 'stex', 'stype', 'cstno', 'vatno', 'excisereg', 'aboutstore', 'industorytext') )
+	"savedetails"=>array("need" => array('name', 'address', 'city', 'state', 'zipcode', 'landmark', 'country', 'lat', 'lan', 'mobile', 'mobile2', 'whatsapp', 'ownername', 'shopcatg', 'pan', 'tin', 'stex', 'stype', 'cstno', 'vatno', 'excisereg', 'aboutstore', 'industorytext') ),
+	"searchrefine" => array("need" => array())
 );
 
 
@@ -149,7 +150,7 @@ $_ginfo["sorting"]=array(
 	);
 
 
-$_ginfo["searchimg_size"]=300;
+$_ginfo["searchimg_size"]=400;
 $_ginfo["productimg_size"]=600;
 
 
@@ -163,7 +164,7 @@ $_ginfo["pricefilter"] = array(
 $_ginfo["salefilter"] = array(
 		array('< 20% ','sale<20'),
 		array('20% - 50%','sale>=20 AND sale<=50'),
-		array('> 50%','sale>50%'),
+		array('> 50%','sale>50'),
 );
 
 

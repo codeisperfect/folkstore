@@ -91,6 +91,37 @@
 		return $outp;
 	}
 
+	function handle_disp($post_data,$actionarg=null){
+		global $_ginfo;
+		if($actionarg!=null)
+			$post_data["action"]=$actionarg;
+		$a=new Actiondisp();
+		$outp=array("ec"=>-7);
+		if(isset($post_data["action"])  ){
+			$isvalid=isvalid_action($post_data);
+			if(!($isvalid>0))
+				$outp["ec"]=$isvalid;
+			else{
+				$func=$post_data["action"];
+				if( method_exists($a,$post_data["action"])){
+					$a->$func($post_data,$actionarg==null);
+					return;
+				}
+				else if(islset($_ginfo,array("autoscroll",$post_data["action"]))) {
+					$as_handle = autoscroll($post_data);
+					$outp["data"]=Fun::getflds(array("min", "max", "minl", "maxl"), $as_handle);
+					$outp["ec"]=1;
+					if($actionarg==null)
+						echo json_encode($outp)."\n";
+					load_view($as_handle["load_view"], array("qresult"=>$as_handle["qresult"]));
+					return;
+				}
+			}
+		}
+		if($actionarg==null)
+			echo json_encode($outp)."\n";
+	}
+
 	function isvalid_action($post_data){
 		global $_ginfo;
 		if(isset($_ginfo["action_constrain"][$post_data["action"]])){
@@ -339,5 +370,70 @@
 		}
 		return $outp;
 	}
+
+	function gget() {
+		$args = func_get_args();
+		$args[0] = g(getval(0, $args));
+		return call_user_func_array("listget", $args);
+	}
+
+	function giget() {
+		$args = func_get_args();
+		$args[0] = gi(getval(0, $args));
+		return call_user_func_array("listget", $args);
+	}
+	
+	function filter($list, $boolfunc) {
+		$outp = array();
+		foreach($list as $i => $val) {
+			if($boolfunc($val, $i) === true) {
+				$outp[] = $val;
+			}
+		}
+		return $outp;
+	}
+
+	function map($list ,$func, $custom=array()) {
+		mergeifunset($custom, array("isindexed" => false, "ismapkey"=>false));
+		$outp = array();
+		foreach($list as $i => $val) {
+			if($custom["ismapkey"] )
+				$outp[ $func($i) ] = $val;
+			else
+				$outp[($custom["isindexed"]?$val:$i)] = $func($val, $i);
+		}
+		return $outp;
+	}
+
+	function add($a, $b) {
+		if(gettype($a) == "array" && gettype($b) == "array" ) {
+			return Fun::array_append($a, $b);
+		} else if (gettype($a) == "array" && gettype($b) == "integer") {
+			return Fun::array_addinall($a, $b);
+		}
+	}
+
+	function msimplode($glue, $inp, $defval=null) {
+		 return (count($inp) == 0 && $defval != null ) ? $defval : implode($glue, $inp);
+	}
+
+	function intexplode($ex, $inp) {
+		$temp = myexplode($ex,$inp);
+		foreach($temp as $i=>$val){
+			$temp[$i] = 0+$val;
+		}
+		return $temp;
+	}
+	function intexplode_t2($inp, $limit=-1, $ex='-'){
+		$temp=myexplode($ex,$inp);
+		$outp=array();
+		foreach($temp as $i=>$val){
+			$val=0+$val;
+			if(1<=$val &&  ($limit==-1 || $val<=$limit) )
+				$outp[]=$val;
+		}
+		return $outp;
+	}
+
 
 ?>

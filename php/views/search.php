@@ -20,7 +20,7 @@ load_view("template/navbarnew.php");
 <br>&nbsp;<br>
 	<div style="border-bottom:solid black 3px;margin-top:-10px;padding-bottom:10px;padding-right:5px;" align="right" >
 		<div style="float:right;width:230px;" >
-			<select class='browser-default' >
+			<select class='browser-default' id="sortoptions" onchange="searchrefine()" >
 			<?php
 				disp_olist(arr2option(array_keys($_ginfo["sorting"])));
 			?>
@@ -38,28 +38,10 @@ load_view("template/navbarnew.php");
 				</div>
 			</div>
 			<div class='col s12 l9 m8' style='padding:0px;margin:0px;' >
-				<div class='row' >
-
-					<?php
-						if(true){
-						$pnum=0;
-						for($i=0;true && $pnum<count($sresults) ;$i++){
-							for($j=0;$j<3 && $pnum<count($sresults) ;$j++){
-								$row=$sresults[$pnum];
-						?>
-						<div class="col s12 l4 m6" style="" >
-							<?php
-								load_view("template/dispproduct.php", array("row" => $row));
-							?>
-						</div>
-						<?php
-								$pnum++;
-							}
-						}
-					}
-					?>
-
-
+				<div class='row' id="searchresultdiv" >
+				<?php
+					load_view("template/searchresults.php", $inp);
+				?>
 				</div>
 			</div>
 		</div>

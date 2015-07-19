@@ -440,6 +440,27 @@ abstract class Fun{
 	public static function getloadviewname($inp){
 		return firstelm(explode(".php",lastelm(explode("/",$inp))));
 	}
+
+	public static function array_append($a, $b) {
+		for($i=0; $i<count($b); $i++) {
+			$a[] = $b[$i];
+		}
+		return $a;
+	}
+
+	public static function array_addinall($a, $val) {
+		foreach($a as $i => $v) {
+			$a[$i]+=$val;
+		}
+		return $a;
+	}
+
+	public static function get_constrain($inp, $arr) {//used in some query. mainly search
+		return msimplode(" OR ", map(Fun::getflds( add(intexplode_t2($inp, count($arr) ), -1), $arr), function($inp){
+			return "(".$inp.")";
+		}), "true");
+	}
+
 }
 
 ?>

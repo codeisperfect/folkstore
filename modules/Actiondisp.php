@@ -51,5 +51,10 @@ class Actiondisp{
 		Disps::disp_chat_list($data["msgid"]);
 	}
 
+	function searchrefine($data) {
+		echo json_encode(array('ec'=>1,'data'=>0))."\n";
+		load_view("template/searchresults.php", array("sresults" => Funs::searchrefine($data)));
+	}
+
 }
 ?>
