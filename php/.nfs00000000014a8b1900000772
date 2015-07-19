@@ -318,12 +318,5 @@
 		}
 	}
 
-	function getrefarr(&$inp) {
-		$outp=array();
-		foreach($inp as $i=>$val){
-			$outp[] = &$inp[$i];
-		}
-		return $outp;
-	}
 
 ?>

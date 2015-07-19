@@ -207,27 +207,9 @@ The function was attended by Premier Sheikh Hasina, her Cabinet colleagues, emin
 		?>
 	</div>
 
-<!-- 
-	<div class="jumbotron text-center">
-	 <div class="container"  >
-		<?php
-			opent("div",array("align"=>"center"));
-			resimg("images/VectorSmartObject.png",array("style"=>"margin-bottom:30px;"));
-			resimg("images/serviceAreas.png");
-			resimg("images/seprator.png",array("style"=>"margin-top:20px;margin-bottom:20px;"));
-			closet("div");
-		?>
-		<div>
-		 
-The function was attended by Premier Sheikh Hasina, her Cabinet colleagues, eminent citizens, diplomats and top Bangladeshi officials.
+	
 
-Modi, while receiving the honour, hailed Vajpayee's leadership, saying the "great leader" was a source of inspiration for political workers including him.
 
-"This day is a matter of great pride for all Indians that a great leader like Atal Bihari Vajpayee is being honoured. He dedicated his entire life to the service of the country and he fought for the rights of the common man and from a poli
-		</div>
-	 </div>
-	</div>
- -->
 <?php
 load_view("template/footer.php");
 load_view("template/bottom.php");

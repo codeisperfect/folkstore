@@ -18,7 +18,7 @@ if(true){
 $alls=$data["stores"];
 foreach($alls as $i=>$val){
 	$pass=rand(1000000,9999999);
-	$sh=handle_request(array("email"=>$val[1],"name"=>$val[0],"password"=>$pass,"action"=>"signup", "phone"=>$val[12] ));
+	$sh=handle_request(array("email1"=>$val[1],"name"=>$val[0],"password1"=>$pass,"action"=>"signup", "phone"=>$val[12] ));
 	$sa=array_slice($val,2,34);
 	$sa[0]=strtotime($sa[0]);
 	echo $sh["ec"]."<br>";

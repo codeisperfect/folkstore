@@ -6,7 +6,9 @@ $sid=0+get("sid",User::loginId());
 $savedetails=handle_request(Fun::setifunset($_POST, "action", "savedetails"));
 $pageinfo["savedetails"] = $savedetails;
 
+
 $sinfo = Funs::storeinfo($sid);
+
 // select sid,brand2wheel,group_concat(brands.name) from stores left join brands on ( concat(",",brand2wheel,",") like concat("%,",brands.id,",%") ) group by sid;
 
 Fun::redirectinv($sinfo==null || ($sinfo["sdate"]==null && $sid!=User::loginId()) );
@@ -40,6 +42,8 @@ $sinfo["pan_details"]=dict2keyval(array(
 	));
 
 $pageinfo["sinfo"]=$sinfo;
+
+$pageinfo["sresults"] = Funs::dispproductinfo(Sqle::getA("select * from products where sid={sid} ", array("sid" => $sid)));
 
 
 load_view("store.php",$pageinfo);

@@ -37,5 +37,23 @@ abstract class Funs{
 	public static function productinfo($pid){
 		return Sqle::getRow("select users.name as sellername, stores.address, stores.mobile, products.* from products left join users on users.id=products.sid left join stores on stores.sid=products.sid where products.id=? limit 1", 'i', array(&$pid),$pid==0);
 	}
+
+	public static function dispproductinfo($sresults) {
+		foreach($sresults as $i=>$row){
+			$row["images"]=myexplode(",",$row["images"]);
+			$row["simages"]=myexplode(",",$row["simages"]);
+			$row["abouttext_short"]=Fun::maxspace($row["abouttext"],80);
+
+			$need_to_conv=array("title","abouttext","abouttext_short");
+			foreach($need_to_conv as $j){
+				$row[$j]=smilymsg($row[$j]);
+			}
+			$row["dispimg"]=count($row['simages'])>0?$row["simages"][0]:"photo/noimg.jpg";
+
+
+			$sresults[$i]=$row;
+		}
+		return $sresults;
+	}
 }
 ?>
