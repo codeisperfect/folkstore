@@ -153,4 +153,18 @@ $_ginfo["searchimg_size"]=300;
 $_ginfo["productimg_size"]=600;
 
 
+$_ginfo["pricefilter"] = array(
+		array('<1000','price<1000'),
+		array('1000-2000','1000<=price AND price<=2000'),
+		array('>2000','2000<=price'),
+);
+
+
+$_ginfo["salefilter"] = array(
+		array('< 20% ','sale<20'),
+		array('20% - 50%','sale>=20 AND sale<=50'),
+		array('> 50%','sale>50%'),
+);
+
+
 ?>

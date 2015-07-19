@@ -318,6 +318,20 @@
 		}
 	}
 
+	function g($inp) {
+		global $$inp;
+		return $$inp;
+	}
+
+	function s($inp, $val=null) {
+		global $$inp;
+		$$inp = $val;
+	}
+
+	function gi($inp) {
+		return getval($inp, g("_ginfo"));
+	}
+
 	function getrefarr(&$inp) {
 		$outp=array();
 		foreach($inp as $i=>$val){

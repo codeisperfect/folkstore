@@ -29,7 +29,7 @@ load_view("template/navbarnew.php");
 	</div>
 
 	<div class='container-fluid' >
-		<div class='row'  >
+		<div class='row'>
 			<div class='col s12 l3 m4 ' style='padding:0px;margin:0px;' >
 				<div class='card' >
 					<?php
