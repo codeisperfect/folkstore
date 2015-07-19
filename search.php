@@ -9,9 +9,10 @@ $sresults=Sql::getArray("select * from products ");
 foreach($sresults as $i=>$row){
 	$row["images"]=myexplode(",",$row["images"]);
 	$row["simages"]=myexplode(",",$row["simages"]);
-	$row["abouttext_short"]=Fun::maxspace($row["abouttext"],80);
+	$row["title_short"]=Fun::maxspace($row["title"],25);
+	$row["abouttext_short"]=Fun::maxspace($row["abouttext"],25);
 
-	$need_to_conv=array("title","abouttext","abouttext_short");
+	$need_to_conv=array("title","abouttext","abouttext_short", "title_short");
 	foreach($need_to_conv as $j){
 		$row[$j]=smilymsg($row[$j]);
 	}
@@ -24,6 +25,7 @@ $pageinfo["sresults"]=$sresults;
 
 
 $pageinfo["search"] = $search;
+$pageinfo["catgs"] = Fun::idtovalarr(Sqle::getA("select * from shopcatgs"), "id", "name");
 load_view("search.php",$pageinfo);
 
 
